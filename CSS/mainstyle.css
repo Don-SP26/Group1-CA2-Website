@@ -1,0 +1,203 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+h1, h2, h3, h4  {
+    color: white;
+}
+
+body{
+    background:#111;
+    padding:10px;
+}
+
+section{
+    margin-bottom: 50px;
+}
+
+.body-content{
+    padding: 0 0 50px 50px;
+}
+
+/* Explore Dropdown */
+
+.nav-explore{
+    position:relative;
+}
+
+.explore-btn{
+    display:flex;
+    align-items:center;
+    gap:8px;
+
+    padding:12px 28px;
+    border:none;
+    border-radius:50px;
+
+    background:rgba(255,255,255,.1);
+    color:white;
+
+    font-weight:600;
+    font-size:1rem;
+    cursor:pointer;
+
+    backdrop-filter:blur(4px);
+    transition:background .2s ease;
+}
+
+.explore-btn:hover{
+    background:rgba(255,255,255,.2);
+}
+
+.chevron{
+    font-size:.8rem;
+    transition:transform .2s ease;
+}
+
+.nav-explore.open .chevron{
+    transform:rotate(180deg);
+}
+
+.explore-menu{
+    position:absolute;
+    top:calc(100% + 10px);
+    right:0;
+
+    min-width:220px;
+
+    background:#1a1a1a;
+    border-radius:16px;
+
+    padding:10px;
+
+    display:flex;
+    flex-direction:column;
+    gap:2px;
+
+    opacity:0;
+    visibility:hidden;
+    transform:translateY(-8px);
+
+    transition:opacity .2s ease, transform .2s ease, visibility .2s ease;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.4);
+}
+
+.nav-explore.open .explore-menu{
+    opacity:1;
+    visibility:visible;
+    transform:translateY(0);
+}
+
+.explore-menu a{
+    color:white;
+    text-decoration:none;
+    font-size:.95rem;
+
+    padding:10px 14px;
+    border-radius:10px;
+
+    transition:background .15s ease;
+}
+
+.explore-menu a:hover{
+    background:rgba(255,255,255,.1);
+}
+
+/* Standalone Nav (for inner pages, no hero behind it) */
+
+.main-nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:20px 40px;
+    margin-bottom:30px;
+
+    background:#1a1a1a;
+    border-radius:20px;
+}
+
+.main-nav .logo img{
+    height:36px;
+}
+
+/* Footer */
+
+.site-footer{
+    background:#0a0a0a;
+    border-radius:30px;
+
+    padding:50px;
+    margin-top:50px;
+}
+
+.footer-top{
+    display:flex;
+    justify-content:space-between;
+    flex-wrap:wrap;
+    gap:40px;
+
+    padding-bottom:40px;
+    border-bottom:1px solid rgba(255,255,255,.1);
+}
+
+.footer-brand{
+    max-width:280px;
+}
+
+.footer-logo{
+    height:32px;
+    margin-bottom:15px;
+}
+
+.footer-brand p{
+    color:#999;
+    font-size:.9rem;
+    line-height:1.5;
+}
+
+.footer-links{
+    display:flex;
+    gap:60px;
+    flex-wrap:wrap;
+}
+
+.footer-col{
+    display:flex;
+    flex-direction:column;
+    gap:12px;
+}
+
+.footer-col h5{
+    color:#666;
+    font-size:.8rem;
+    text-transform:uppercase;
+    letter-spacing:.05em;
+    margin-bottom:5px;
+}
+
+.footer-col a{
+    color:white;
+    text-decoration:none;
+    font-size:.95rem;
+
+    transition:color .15s ease;
+}
+
+.footer-col a:hover{
+    color:#999;
+}
+
+.footer-bottom{
+    padding-top:25px;
+    text-align:center;
+}
+
+.footer-bottom p{
+    color:#666;
+    font-size:.85rem;
+}
