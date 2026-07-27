@@ -1,0 +1,278 @@
+/* Genre Banner */
+
+.genre-banner{
+    position:relative;
+    height:280px;
+
+    border-radius:30px;
+    overflow:hidden;
+
+    background-size:cover;
+    background-position:center;
+
+    display:flex;
+    align-items:center;
+}
+
+.genre-banner-overlay{
+    position:absolute;
+    inset:0;
+    background:rgba(0,0,0,.5);
+}
+
+.genre-banner-content{
+    position:relative;
+    z-index:2;
+
+    padding-left:50px;
+    color:white;
+}
+
+.genre-banner-content h1{
+    font-size:3.5rem;
+    font-weight:900;
+    line-height:1;
+}
+
+.genre-banner-content p{
+    margin-top:10px;
+    font-size:1.2rem;
+    color:#ddd;
+}
+
+/* History & Description */
+
+.genre-info{
+    display:flex;
+    gap:40px;
+    flex-wrap:wrap;
+
+    padding:0 10px;
+}
+
+.genre-info-block{
+    flex:1;
+    min-width:280px;
+}
+
+.genre-info-block h2{
+    font-size:1.5rem;
+    margin-bottom:15px;
+}
+
+.genre-info-block p{
+    color:#bbb;
+    font-size:1rem;
+    line-height:1.6;
+}
+
+/* Recommended Artists */
+
+.genre-artists-title{
+    font-size:1.8rem;
+    margin-bottom:25px;
+    padding:0 10px;
+}
+
+.genre-artists-grid{
+    display:flex;
+    gap:20px;
+    flex-wrap:wrap;
+
+    padding:0 10px;
+}
+
+.genre-artist-card{
+    flex:0 0 180px;
+
+    text-decoration:none;
+    color:white;
+
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+}
+
+.genre-artist-card img{
+    width:180px;
+    height:180px;
+
+    object-fit:cover;
+    border-radius:12px;
+
+    transition:transform .3s ease;
+}
+
+.genre-artist-card:hover img{
+    transform:scale(1.03);
+}
+
+.genre-artist-card h4{
+    font-size:1rem;
+    margin:0;
+}
+
+/* Artist Modal */
+
+.artist-modal-backdrop{
+    position:fixed;
+    inset:0;
+
+    background:rgba(0,0,0,.7);
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    opacity:0;
+    visibility:hidden;
+
+    transition:opacity .25s ease, visibility .25s ease;
+
+    z-index:100;
+}
+
+.artist-modal-backdrop.open{
+    opacity:1;
+    visibility:visible;
+}
+
+.artist-modal{
+    position:relative;
+
+    background:#1a1a1a;
+    border-radius:24px;
+
+    padding:50px;
+
+    width:90%;
+    max-width:900px;
+    max-height:90vh;
+
+    overflow-y:auto;
+
+    transform:translateY(20px);
+    transition:transform .25s ease;
+}
+
+.artist-modal-backdrop.open .artist-modal{
+    transform:translateY(0);
+}
+
+.artist-modal-close{
+    position:absolute;
+    top:24px;
+    right:24px;
+
+    background:none;
+    border:none;
+
+    color:white;
+    font-size:2rem;
+    line-height:1;
+
+    cursor:pointer;
+
+    z-index:2;
+}
+
+/* Top section: image left, info right */
+
+.artist-modal-top{
+    display:flex;
+    gap:40px;
+
+    margin-bottom:35px;
+}
+
+.artist-modal-image-wrapper{
+    flex:0 0 280px;
+}
+
+.artist-modal-image{
+    width:100%;
+    height:280px;
+
+    object-fit:cover;
+    border-radius:16px;
+}
+
+.artist-modal-info{
+    flex:1;
+
+    display:flex;
+    flex-direction:column;
+}
+
+.artist-modal-name{
+    font-size:2rem;
+    margin-bottom:15px;
+}
+
+.artist-modal-description{
+    color:#bbb;
+    font-size:1rem;
+    line-height:1.6;
+
+    margin-bottom:25px;
+
+    max-height:140px;
+    overflow-y:auto;
+    padding-right:10px; /* keeps text from touching the scrollbar */
+
+}
+
+.artist-modal-songs h5{
+    color:#fdfafa;
+    font-size:.8rem;
+    text-transform:uppercase;
+    letter-spacing:.05em;
+
+    margin-bottom:12px;
+}
+
+.artist-modal-song-list{
+    list-style:none;
+
+    display:flex;
+    flex-direction:column;
+    gap:8px;
+}
+
+.artist-modal-song-list li{
+    padding:12px 16px;
+    border-radius:10px;
+    color: #fdfafa;
+
+    background:rgba(255,255,255,.05);
+
+    cursor:pointer;
+    transition:background .15s ease;
+}
+
+.artist-modal-song-list li:hover{
+    background:rgba(255,255,255,.1);
+}
+
+.artist-modal-song-list li.playing{
+    background:rgba(255,255,255,.15);
+    font-weight:600;
+}
+
+/* Player: full width, underneath everything */
+
+.artist-modal-player-wrapper{
+    border-radius:12px;
+    overflow:hidden;
+}
+
+.artist-modal-player{
+    width:100%;
+    height:80px;
+    border:none;
+    display:block;
+}
+/* Make artist cards feel clickable now that they're not links */
+.genre-artist-card{
+    cursor:pointer;
+}

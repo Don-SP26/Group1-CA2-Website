@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Genres</title>
+
+    <!-- Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../CSS/mainstyle.css">
+    <link rel="stylesheet" href="../CSS/genre.css">
+
+    <!-- JavaScript -->
+    <script src="../JavaScript/artistModal.js" defer></script>
+    <script src="../JavaScript/dropdown.js" defer></script>
+
+</head>
+<body>
+<!-- Navigation -->
+    <nav class="main-nav">
+        <div class="logo">
+        <a href="index.html">
+            <img src="../Images/LogoDark-removebg.png" alt="Logo">
+        </a>
+    </div>
+
+    <div class="nav-explore">
+        <button class="explore-btn">
+            Explore
+            <span class="chevron">▾</span>
+        </button>
+
+        <div class="explore-menu">
+                <a href="index.html">Home</a>
+                <a href="genre.html">Genres</a>
+                <a href="renoAlbums.html">Renowned Albums</a>
+                <a href="renoSingles.html">Renowned Singles</a>
+                <a href="renoArtists.html">Renowned Artists</a>
+                <a href="renoMV.html">Renowned Music Videos</a>
+                <a href="vocaloids.html">Vocaloids</a>
+                <a href="history.html">History of Music</a>
+                <a href="musicProd.html">Mordern Music Production</a>
+                <a href="aifuture.html">AI and the Future of Music</a>
+                <a href="forums.html">Forums</a>
+                <a href="about.html">Who We Are</a>
+            </div>
+    </div>
+</nav>
+
+<section>
+<!-- Genre Banner -->
+<section class="genre-banner" style="background-image:url('../Images/Twilight_in_the_Wilderness_by_Frederic_Edwin_Church_\(3\).jpg');">
+    <div class="genre-banner-overlay"></div>
+    <div class="genre-banner-content">
+        <h1>Country</h1>
+    </div>
+</section>
+
+<!-- History & Description -->
+<section class="genre-info">
+    <div class="genre-info-block">
+        <h2>A Brief History</h2>
+        <p>
+            Country music originated in the rural southern United States during the 
+            early 20th century, drawing inspiration from Appalachian folk music, traditional 
+            ballads, gospel, blues, and Irish and Scottish musical traditions. In the 1920s, 
+            the first commercial country recordings helped popularize the genre, while radio 
+            programs such as the Grand Ole Opry established Nashville, Tennessee, as the heart 
+            of country music. Over the decades, country evolved into styles such as honky-tonk, 
+            bluegrass, outlaw country, and contemporary country, with artists like Johnny Cash, 
+            Dolly Parton, Garth Brooks, and Luke Combs helping bring the genre to audiences 
+            worldwide.
+        </p>
+    </div>
+
+    <div class="genre-info-block">
+        <h2>What Makes It Unique</h2>
+        <p>
+            What makes country music unique is its emphasis on storytelling and 
+            emotional honesty. Many songs explore everyday experiences such as love, family, 
+            heartbreak, hard work, faith, and life in rural communities. Traditional country 
+            music is known for its use of acoustic guitar, fiddle, banjo, steel guitar, and 
+            harmonica, although modern country often blends these instruments with elements of 
+            rock and pop.
+        </p>
+    </div>
+</section>
+
+<section class="genre-info">
+    <div class="genre-info-block">
+        <h2>Why It's Popular</h2>
+        <p>
+            Country music has a strong sense of community and culture. 
+            Festivals, concerts, and traditions like line dancing create shared 
+            experiences that bring fans together. Combined with artists who often 
+            write about real-life experiences, this authenticity has helped country 
+            music remain one of the most enduring and popular genres in the world.
+        </p>
+    </div>
+</section>
+
+<section class="genre-artists">
+    <h2 class="genre-artists-title">Recommended Artists</h2>
+
+    <div class="genre-artists-grid">
+
+    <div class="genre-artist-card"
+        data-name="Chris Stapleton"
+        data-image="../Images/Chris_Stapleton.jpg"
+        data-description="Chris Stapleton is highly recommended because he 
+        combines traditional country roots with soulful blues, Southern rock, 
+        and powerful storytelling. His rich, gritty voice and emotionally honest lyrics 
+        bring authenticity to every song, whether it's a heartfelt ballad or an energetic anthem."
+        data-songs='[
+            {"title":"You Should Probably Leave","embed":"https://open.spotify.com/embed/track/2UikqkwBv7aIvlixeVXHWt"},
+            {"title":"White Horse","embed":"https://open.spotify.com/embed/track/1DgtQlVNotingln271ZKCx"},
+            {"title":"Tennessee Whiskey","embed":"https://open.spotify.com/embed/track/3fqwjXwUGN6vbzIwvyFMhx"}
+        ]'>
+        <img src="../Images/Chris_Stapleton.jpg" alt="Chris Stapleton">
+        <h4>Chris Stapleton</h4>
+    </div>
+
+    <div class="genre-artist-card"
+        data-name="Dolly Parton"
+        data-image="../Images/Young-Dolly-Parton.jpg"
+        data-description="Dolly Parton is highly recommended because she is one of country 
+        music's most iconic singer-songwriters, celebrated for her heartfelt storytelling, 
+        memorable melodies, and warm, expressive voice. Her music blends traditional country 
+        with pop and folk influences, covering themes of love, perseverance, family, and personal
+        growth."
+        data-songs='[
+            {"title":"9 to 5","embed":"https://open.spotify.com/embed/track/4w3tQBXhn5345eUXDGBWZG"},
+            {"title":"Jolene","embed":"https://open.spotify.com/embed/track/5fdhThPDe6jQQDqCyWrdAn"},
+            {"title":"I Will Always Love You","embed":"https://open.spotify.com/embed/track/77bNe6jYY8yHdP7orXrz5I"}
+        ]'>
+        <img src="../Images/Young-Dolly-Parton.jpg" alt="Dolly Parton">
+        <h4>Daft Punk</h4>
+    </div>
+
+    <div class="genre-artist-card"
+        data-name="Johnny Cash"
+        data-image="../Images/Johnny_Cash.jpg"
+        data-description="Johnny Cash is widely recommended because he is one of country 
+        music's most influential and enduring artists, known for his deep baritone voice, 
+        honest storytelling, and timeless songwriting. Blending country, folk, rockabilly, 
+        and gospel, his music explores themes of love, hardship, redemption, and resilience, 
+        making it relatable across generations."
+        data-songs='[
+            {"title":"Folsom Prison Blues","embed":"https://open.spotify.com/embed/track/2fDHuS1PTkHBbCWWZF1ph9"},
+            {"title":"(Ghost) Riders In The Sky","embed":"https://open.spotify.com/embed/track/3ST1SVHTxxiGodhUeASN3h"},
+            {"title":"Hurt","embed":"https://open.spotify.com/embed/track/28cnXtME493VX9NOw9cIUh"}
+        ]'>
+        <img src="../Images/Johnny_Cash.jpg" alt="Johnny Cash">
+        <h4>Johnny Cash</h4>
+    </div>
+
+    </div>
+</section>
+</section>
+
+<section>
+<!-- Genre Banner -->
+<section class="genre-banner" style="background-image:url('../Images/Tomorrowland_2026_Mainstage_Night_Show_Boom_Belgium.jpg');">
+    <div class="genre-banner-overlay"></div>
+    <div class="genre-banner-content">
+        <h1>EDM</h1>
+    </div>
+</section>
+
+<!-- History & Description -->
+<section class="genre-info">
+    <div class="genre-info-block">
+        <h2>A Brief History</h2>
+        <p>
+            Electronic Dance Music (EDM) is a broad genre of music 
+            created primarily using electronic instruments, synthesizers, 
+            drum machines, and computers. Its roots can be traced back to the 
+            late 1970s and early 1980s, evolving from disco into genres such 
+            as house in Chicago and techno in Detroit. During the 1990s, EDM 
+            spread across Europe through rave culture, and by the 2010s it had 
+            become a global phenomenon thanks to artists like Avicii, Calvin Harris, 
+            Martin Garrix, and Skrillex, as well as major festivals such as Tomorrowland 
+            and Ultra Music Festival.
+        </p>
+    </div>
+
+    <div class="genre-info-block">
+        <h2>What Makes It Unique</h2>
+        <p>
+            EDM focuses on rhythm and electronic production rather than traditional instruments. 
+            Most songs feature a steady dance beat, powerful basslines, synthesized melodies, and the 
+            signature "build-up and drop" structure that creates excitement on the 
+            dance floor. EDM is also designed for live DJ performances, where tracks 
+            are mixed seamlessly to create a continuous musical experience.
+        </p>
+    </div>
+</section>
+
+<section class="genre-info">
+    <div class="genre-info-block">
+        <h2>Why It's Popular</h2>
+        <p>
+            EDM's popularity comes from its accessibility and versatility. 
+            The music often relies on memorable melodies and powerful rhythms 
+            rather than complex lyrics, making it enjoyable across different languages 
+            and cultures. Advances in music production software have also made it easier 
+            for aspiring producers to create professional-quality tracks, allowing the genre 
+            to grow rapidly worldwide.
+        </p>
+    </div>
+</section>
+
+<section class="genre-artists">
+    <h2 class="genre-artists-title">Recommended Artists</h2>
+
+    <div class="genre-artists-grid">
+
+    <div class="genre-artist-card"
+        data-name="Avicii"
+        data-image="../Images/Avicii.png"
+        data-description="Avicii is widely recommended because he helped bring 
+        electronic dance music into the mainstream by combining uplifting melodies with 
+        elements of folk, country, and pop. His music is known for its emotional storytelling, 
+        catchy hooks, and euphoric energy, making it accessible to both EDM fans and general 
+        audiences."
+        data-songs='[
+            {"title":"Levels","embed":"https://open.spotify.com/embed/track/5UqCQaDshqbIk3pkhy4Pjg"},
+            {"title":"The Nights","embed":"https://open.spotify.com/embed/track/0ct6r3EGTcMLPtrXHDvVjc"},
+            {"title":"Waiting for Love","embed":"https://open.spotify.com/embed/track/2P4OICZRVAQcYAV2JReRfj"}
+        ]'>
+        <img src="../Images/Avicii.png" alt="Gesaffelstein">
+        <h4>Avicii</h4>
+    </div>
+
+    <div class="genre-artist-card"
+        data-name="Daft Punk"
+        data-image="../Images/DaftPunk.jpg"
+        data-description="Daft Punk is widely recommended because they 
+        transformed electronic music into something that appeals to both 
+        casual listeners and dedicated music fans. By blending house, disco, funk, rock, 
+        and pop with innovative production techniques, the French duo created timeless tracks 
+        that are both energetic and emotionally engaging."
+        data-songs='[
+            {"title":"One More Time","embed":"https://open.spotify.com/embed/track/0DiWol3AO6WpXZgp0goxAV"},
+            {"title":"Get Lucky","embed":"https://open.spotify.com/embed/track/2Foc5Q5nqNiosCNqttzHof"},
+            {"title":"Da Funk","embed":"https://open.spotify.com/embed/track/0MyY4WcN7DIfbSmp5yej5z"}
+        ]'>
+        <img src="../Images/DaftPunk.jpg" alt="Daft Punk">
+        <h4>Daft Punk</h4>
+    </div>
+
+    <div class="genre-artist-card"
+        data-name="Gesaffelstein"
+        data-image="../Images/Gesaffelstein.jpeg"
+        data-description="Gesaffelstein is recommended for listeners who enjoy darker, more 
+        cinematic electronic music. Known for his heavy industrial sound, distorted synthesizers, 
+        and minimalist production, the French producer creates music that feels intense, 
+        futuristic, and atmospheric. Rather than focusing on uplifting melodies, Gesaffelstein 
+        builds tension through powerful basslines, sharp rhythms, and haunting textures, making 
+        his work stand out in genres like electro, techno, and industrial."
+        data-songs='[
+            {"title":"Lost In The Fire (ft. The Weeknd)","embed":"https://open.spotify.com/embed/track/2vXKRlJBXyOcvZYTdNeckS"},
+            {"title":"Opr","embed":"https://open.spotify.com/embed/track/12Ypr3PCVJ2i7Uwz93q1Vl"},
+            {"title":"Pursuit","embed":"https://open.spotify.com/embed/track/2jJIxT6WAIVWzDo3Ou53Q0"}
+        ]'>
+        <img src="../Images/Gesaffelstein.jpeg" alt="Gesaffelstein">
+        <h4>Gesaffelstein</h4>
+    </div>
+
+    </div>
+</section>
+</section>
+
+
+
+
+
+<!-- Artist Modal (reused across every genre page) -->
+<div class="artist-modal-backdrop">
+    <div class="artist-modal">
+        <button class="artist-modal-close" aria-label="Close">&times;</button>
+
+        <div class="artist-modal-top">
+
+            <div class="artist-modal-image-wrapper">
+                <img class="artist-modal-image" src="" alt="">
+            </div>
+
+            <div class="artist-modal-info">
+                <h3 class="artist-modal-name"></h3>
+                <p class="artist-modal-description"></p>
+
+                <div class="artist-modal-songs">
+                    <h5>Songs</h5>
+                    <ul class="artist-modal-song-list"></ul>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="artist-modal-player-wrapper">
+            <iframe
+                class="artist-modal-player"
+                src=""
+                frameborder="0"
+                allow="encrypted-media">
+            </iframe>
+        </div>
+
+    </div>
+</div>
+    
+<footer class="site-footer">
+    <div class="footer-top">
+        <div class="footer-brand">
+            <img src="../Images/LogoDark-removebg.png" alt="Logo" class="footer-logo">
+            <p>Discover something new.</p>
+        </div>
+
+        <div class="footer-links">
+            <div class="footer-col">
+                <h5>Discover</h5>
+                <a href="index.html">Home</a>
+                <a href="genre.html">Genres</a>
+                <a href="vocaloids.html">Vocaloids</a>
+                <a href="forums.html">Forums</a>
+            </div>
+
+        <div class="footer-links">
+            <div class="footer-col">
+                <h5>Renowned</h5>
+                <a href="renoAlbums.html">Renowned Albums</a>
+                <a href="renoSingles.html">Renowned Singles</a>
+                <a href="renoArtists.html">Renowned Artists</a>
+                <a href="renoMV.html">Renowned Music Videos</a>
+            </div>
+
+            <div class="footer-col">
+                <h5>History</h5>
+                <a href="history.html">History of Music</a>
+                <a href="musicProd.html">Mordern Music Production</a>
+                <a href="aifuture.html">AI and the Future of Music</a>
+            </div>
+
+            <div class="footer-col">
+                <h5>About Us</h5>
+                <a href="about.html">Who We Are</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <p>&copy; Discovery. All rights reserved.</p>
+    </div>
+</footer>
+
+</body>
+</html>
