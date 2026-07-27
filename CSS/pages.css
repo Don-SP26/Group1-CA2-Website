@@ -1,0 +1,184 @@
+/* =========================================
+   Universal Layout Styles for New Pages
+========================================= */
+
+section {
+    max-width: 1200px;
+    margin: 0 auto 80px auto;
+    padding: 0 40px;
+    color: white;
+}
+
+img {
+    max-width: 100%;
+    border-radius: 12px;
+    object-fit: cover;
+}
+
+/* =========================================
+   Vocaloids Layout
+========================================= */
+.vocaloid-hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+}
+
+.vocaloid-text {
+    flex: 1;
+}
+
+.vocaloid-text h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.vocaloid-text p {
+    color: #ccc;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.vocaloid-image-stack {
+    flex: 1;
+    position: relative;
+    min-height: 400px;
+}
+
+.vocaloid-image-stack .img-back {
+    width: 80%;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.vocaloid-image-stack .img-front {
+    width: 60%;
+    position: absolute;
+    bottom: -30px;
+    left: 20px;
+    box-shadow: -10px 10px 30px rgba(0,0,0,0.8);
+}
+
+.vocaloid-gallery {
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+    margin-top: 100px;
+}
+
+.gallery-card {
+    flex: 1;
+    background: #1a1a1a;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+/* =========================================
+   History Layout
+========================================= */
+.history-header {
+    margin-bottom: 40px;
+}
+
+.history-header p {
+    color: #ccc;
+    max-width: 800px;
+    line-height: 1.6;
+    margin-top: 15px;
+}
+
+.history-main-feature {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+}
+
+.history-main-feature .main-img {
+    flex: 2;
+}
+
+.history-main-feature .main-lines {
+    flex: 1;
+}
+
+.history-main-feature .main-lines hr, 
+.sub-lines hr {
+    border-color: #444;
+    margin: 15px 0;
+}
+
+.history-sub-grid {
+    display: flex;
+    gap: 40px;
+    margin-top: 60px;
+}
+
+.sub-card {
+    flex: 1;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.sub-card .sub-img {
+    flex: 1;
+}
+
+.sub-card .sub-lines {
+    flex: 1;
+}
+
+/* =========================================
+   Modern Music Prod (Zig-Zag) Layout
+========================================= */
+.zz-row {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    margin-bottom: 80px;
+}
+
+.zz-row.reverse {
+    flex-direction: row-reverse;
+}
+
+.zz-text {
+    flex: 1;
+}
+
+.zz-image {
+    flex: 1;
+}
+
+.zz-text h2 {
+    font-size: 2.2rem;
+    margin-bottom: 10px;
+}
+
+.accent-line {
+    width: 50px;
+    height: 3px;
+    background-color: #28a745; /* Green accent from wireframe */
+    margin-bottom: 20px;
+}
+
+.zz-text p {
+    color: #ccc;
+    line-height: 1.6;
+}
+
+/* =========================================
+   Interactivity (Scroll Reveal) Styles
+========================================= */
+.reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
