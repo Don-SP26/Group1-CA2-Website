@@ -1,0 +1,290 @@
+/* PAGE 10 CSS STYLING */ 
+/* Remove box background and border but keep spacing */
+.box {
+    background: #1c1c1c;
+    border: none !important; /* removes Bootstrap’s white border */
+}
+
+.pros {
+    background: #95c192;
+    border: 2px dashed #777777; /* Bootstrap has no dashed-border utility */
+}
+
+.cons {
+    background: #ca9c9c;
+    border: 2px dashed #777; /* Bootstrap has no dashed-border utility */
+}
+
+.pros ul li, .cons ul li {
+  color: #cccccc
+}
+
+.ai-list strong {
+    color: #788d80; /* muted highlight, custom color */
+}
+
+.future-list strong {
+    color: #788d80; /* bright highlight, custom color */
+}
+
+.callout {
+    background: #bbe1df;
+    --bs-border-color: #00d9ff; /* same !important issue as .box above */
+    line-height: 1.4; /* not on Bootstrap's lh-* scale (1, 1.25, 1.5, 2) */
+}
+
+h2 {
+  color: #ffffff; /* dark blue for headings */
+}
+
+p {
+  color: #04ef00; /* softer grey for paragraphs */
+}
+
+ul li {
+  color: #a9a3ab; /* darker text for list items */
+}
+
+
+
+/* PAGE 11 CSS STYLING */ 
+/* Custom-only styles: colors, hover states, and values not on Bootstrap's scale */
+.forum-layout {
+  max-width: 1200px; /* not a Bootstrap container breakpoint */
+}
+
+.posts-section {
+  max-height: 80vh; /* Bootstrap has no vh-based utility besides vh-100 */
+}
+
+.forum-title {
+  color: #ffcc00;
+}
+
+.forum-subtitle {
+  color: #ccc;
+}
+
+.post {
+  background: #1c1c1c;
+}
+
+.post h4 {
+  color: #ffcc00;
+}
+
+.post p {
+  font-size: .9rem; /* not on Bootstrap's fs-* scale */
+  color: #ccc;
+}
+
+.post-actions button {
+  background: #1c1c1c;
+  color: #f5f5f5;
+}
+
+.post-actions button:hover {
+  background: #333; /* Bootstrap has no utility for custom hover colors */
+}
+
+.comments {
+  --bs-border-color: #444; /* border-start utility sets border-color with !important, so override the variable it reads from */
+}
+
+.share-section {
+  background: #222;
+  border-radius: 12px; /* not on Bootstrap's rounded-* scale */
+  position: sticky;
+  top: 20px; /* Bootstrap's sticky-top utility forces top:0, so this stays custom */
+  height: fit-content; /* no Bootstrap utility for fit-content */
+}
+
+.share-section .form-control {
+  background: #1c1c1c;
+  color: #f5f5f5;
+  border-color: #555; /* form-control's border-color isn't !important, so a direct override works here */
+}
+
+.share-section .form-control:focus {
+  background: #1c1c1c;
+  color: #f5f5f5;
+}
+
+#charCount {
+  font-size: 0.8rem; /* smaller than Bootstrap's smallest fs-6 (1rem) */
+  color: #ccc;
+}
+
+#formMessage {
+  font-size: 0.9rem; /* not on Bootstrap's fs-* scale */
+}
+
+/* Verification Modal */
+.modal-content {
+  border-radius: 12px; /* not on Bootstrap's rounded-* scale */
+}
+
+.modal-title {
+  color: #ffcc00;
+}
+
+#captchaMessage {
+  font-size: 0.9rem; /* not on Bootstrap's fs-* scale */
+}
+
+/* Share form submit button — custom brand color, so kept fully styled here */
+.form-actions button {
+  background: #ffcc00;
+  color: #000;
+  padding: 10px 20px; /* not on Bootstrap's spacing scale */
+  border-radius: 8px; /* not on Bootstrap's rounded-* scale */
+  transition: background .3s ease; /* no Bootstrap utility for a custom transition duration */
+}
+
+.form-actions button:hover {
+  background: #e6b800;
+}
+
+/* Make form labels visible on dark background */
+.share-section .form-label {
+  color: #ffcc00; /* bright gold for visibility */
+  font-weight: 600;
+}
+
+/* Input text colour */
+.share-section .form-control {
+  background: #1c1c1c;
+  color: #f5f5f5; /* light text inside input */
+  border-color: #555;
+}
+
+/* Placeholder text colour */
+.share-section .form-control::placeholder {
+  color: #aaa; /* lighter grey so it's readable */
+}
+
+/* Forum Tabs */
+.forum-tabs {
+  background: #1c1c1c;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.forum-tab {
+  background: transparent;
+  border: none;
+  color: #f5f5f5;
+  font-weight: 600;
+  padding: 8px 16px;
+  border-radius: 6px;
+  transition: background .3s ease, color .3s ease;
+  cursor: pointer;
+}
+
+.forum-tab:hover {
+  background: #333;
+  color: #ffcc00;
+}
+
+.forum-tab.active {
+  background: #ffcc00;
+  color: #000;
+}
+
+/* Hide scrollbar but keep scrolling */
+.posts-section {
+  scrollbar-width: none; /* Firefox */
+}
+
+.posts-section::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Edge */
+}
+
+
+
+/* PAGE 12 CSS STYLING */
+/* Custom-only styles: colors, hover/transform effects, and values not on Bootstrap's scale */
+.about-section {
+  max-width: 1200px; /* keep for overall width control */
+}
+
+.team-card {
+  background: #1c1c1c;
+  --bs-border-color: #555;
+  color: #f5f5f5;
+  transition: transform .3s ease, box-shadow .3s ease;
+  display: flex;
+  flex-direction: column;   /* stack image row + reason text vertically */
+  height: 100%;             /* equal height cards */
+}
+
+.team-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+}
+
+.team-card-top img {
+  width: 120px;
+  height: 120px;      /* square crop */
+  flex-shrink: 0;
+  object-position: center;
+}
+
+.song-info {
+  min-width: 0;        /* prevent overflow */
+}
+
+.song-info em {
+  color: #ffcc00;
+}
+
+.song-reason {
+  --bs-border-color: #444;
+  margin-top: auto;    /* pins reason text to bottom */
+}
+
+.team-card h3 {
+  font-size: 1.2rem; /* custom size */
+}
+
+.team-card p {
+  font-size: .9rem;
+  color: #ccc;
+}
+
+.our-story h2 {
+  font-size: 1.8rem;
+}
+
+.our-story {
+  background: linear-gradient(to right, #ff99cc, #66ccff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+
+.music-player {
+  background: #222;
+  border-radius: 12px;
+}
+
+.progress-bar {
+  width: 80%;
+  height: 8px;
+  background: #444;
+}
+
+.progress {
+  background: #f5f5f5;
+}
+
+.buttons button {
+  background: #1c1c1c;
+  color: #f5f5f5;
+  font-size: 1.2rem;
+  transition: background .3s ease;
+}
+
+.buttons button:hover {
+  background: #333;
+}
