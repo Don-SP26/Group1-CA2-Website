@@ -58,133 +58,160 @@
 <main>
     <section class="container my-5">
 
-    <h1 class="text-center page-title">Renowned Music Videos</h1>
-    <p class="text-center page-subtitle">
-        Iconic music videos that changed the music industry.
-    </p>
+        <h1 class="text-center page-title">Renowned Music Videos</h1>
+        <p class="text-center page-subtitle">
+            Iconic music videos that changed the music industry.
+        </p>
 
-    <div class="card shadow-lg p-4">
+        <div class="card shadow-lg p-4 text-dark">
 
-        <div class="row">
+            <!-- Top Row: Thumbnail on Left, Video Info + "Why It's Iconic" on Right -->
+            <div class="row g-4 align-items-center">
 
-            <!-- Left Side -->
-            <div class="video-thumbnail">
-                <a href="https://www.youtube.com/watch?v=sOnqjkJTMaA"target="_blank">
+                <!-- Left Side: Image (col-md-5) -->
+                <div class="col-md-5">
+                    <div class="video-thumbnail">
+                        <a href="https://www.youtube.com/watch?v=sOnqjkJTMaA" target="_blank">
+                            <img src="../Images/6Thriller.jpg" class="img-fluid rounded thumbnail" alt="Michael Jackson - Thriller">
+                        </a>
+                    </div>
+                </div>
 
-        <img src="../Images/6Thriller.jpg"
-             class="img-fluid rounded" alt="Michael Jackson - Thriller">
-    </a>
-    </div>
+                <!-- Right Side: Song Info + Why It's Iconic (col-md-7) -->
+                <div class="col-md-7">
+                    <h2>Thriller</h2>
+                    <h5>Michael Jackson</h5>
+                    <p class="mb-2"><strong>Released:</strong> 1983</p>
 
-            <!-- Right Side -->
-            <div class="col-md-7">
+                    <div class="mb-3">
+                        <span class="badge bg-danger">Pop</span>
+                        <span class="badge bg-dark">Horror</span>
+                    </div>
 
-                <h2>Thriller</h2>
+                    <button class="btn btn-outline-dark mb-3" onclick="toggleBTS('bts1')">
+                        Behind The Scenes ▼
+                    </button>
 
-                <h5>Michael Jackson</h5>
+                    <div class="bg-light p-3 rounded border mt-2">
+                        <h4 class="h5 font-weight-bold">⭐ Why It's Iconic</h4>
+                        <p class="mb-0 small text-muted">
+                            Thriller changed the way people viewed music videos. Instead of a simple performance, it told a cinematic horror story complete with professional acting, choreography, costumes, and special effects.
+                        </p>
+                    </div>
+                </div>
 
+            </div>
+
+            <hr class="my-4">
+
+            <!-- Awards & Impact Section -->
+            <div class="row">
+                <div class="col-md-6">
+                    <h3>🏆 Awards</h3>
+                    <ul>
+                        <li>MTV Video Music Awards</li>
+                        <li>Grammy Hall of Fame</li>
+                        <li>Library of Congress National Film Registry</li>
+                    </ul>
+                </div>
+
+                <div class="col-md-6">
+                    <h3>🌍 Cultural Impact</h3>
+                    <ul>
+                        <li>Popularised cinematic music videos</li>
+                        <li>Famous zombie dance worldwide</li>
+                        <li>Inspired countless artists and filmmakers</li>
+                        <li>Still celebrated every Halloween</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Hidden BTS Section -->
+            <div id="bts1" style="display:none;">
+                <hr class="my-4">
+                <h3>🎬 Behind The Scenes</h3>
                 <p>
-                    <strong>Released:</strong> 1983
+                    Thriller was directed by John Landis and took several days to film. The production used professional movie makeup artists, elaborate costumes, and a large team of dancers. With a budget of around $900,000, it was one of the most expensive music videos ever made at that time.
                 </p>
-
-                <span class="badge bg-danger">Pop</span>
-                <span class="badge bg-dark">Horror</span>
-
-                <hr>
-
-                <button class="btn btn-outline-dark"
-                        onclick="toggleBTS()">
-                    Behind The Scenes ▼
-                </button>
-
             </div>
 
         </div>
 
-        <hr>
+    <!-- Janet Jackson - Rhythm Nation Card -->
+        <div class="card shadow-lg p-4 text-dark">
 
-        <!-- Why Iconic -->
-        <div class="row">
+            <!-- Top Row: Thumbnail on Left, Video Info + "Why It's Iconic" on Right -->
+            <div class="row g-4 align-items-center">
 
-            <div class="col-md-12">
+                <!-- Left Side: Image (col-md-5) -->
+                <div class="col-md-5">
+                    <div class="video-thumbnail">
+                        <a href="https://www.youtube.com/watch?v=sOnqjkJTMaA" target="_blank">
+                            <img src="../Images/6RhythmNation.png" class="img-fluid rounded thumbnail" alt="Janet Jackson Rhythm Nation">
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Right Side: Song Info + Why It's Iconic (col-md-7) -->
+                <div class="col-md-7">
+                    <h2>Rhythm Nation</h2>
+                    <h5>Janet Jackson</h5>
+                    <p class="mb-2"><strong>Released:</strong> 1989</p>
 
-                <h3>⭐ Why It's Iconic</h3>
+                    <div class="mb-3">
+                        <span class="badge bg-danger">Pop</span>
+                        <span class="badge bg-dark">Dance</span>
+                    </div>
 
+                    <button class="btn btn-outline-dark mb-3" onclick="toggleBTS('bts2')">
+                        Behind The Scenes ▼
+                    </button>
+
+                    <div class="bg-light p-3 rounded border mt-2">
+                        <h4 class="h5 font-weight-bold">⭐ Why It's Iconic</h4>
+                        <p class="mb-0 small text-muted">
+                            Rhythm Nation is one of Janet Jackson’s most famous videos. Its bold black-and-white style, 
+                            powerful choreography, and social message made it a standout pop classic.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+
+            <hr class="my-4">
+
+            <!-- Awards & Impact Section -->
+            <div class="row">
+                <div class="col-md-6">
+                    <h3>🏆 Awards</h3>
+                    <ul>
+                        <li>MTV Video Music Award recognition for choreography</li>
+                        <li>Grammy-winning Rhythm Nation 1814 era</li>
+                        <li>One of Janet Jackson’s most celebrated music videos</li>
+                    </ul>
+                </div>
+
+                <div class="col-md-6">
+                    <h3>🌍 Cultural Impact</h3>
+                    <ul>
+                        <li>Influenced pop music videos with its cinematic style</li>
+                        <li>Made Janet Jackson a major visual icon in music</li>
+                        <li>Still remembered for its choreography and social message</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Hidden BTS Section -->
+            <div id="bts2" style="display:none;">
+                <hr class="my-4">
+                <h3>🎬 Behind The Scenes</h3>
                 <p>
-                    Thriller changed the way people viewed music videos.
-                    Instead of a simple performance, it told a cinematic
-                    horror story complete with professional acting,
-                    choreography, costumes and special effects.
-                    It inspired future artists to create larger-scale
-                    productions.
-                </p>
-
+                 The video was filmed in black and white in a warehouse-like setting to match its serious tone and message of unity.
+                 </p>
             </div>
 
         </div>
-
-        <hr>
-
-        <!-- Awards -->
-        <div class="row">
-
-            <div class="col-md-6">
-
-                <h3>🏆 Awards</h3>
-
-                <ul>
-
-                    <li>MTV Video Music Awards</li>
-
-                    <li>Grammy Hall of Fame</li>
-
-                    <li>Library of Congress National Film Registry</li>
-
-                </ul>
-
-            </div>
-
-            <div class="col-md-6">
-
-                <h3>🌍 Cultural Impact</h3>
-
-                <ul>
-
-                    <li>Popularised cinematic music videos</li>
-
-                    <li>Famous zombie dance worldwide</li>
-
-                    <li>Inspired countless artists and filmmakers</li>
-
-                    <li>Still celebrated every Halloween</li>
-
-                </ul>
-
-            </div>
-
-        </div>
-
-        <hr>
-
-        <!-- Hidden Section -->
-
-        <div id="bts" style="display:none;">
-
-            <h3>🎬 Behind The Scenes</h3>
-
-            <p>
-                Thriller was directed by John Landis and took several
-                days to film. The production used professional movie
-                makeup artists, elaborate costumes and a large team of
-                dancers. With a budget of around $900,000, it was one of
-                the most expensive music videos ever made at that time.
-            </p>
-
-        </div>
-
-    </div>
-
-</section>
+    </section>
 </main>
 
 
@@ -229,7 +256,7 @@
     </div>
 
     <div class="footer-bottom">
-        <p>&copy; 2026 YourSiteName. All rights reserved.</p>
+        <p>&copy; Discovery. All rights reserved.</p>
     </div>
 </footer>
 
