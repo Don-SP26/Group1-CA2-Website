@@ -7,6 +7,7 @@
 
     <!-- Bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- CSS -->
     <link rel="stylesheet" href="../CSS/mainstyle.css">
@@ -15,6 +16,7 @@
     <!-- JavaScript -->
     <script src="../JavaScript/artistModal.js" defer></script>
     <script src="../JavaScript/dropdown.js" defer></script>
+    <script src="../JavaScript/toastNotify.js" defer></script>
 
 </head>
 <body>
@@ -33,22 +35,420 @@
         </button>
 
         <div class="explore-menu">
-            <a href="index.html">Home</a>
-            <a href="2-genre.html">Genres</a>
-            <a href="3-renoAlbums.html">Renowned Albums</a>
-            <a href="4-renoSingles.html">Renowned Singles</a>
-            <a href="5-renoArtists.html">Renowned Artists</a>
-            <a href="6-renoMV.html">Renowned Music Videos</a>
-            <a href="7-vocaloids.html">Vocaloids</a>
-            <a href="8-history.html">History of Music</a>
-            <a href="9-musicProd.html">Mordern Music Production</a>
-            <a href="10-aifuture.html">AI and the Future of Music</a>
-            <a href="11-forums.html">Forums</a>
-            <a href="12-about.html">Who We Are</a>
-        </div>
+                <a href="index.html">Home</a>
+                <a href="2-genre.html">Genres</a>
+                <a href="3-renoAlbums.html">Renowned Albums</a>
+                <a href="4-renoSingles.html">Renowned Singles</a>
+                <a href="5-renoArtists.html">Renowned Artists</a>
+                <a href="6-renoMV.html">Renowned Music Videos</a>
+                <a href="7-vocaloids.html">Vocaloids</a>
+                <a href="8-history.html">History of Music</a>
+                <a href="9-musicProd.html">Mordern Music Production</a>
+                <a href="10-aifuture.html">AI and the Future of Music</a>
+                <a href="11-forums.html">Forums</a>
+                <a href="12-about.html">Who We Are</a>
+            </div>
     </div>
 </nav>
 
+<!-- Classical -->
+<section>
+<!-- Genre Banner -->
+<section class="genre-banner" style="background-image:url('../Images/Classical-Music-Banner.jpg');">
+    <div class="genre-banner-overlay"></div>
+    <div class="genre-banner-content">
+        <h1>Classical</h1>
+    </div>
+</section>
+
+<!-- History & Description -->
+<section class="genre-info">
+    <div class="genre-info-block">
+        <h2>A Brief History</h2>
+        <p>
+            Classical music has its roots in European art music, dating back to the medieval 
+            period, but it flourished between the 17th and 19th centuries. It evolved through
+            several eras, including the Baroque, Classical, and Romantic periods, each 
+            introducing new styles, techniques, and forms. Composers such as Johann Sebastian 
+            Bach, Wolfgang Amadeus Mozart, Ludwig van Beethoven, and Pyotr Ilyich Tchaikovsky 
+            helped shape the genre, creating works that continue to influence music today. 
+            Although it originated centuries ago, classical music remains an important part of 
+            concert halls, films, television, and video games.
+        </p>
+    </div>
+
+    <div class="genre-info-block">
+        <h2>What Makes It Unique</h2>
+        <p>
+            What makes classical music unique is its focus on orchestral composition, musical 
+            complexity, and emotional expression. Rather than relying on lyrics, it tells stories 
+            and conveys emotions through melody, harmony, dynamics, and carefully structured 
+            compositions. Classical music also features a wide variety of instruments, from solo 
+            piano and violin to full symphony orchestras, allowing composers to create rich and 
+            expressive soundscapes.
+        </p>
+    </div>
+</section>
+
+<section class="genre-info">
+    <div class="genre-info-block">
+        <h2>Why It's Popular</h2>
+        <p>
+            Despite being so old, Classical music remains popular because of its timeless 
+            beauty and versatility. Many of its melodies are instantly recognizable, while 
+            its emotional depth makes it suitable for concerts, education, film scores, and 
+            everyday listening. Its influence can also be heard in many modern genres, making 
+            classical music one of the most enduring and influential forms of music in history.
+        </p>
+    </div>
+</section>
+
+
+<section class="genre-artists">
+    <h2 class="genre-artists-title">Recommended Composers</h2>
+
+    <div class="genre-artists-grid">
+
+    <div class="genre-artist-card"
+        data-name="Ludwig van Beethoven"
+        data-image="../Images/Beethoven.jpg"
+        data-description="Ludwig van Beethoven was a German composer and pianist who is widely 
+        regarded as one of the greatest composers in the history of classical music. Born in Bonn 
+        in 1770, Beethoven became a bridge between the Classical era of Wolfgang Amadeus Mozart 
+        and Joseph Haydn and the emotional, expressive Romantic era that followed. His music 
+        transformed classical composition by expanding its emotional depth, technical complexity, 
+        and dramatic power, influencing virtually every composer who came after him. \n\n
+
+        What makes Beethoven unique is his ability to express profound human emotion through 
+        music. His works range from moments of quiet intimacy to explosive triumph, often taking 
+        listeners on an emotional journey. He expanded the scale of symphonies, sonatas, and 
+        concertos, proving that instrumental music could tell powerful stories and evoke deep 
+        feelings without the need for words. His compositions are celebrated for their memorable 
+        melodies, bold harmonies, and innovative structures, making them timeless masterpieces 
+        that continue to inspire audiences more than two centuries later. \n\n
+
+        One of the most remarkable aspects of Beethoven's life was that he gradually lost his 
+        hearing, beginning in his late twenties. Despite eventually becoming almost completely 
+        deaf, he continued composing some of his greatest works, including his final piano 
+        sonatas, the Missa Solemnis, and the legendary Symphony No. 9. His perseverance in the 
+        face of adversity has made him a symbol of resilience and artistic determination. \n\n
+
+        Throughout his career, Beethoven composed nine symphonies, 32 piano sonatas, 16 string 
+        quartets, five piano concertos, one opera, and numerous chamber works. His Symphony No. 5, 
+        with its iconic four-note opening motif, is one of the most recognizable pieces of music 
+        ever written, while Symphony No. 9, featuring the famous Ode to Joy, is considered one of 
+        the greatest achievements in Western music. \n\n 
+        
+        Beethoven is often recommended because his music captures the full spectrum of the human 
+        experience. From sorrow and struggle to hope, joy, and triumph. His influence on classical 
+        music is unmatched, and his compositions remain cornerstones of concert repertoires 
+        around the world. Whether you're discovering classical music for the first time or 
+        revisiting its greatest masterpieces, Beethoven's works offer some of the most powerful, 
+        beautiful, and enduring music ever written."
+        data-songs='[
+            {"title":"Fur Elise","embed":"https://open.spotify.com/embed/track/3zLTPuucd3e6TxZnu2dlVS"},
+                        {"title":"Moonlight Sonata Act I","embed":"https://open.spotify.com/embed/track/40gRh2ZURv5tYBo8yB9Lu3"},
+            {"title":"Symphony No. 5 in C minor, Op. 67","embed":"https://open.spotify.com/embed/track/02EjNQRJohFLY4NaXiFdH1"}
+        ]'>
+        <img src="../Images/Beethoven.jpg" alt="Ludwig van Beethoven">
+        <h4>Ludwig van Beethoven</h4>
+    </div>
+
+    <div class="genre-artist-card"
+        data-name="Pyotr Ilyich Tchaikovsky"
+        data-image="../Images/Tschaikowski.jpg"
+        data-description="Pyotr Ilyich Tchaikovsky was a Russian composer who is widely regarded 
+        as one of the greatest figures in classical music. Born in 1840, Tchaikovsky combined 
+        the elegance of the Classical tradition with the emotional intensity of the Romantic era, 
+        creating music that remains among the most beloved and frequently performed in the world.
+        Unlike many of his contemporaries, his compositions appealed not only to musicians and 
+        critics but also to the general public through their memorable melodies and expressive 
+        storytelling.\n\n
+
+        What makes Tchaikovsky unique is his extraordinary gift for melody and emotion. His 
+        music is filled with sweeping orchestral themes, rich harmonies, and dramatic contrasts 
+        that can convey joy, heartbreak, excitement, or tragedy with remarkable clarity. He 
+        excelled in writing for both the orchestra and the ballet, helping elevate ballet music 
+        into an art form that was just as important as the choreography itself. His works 
+        continue to define the sound of Romantic classical music.\n\n
+
+    Throughout his career, Tchaikovsky composed some of the most iconic works in classical 
+    history. His three great ballets—Swan Lake, The Sleeping Beauty, and The Nutcracker—remain 
+    staples of ballet companies around the world, with The Nutcracker becoming a cherished 
+    holiday tradition in many countries. Beyond ballet, he also wrote acclaimed symphonies, 
+    concertos, operas, and overtures, including the emotionally powerful Symphony No. 6 (Pathétique) 
+    and the virtuosic Piano Concerto No. 1, both considered masterpieces of the Romantic 
+    repertoire.\n\n
+
+    One of Tchaikovsky's greatest strengths was his ability to tell stories through music. 
+    Whether depicting enchanted kingdoms, tragic love stories, heroic battles, or personal 
+    struggles, his compositions evoke vivid imagery and deep emotion without the need for words. 
+    His influence can still be heard today in film scores, video game soundtracks, and orchestral 
+    music, where composers continue to draw inspiration from his expressive melodies and lush 
+    orchestration.\n\n.
+    
+    Pyotr Ilyich Tchaikovsky is often recommended because his music is both emotionally 
+    powerful and remarkably accessible. His unforgettable melodies, masterful orchestration,
+    and ability to tell compelling stories through music have made his works timeless classics. 
+    Whether you're discovering classical music for the first time or exploring the Romantic era, 
+    Tchaikovsky's compositions offer some of the most moving and instantly recognizable music 
+    ever written."
+        data-songs='[
+            {"title":"1812 Overture","embed":"https://open.spotify.com/embed/track/6oWacAPUt8LMXqRkEk2MNg"},
+            {"title":"Swan Lake","embed":"https://open.spotify.com/embed/track/2xizRhme7pYeITbH1NLLGt"},
+            {"title":"Waltz of the Flowers","embed":"https://open.spotify.com/embed/track/0CJuLeZpCdqrqoCMXWZw8k"}
+        ]'>
+        <img src="../Images/Tschaikowski.jpg" alt="Pyotr Ilyich Tchaikovsky">
+        <h4>Pyotr Ilyich Tchaikovsky</h4>
+    </div>
+
+
+    <div class="genre-artist-card"
+        data-name="Wolfgang Amadeus Mozart"
+        data-image="../Images/Mozart.jpg"
+        data-description="Wolfgang Amadeus Mozart was an Austrian composer and pianist who is 
+        widely regarded as one of the greatest musical geniuses in history. Born in Salzburg in 
+        1756, Mozart displayed extraordinary talent from an early age, composing music and 
+        performing for European royalty as a child. Despite his short life, he composed over 
+        600 works, leaving behind a legacy that has shaped classical music for more than two 
+        centuries.\n\n
+
+    What makes Mozart unique is his remarkable ability to write music that is both technically 
+    brilliant and effortlessly beautiful. His compositions are known for their elegant melodies, 
+    perfect balance, and emotional depth, often expressing joy, sorrow, humor, and drama with 
+    incredible clarity. He excelled in virtually every major genre of his time, including 
+    symphonies, operas, concertos, chamber music, and sacred works, demonstrating a level of 
+    versatility that few composers have ever matched.\n\n
+
+    Throughout his career, Mozart produced many of the most celebrated works in classical music. 
+    His operas, such as The Marriage of Figaro, Don Giovanni, and The Magic Flute, remain among 
+    the most frequently performed in the world. He also composed numerous symphonies and piano 
+    concertos that continue to be admired for their creativity, elegance, and innovation. His
+    music became a defining example of the Classical era, influencing generations of composers, 
+    including Ludwig van Beethoven.\n\n
+
+    One of Mozart's greatest strengths was his ability to create music that appealed to both 
+    musicians and everyday listeners. His works combine sophisticated craftsmanship with 
+    memorable melodies, making them enjoyable for audiences of all backgrounds. Even today, 
+    his compositions are performed regularly by orchestras, opera companies, and solo musicians 
+    around the world, remaining some of the most recognizable pieces in the classical repertoire.\n\n
+    
+    Wolfgang Amadeus Mozart is often recommended because his music perfectly balances beauty, 
+    emotion, and technical mastery. His timeless melodies, extraordinary versatility, and 
+    lasting influence have made him one of the most celebrated composers in history. Whether 
+    you're new to classical music or exploring its greatest masterpieces, Mozart's works offer 
+    an ideal introduction to the elegance and brilliance of the Classical era.\n\n"
+        data-songs='[
+            {"title":"A Little Night Music","embed":"https://open.spotify.com/embed/track/5NSBrcJWwqLsQPuX0XczOW"},
+            {"title":"I. Allegro","embed":"https://open.spotify.com/embed/track/62UHMOmUSixA8sdj0OjAKL"},
+            {"title":"Sequence: VI. Lacrimosa dies illa","embed":"https://open.spotify.com/embed/track/7mgIQzCDcafYFkMMS3Bqvb"}
+        ]'>
+        <img src="../Images/Mozart.jpg" alt="Mozart">
+        <h4>Wolfgang Amadeus Mozart</h4>
+    </div>
+
+    </div>
+</section>
+</section>
+
+<!-- Comedy -->
+<section>
+<!-- Genre Banner -->
+<section class="genre-banner" style="background-image:url('../Images/Comedy-Banner.jpg');">
+    <div class="genre-banner-overlay"></div>
+    <div class="genre-banner-content">
+        <h1>Comedy</h1>
+    </div>
+</section>
+
+<!-- History & Description -->
+<section class="genre-info">
+    <div class="genre-info-block">
+        <h2>A Brief History</h2>
+        <p>
+            Comedy music is a genre that combines music and humor to entertain audiences. Its 
+            origins date back centuries through humorous folk songs, theatrical performances, 
+            and vaudeville acts, but it became especially popular during the 20th century with 
+            novelty songs, musical parodies, and comedic performances on radio and television. 
+            Artists such as Spike Jones, Tom Lehrer, and "Weird Al" Yankovic helped bring comedy 
+            music into the mainstream by blending clever lyrics with memorable melodies and 
+            parodying popular songs.
+        </p>
+    </div>
+
+    <div class="genre-info-block">
+        <h2>What Makes It Unique</h2>
+        <p>
+            What makes comedy music unique is its ability to blend humor with melody. 
+            Unlike most genres that focus primarily on emotion or storytelling, comedy music is
+            designed to make listeners laugh while remaining musically engaging. It often uses 
+            clever wordplay, satire, exaggeration, and parodies of well-known songs or everyday 
+            situations, making it both entertaining and memorable.
+        </p>
+    </div>
+</section>
+
+<section class="genre-info">
+    <div class="genre-info-block">
+        <h2>Why It's Popular</h2>
+        <p>
+            Comedy music remains popular because it offers a fun and lighthearted listening 
+            experience that appeals to audiences of all ages. Whether through parody, social 
+            commentary, or humorous storytelling, the genre provides laughter while showcasing
+            creativity and musical talent, proving that music can entertain in more ways than 
+            just through emotion or dance.
+        </p>
+    </div>
+</section>
+
+
+<section class="genre-artists">
+    <h2 class="genre-artists-title">Recommended Artists</h2>
+
+    <div class="genre-artists-grid">
+
+    <div class="genre-artist-card"
+        data-name="Bo Burnham"
+        data-image="../Images/Bo-Burnham.jpg"
+        data-description="Bo Burnham is an American comedian, musician, writer, filmmaker, and 
+        actor who has redefined what musical comedy can be. Born in Massachusetts in 1990, he 
+        first gained attention as a teenager by uploading humorous songs to YouTube, quickly 
+        becoming one of the platform's earliest viral stars. Over the years, Burnham evolved 
+        from an internet sensation into one of the most respected voices in modern comedy, 
+        known for combining sharp wit, original music, and thoughtful social commentary.\n\n
+
+        What makes Bo Burnham unique is his ability to blend comedy with meaningful 
+        observations about modern life. His songs often explore topics such as social media, 
+        mental health, relationships, consumer culture, politics, and the pressures of fame. 
+        Rather than relying solely on punchlines, Burnham combines clever wordplay, catchy 
+        melodies, theatrical performances, and visual storytelling to create comedy that is both 
+        entertaining and thought-provoking.\n\n
+
+        Throughout his career, Burnham has released several acclaimed comedy specials, 
+        including Words, Words, Words, what., Make Happy, and the Emmy Award-winning Inside. 
+        Released during the COVID-19 pandemic, Inside was written, filmed, edited, and produced 
+        entirely by Burnham himself in a single room. The special received widespread praise 
+        for its creativity, emotional honesty, and exploration of isolation, internet culture, 
+        and mental health, becoming one of the defining comedy specials of the decade.\n\n
+
+        Beyond stand-up comedy, Burnham has also established himself as a successful filmmaker. 
+        He wrote and directed the critically acclaimed coming-of-age film Eighth Grade 
+        and has acted in several films, showcasing his versatility as a storyteller. His 
+        ability to move seamlessly between comedy, music, film, and drama has made him one of 
+        the most distinctive entertainers of his generation.\n\n
+        
+        Bo Burnham is often recommended because he pushes the boundaries of comedy by combining 
+        music, storytelling, and genuine emotional depth. His work is funny, intelligent, and 
+        deeply reflective, offering much more than traditional stand-up. Whether you're 
+        interested in clever musical performances, social satire, or comedy that encourages 
+        self-reflection, Bo Burnham's work demonstrates how the genre can be both hilarious and 
+        profoundly meaningful.\n\n"
+        data-songs='[
+            {"title":"Welcome to the Internet","embed":"https://open.spotify.com/embed/track/3s44Qv8x974tm0ueLexMWN"},
+            {"title":"1985","embed":"https://open.spotify.com/embed/track/0yNiaePZow0ycdrmLV0J7y"},
+            {"title":"All Eyes On Me","embed":"https://open.spotify.com/embed/track/2Q6RiCAKOrxRYtvl9pcpjY"}
+        ]'>
+        <img src="../Images/Bo-Burnham.jpg" alt="Bo Burnham">
+        <h4>Bo Burnham</h4>
+    </div>
+
+    <div class="genre-artist-card"
+        data-name="Weird Al Yankovic"
+        data-image="../Images/Weird-AL-Yankovic.jpg"
+        data-description="Weird Al Yankovic is an American singer, songwriter, musician, 
+        comedian, and actor who is widely regarded as the greatest parody musician of all time. 
+        Born in California in 1959, Yankovic rose to fame in the 1980s by transforming popular 
+        hit songs into hilarious parodies while also writing original comedy songs. Armed with 
+        his signature accordion, energetic performances, and family-friendly humor, he has 
+        enjoyed a career spanning more than four decades, making him one of the most successful 
+        comedy musicians in history.\n\n
+
+        What makes Weird Al unique is his ability to parody popular music while showing genuine 
+        respect for the original artists. Rather than mocking musicians themselves, his songs 
+        humorously reinvent familiar hits with entirely new lyrics about everyday life, food, 
+        technology, television, and pop culture. His meticulous attention to musical detail 
+        allows his parodies to sound remarkably similar to the originals, making them instantly 
+        recognizable while remaining completely original in their humor.\n\n
+
+        Throughout his career, Yankovic has released numerous successful albums and earned 
+        multiple Grammy Awards. He has parodied songs by artists such as Michael Jackson, 
+        Madonna, Coolio, Chamillionaire, Pharrell Williams, and Lady Gaga, among many others. 
+        His 2014 album Mandatory Fun became the first comedy album ever to debut at No. 1 on the 
+        Billboard 200 chart, demonstrating the enduring popularity of his unique style of 
+        musical comedy.\n\n
+
+        Beyond parody songs, Yankovic is also celebrated for his original comedy music, live 
+        performances, and music videos. His concerts feature elaborate costume changes, audience 
+        interaction, and energetic stage productions that have made him a beloved live performer. 
+        Over the years, he has become a cultural icon, introducing younger audiences to classic 
+        songs while providing longtime fans with clever, timeless humor.\n\n
+        
+        Weird Al Yankovic is often recommended because he proves that comedy music can be just 
+        as creative and musically accomplished as the songs it parodies. His clever lyrics, 
+        exceptional musicianship, and lighthearted humor have entertained audiences of all ages 
+        for decades. Whether you're a fan of pop, rock, hip-hop, or comedy, Weird Al offers a 
+        unique listening experience that celebrates music while making listeners laugh.\n\n"
+        data-songs='[
+            {"title":"Fat","embed":"https://open.spotify.com/embed/track/4is3oF4FlWmedh3TK6Ke7z"},
+            {"title":"NOW Thats what I call Polka","embed":"https://open.spotify.com/embed/track/5mN0UUIKMVtnfsW8lhwzqY"},
+            {"title":"Polkamania!","embed":"https://open.spotify.com/embed/track/1GXIST9gaPpWcRrRhHUcJb"}
+        ]'>
+        <img src="../Images/Weird-AL-Yankovic.jpg" alt="Weird Al Yankovic">
+        <h4>"Weird Al" Yankovic</h4>
+    </div>
+
+    <div class="genre-artist-card"
+        data-name="Tenacious D"
+        data-image="../Images/TenaciousD.jpg"
+        data-description="Tenacious D is an American comedy rock duo consisting of Jack Black 
+        and Kyle Gass. Formed in Los Angeles in 1994, the duo became famous for combining hard 
+        rock and heavy metal with outrageous comedy, theatrical storytelling, and over-the-top 
+        performances. Their music lovingly celebrates classic rock while humorously 
+        exaggerating its larger-than-life attitude, earning them the nickname 
+        The Greatest Band in the World.\n\n
+
+        What makes Tenacious D unique is their ability to perform genuinely impressive rock 
+        music while delivering hilarious lyrics and absurd narratives. Unlike many comedy acts, 
+        the duo places great emphasis on musicianship, with Kyle Gass providing skilled 
+        acoustic guitar work and Jack Black delivering powerful, theatrical vocals. Their 
+        songs often parody fantasy adventures, rock star clichés, friendship, and everyday 
+        situations, blending epic storytelling with self-aware humor.\n\n
+
+        Tenacious D first gained widespread recognition through their HBO television series 
+        before releasing their self-titled debut album in 2001. They later expanded their story 
+        with the cult comedy film Tenacious D in The Pick of Destiny, which follows a 
+        fictionalized version of the duo on a quest to obtain a magical guitar pick. Although 
+        the film was modestly received upon release, it has since become a beloved cult 
+        classic among rock and comedy fans. Throughout their career, Tenacious D has 
+        collaborated with legendary musicians and earned a Grammy Award, proving that 
+        comedy and rock music can coexist at the highest level.\n\n
+
+        Beyond their recordings, Tenacious D is renowned for its energetic live performances. 
+        Their concerts combine impressive musicianship with theatrical comedy, audience 
+        interaction, and elaborate storytelling, creating a show that feels equally like a 
+        rock concert and a comedy performance. Their passion for classic rock is evident in 
+        every performance, making them favorites among both comedy enthusiasts and rock fans.\n\n
+        
+        Tenacious D is often recommended because they perfectly balance outstanding 
+        musicianship with hilarious storytelling. Their songs celebrate the spirit of classic 
+        rock while never taking themselves too seriously, making them enjoyable for both rock 
+        fans and comedy lovers. Whether you're looking for memorable guitar riffs, theatrical 
+        performances, or laugh-out-loud lyrics, Tenacious D offers one of the most unique 
+        experiences in comedy music.\n\n"
+        data-songs='[
+            {"title":"Tribute","embed":"https://open.spotify.com/embed/track/6crBy2sODw2HS53xquM6us"},
+            {"title":"Video Games","embed":"https://open.spotify.com/embed/track/1g5RHGR5IPNmcID8BJBMaa"},
+            {"title":"Steves Lava Chicken","embed":"https://open.spotify.com/embed/track/78HOAddeAcXmcuhoanspry"}
+        ]'>
+        <img src="../Images/TenaciousD.jpg" alt="Tenacious D">
+        <h4>Tenacious D</h4>
+    </div>
+
+    </div>
+</section>
+</section>
+
+<!-- Country -->
 <section>
 <!-- Genre Banner -->
 <section class="genre-banner" style="background-image:url('../Images/Twilight_in_the_Wilderness_by_Frederic_Edwin_Church_\(3\).jpg');">
@@ -109,10 +509,41 @@
     <div class="genre-artist-card"
         data-name="Chris Stapleton"
         data-image="../Images/Chris_Stapleton.jpg"
-        data-description="Chris Stapleton is highly recommended because he 
-        combines traditional country roots with soulful blues, Southern rock, 
-        and powerful storytelling. His rich, gritty voice and emotionally honest lyrics 
-        bring authenticity to every song, whether it's a heartfelt ballad or an energetic anthem."
+        data-description="Chris Stapleton is an American country singer-songwriter, 
+        guitarist, and producer who has become one of the most respected artists in 
+        modern country music. Born in Kentucky in 1978, he spent more than a decade 
+        behind the scenes in Nashville writing songs for other artists before becoming a 
+        solo star. During that time, he wrote hit songs for artists including Kenny Chesney, 
+        George Strait, Luke Bryan, Josh Turner, and even had songs recorded by Adele. \n\n
+        
+        What makes Stapleton stand out is his voice. Rather than the polished, pop-influenced 
+        sound that dominates much of modern country, he has a powerful, gritty vocal style that 
+        blends traditional country, blues, Southern rock, bluegrass, and soul. His music often 
+        features raw emotion, honest storytelling, and exceptional guitar playing, earning 
+        comparisons to classic artists rather than contemporary pop-country acts. \n\n
+        
+        Although he had already built an impressive songwriting career, his breakthrough came in 
+        2015 with his debut solo album Traveller. The album became a massive success after his 
+        unforgettable duet with Justin Timberlake at the 2015 CMA Awards, introducing him to 
+        millions of viewers. Traveller went on to win multiple Grammy and CMA Awards and is 
+        widely regarded as one of the defining country albums of the 2010s. \n\n
+        
+        Since then, Stapleton has continued to release critically acclaimed albums, 
+        including From A Room: Volume 1, From A Room: Volume 2, Starting Over, and Higher. 
+        He has won numerous Grammy Awards and is recognized as one of country music's premier 
+        vocalists and songwriters. \n\n
+        
+        One reason Chris Stapleton appeals to listeners outside of 
+        country music is that his songs don't rely on common country clichés. Instead, they focus 
+        on universal themes such as love, heartbreak, family, resilience, and self-reflection. 
+        His performances are also refreshingly straightforward, usually just him, his band, and 
+        his wife, Morgane Stapleton, providing harmony vocals, with very little emphasis on 
+        elaborate stage production. \n\n
+        
+        Chris Stapleton is often recommended because he bridges the gap between traditional 
+        country and other genres like rock, blues, and soul. Even people who don't usually listen 
+        to country music frequently find themselves drawn to his authentic songwriting and 
+        unmistakable voice."
         data-songs='[
             {"title":"You Should Probably Leave","embed":"https://open.spotify.com/embed/track/2UikqkwBv7aIvlixeVXHWt"},
             {"title":"White Horse","embed":"https://open.spotify.com/embed/track/1DgtQlVNotingln271ZKCx"},
@@ -125,28 +556,87 @@
     <div class="genre-artist-card"
         data-name="Dolly Parton"
         data-image="../Images/Young-Dolly-Parton.jpg"
-        data-description="Dolly Parton is highly recommended because she is one of country 
-        music's most iconic singer-songwriters, celebrated for her heartfelt storytelling, 
-        memorable melodies, and warm, expressive voice. Her music blends traditional country 
-        with pop and folk influences, covering themes of love, perseverance, family, and personal
-        growth."
+        data-description="Dolly Parton is an American country singer-songwriter, actress, author, 
+        businesswoman, and philanthropist. Born in rural Tennessee in 1946, she grew up in a 
+        large family with limited financial resources and began writing songs at a young age. 
+        After moving to Nashville, she quickly established herself as both a gifted songwriter 
+        and performer, eventually becoming one of the most influential figures in country music 
+        history. \n\n
+        
+        Parton is celebrated for her exceptional songwriting, having written thousands 
+        of songs over her career. Her catalog includes timeless classics such as Jolene, 
+        Coat of Many Colors, 9 to 5, I Will Always Love You, and Islands in the Stream. Her 
+        music blends traditional country with elements of pop, bluegrass, gospel, and folk, 
+        making it accessible to audiences far beyond the country genre. Her warm personality, 
+        memorable storytelling, and instantly recognizable voice have helped her remain 
+        relevant for more than six decades. \n\n
+        
+        Beyond music, Dolly Parton has built an extraordinary career in entertainment. She has 
+        starred in successful films such as 9 to 5, founded the popular theme park Dollywood, 
+        and earned numerous awards across music, television, and film. She is one of the few 
+        entertainers to achieve lasting success in so many different fields while maintaining an 
+        authentic connection with her fans. \n\n
+
+        Parton is equally admired for her philanthropy. In 1995, she founded the Dolly Parton's 
+        Imagination Library, a program that has provided millions of free books to children around 
+        the world to encourage early childhood literacy. She has also supported disaster relief 
+        efforts, education initiatives, and medical research, further cementing her reputation as 
+        one of the entertainment industry's most generous public figures. \n\n
+        
+        One reason Dolly Parton remains so beloved is her authenticity. Despite her glamorous 
+        appearance and global fame, she is known for her humility, humor, kindness, and willingness 
+        to laugh at herself. Her songs often explore themes of love, family, perseverance, ambition,
+        and compassion, resonating with listeners across generations and cultures. \n\n
+        
+        Dolly Parton is often recommended because she represents the very best of country music: 
+        heartfelt storytelling, memorable melodies, and genuine emotion. Combined with 
+        her remarkable generosity, entrepreneurial success, and enduring influence on music and 
+        popular culture, she has become not only a country music legend but one of the most 
+        respected entertainers of all time."
         data-songs='[
             {"title":"9 to 5","embed":"https://open.spotify.com/embed/track/4w3tQBXhn5345eUXDGBWZG"},
             {"title":"Jolene","embed":"https://open.spotify.com/embed/track/5fdhThPDe6jQQDqCyWrdAn"},
             {"title":"I Will Always Love You","embed":"https://open.spotify.com/embed/track/77bNe6jYY8yHdP7orXrz5I"}
         ]'>
         <img src="../Images/Young-Dolly-Parton.jpg" alt="Dolly Parton">
-        <h4>Daft Punk</h4>
+        <h4>Dolly Parton</h4>
     </div>
 
     <div class="genre-artist-card"
         data-name="Johnny Cash"
         data-image="../Images/Johnny_Cash.jpg"
-        data-description="Johnny Cash is widely recommended because he is one of country 
-        music's most influential and enduring artists, known for his deep baritone voice, 
-        honest storytelling, and timeless songwriting. Blending country, folk, rockabilly, 
-        and gospel, his music explores themes of love, hardship, redemption, and resilience, 
-        making it relatable across generations."
+        data-description="Johnny Cash was an American singer-songwriter whose deep baritone voice, 
+        honest storytelling, and unmistakable style made him one of the most influential figures 
+        in country music. Born in Arkansas in 1932, Cash began his career in the 1950s and quickly 
+        became known for songs that blended country, rockabilly, folk, gospel, and blues. His 
+        trademark all-black clothing earned him the nickname The Man in Black, symbolizing his 
+        solidarity with the poor, the imprisoned, and those often overlooked by society. \n\n
+        
+        Cash's music is defined by its simplicity and emotional depth. Rather than relying on 
+        elaborate production, his songs often feature straightforward arrangements that place the 
+        focus on powerful lyrics and his commanding voice. Throughout his career, he wrote and 
+        performed songs about love, faith, hardship, redemption, and the struggles of everyday 
+        people. His authenticity and willingness to address difficult topics helped him connect 
+        with audiences across generations and genres. \n\n
+        
+        One of the defining moments of his career came with his live performances at prisons, 
+        most famously at Folsom State Prison in 1968 and later at San Quentin State Prison. 
+        These concerts showcased Cash's empathy for marginalized people and became some of the 
+        most celebrated live recordings in music history. His relationship with fellow country 
+        star June Carter Cash also became one of country music's most enduring love stories, 
+        inspiring both his personal life and many of his songs. \n\n
+        
+        Late in his career, Cash experienced an extraordinary resurgence through his American 
+        Recordings albums, produced by Rick Rubin. These stripped-back recordings introduced 
+        him to a new generation of listeners. His haunting cover of Hurt, originally by Nine 
+        Inch Nails, is widely regarded as one of the greatest cover songs ever recorded, 
+        transforming the song into a powerful reflection on aging, regret, and mortality. \n\n
+        
+        Johnny Cash is often recommended because his music feels timeless. His songs are rooted 
+        in honesty, resilience, and humanity, making them just as compelling today as when they 
+        were first recorded. Whether you're a country fan or not, his distinctive voice, 
+        unforgettable storytelling, and lasting cultural influence make him one of the essential 
+        artists in American music history."
         data-songs='[
             {"title":"Folsom Prison Blues","embed":"https://open.spotify.com/embed/track/2fDHuS1PTkHBbCWWZF1ph9"},
             {"title":"(Ghost) Riders In The Sky","embed":"https://open.spotify.com/embed/track/3ST1SVHTxxiGodhUeASN3h"},
@@ -160,6 +650,7 @@
 </section>
 </section>
 
+<!-- EDM -->
 <section>
 <!-- Genre Banner -->
 <section class="genre-banner" style="background-image:url('../Images/Tomorrowland_2026_Mainstage_Night_Show_Boom_Belgium.jpg');">
@@ -220,32 +711,95 @@
     <div class="genre-artist-card"
         data-name="Avicii"
         data-image="../Images/Avicii.png"
-        data-description="Avicii is widely recommended because he helped bring 
-        electronic dance music into the mainstream by combining uplifting melodies with 
-        elements of folk, country, and pop. His music is known for its emotional storytelling, 
-        catchy hooks, and euphoric energy, making it accessible to both EDM fans and general 
-        audiences."
+        data-description="Avicii, born Tim Bergling in Stockholm, Sweden, was one of the most 
+        influential electronic dance music producers and DJs of the 21st century. Rising to fame 
+        in the early 2010s, he helped bring EDM into the global mainstream by combining infectious
+        melodies with elements of folk, country, pop, and rock. His music proved that electronic 
+        dance music could be both festival-ready and emotionally resonant, earning him worldwide 
+        acclaim and making him one of the defining artists of his generation. \n\n
+        
+        What made Avicii unique was his gift for songwriting. While many EDM tracks focused 
+        primarily on heavy drops and club energy, Avicii emphasized memorable melodies, 
+        heartfelt lyrics, and uplifting emotions. His productions often featured live instruments 
+        such as acoustic guitar, piano, and strings, creating a warm, organic sound that 
+        appealed to both EDM fans and listeners who typically preferred pop or rock music. 
+        This melodic approach has since influenced countless producers across the electronic 
+        music scene. \n\n
+        
+        His breakthrough came with Levels, a track widely regarded as one of the greatest EDM songs 
+        ever made. The song became an international anthem and introduced millions of listeners to 
+        progressive house music. Avicii continued to innovate with his debut album True, which 
+        blended electronic dance music with country and folk influences. Although songs like Wake 
+        Me Up initially surprised many fans, they went on to become some of the biggest hits of the 
+        decade, helping redefine what EDM could sound like. \n\n
+        
+        Despite his enormous success, Avicii struggled with the pressures of constant touring and 
+        health issues, leading him to retire from live performances in 2016 to focus on his 
+        well-being and studio work. He passed away in 2018 at the age of 28, leaving behind a 
+        remarkable musical legacy. His influence continues to shape modern electronic music, and 
+        many artists cite him as an inspiration for blending emotional songwriting with dance 
+        production. \n\n
+        
+        Avicii is often recommended because he transformed EDM from music made primarily for 
+        clubs and festivals into songs that connected with people on a deeply personal level. 
+        His ability to combine unforgettable melodies, emotional storytelling, and innovative 
+        production made his music timeless, and his influence can still be heard throughout modern
+        electronic music today."
         data-songs='[
             {"title":"Levels","embed":"https://open.spotify.com/embed/track/5UqCQaDshqbIk3pkhy4Pjg"},
             {"title":"The Nights","embed":"https://open.spotify.com/embed/track/0ct6r3EGTcMLPtrXHDvVjc"},
             {"title":"Waiting for Love","embed":"https://open.spotify.com/embed/track/2P4OICZRVAQcYAV2JReRfj"}
         ]'>
-        <img src="../Images/Avicii.png" alt="Gesaffelstein">
+        <img src="../Images/Avicii.png" alt="Avicii">
         <h4>Avicii</h4>
     </div>
 
     <div class="genre-artist-card"
         data-name="Daft Punk"
         data-image="../Images/DaftPunk.jpg"
-        data-description="Daft Punk is widely recommended because they 
-        transformed electronic music into something that appeals to both 
-        casual listeners and dedicated music fans. By blending house, disco, funk, rock, 
-        and pop with innovative production techniques, the French duo created timeless tracks 
-        that are both energetic and emotionally engaging."
+        data-description="Daft Punk was a French electronic music duo consisting of Thomas 
+        Bangalter and Guy-Manuel de Homem-Christo. Formed in Paris in 1993, the pair became 
+        one of the most influential acts in electronic music history by blending house, disco, 
+        funk, rock, hip-hop, and pop into a sound that was both innovative and accessible. Their 
+        iconic robot helmets and commitment to anonymity turned them into one of music's most 
+        recognizable and mysterious acts, allowing their work to take center stage rather than 
+        their personal lives. \n\n
+        
+        What made Daft Punk unique was their ability to constantly reinvent themselves while 
+        remaining unmistakably recognizable. Their early albums, Homework and Discovery, helped 
+        define the French house movement through creative sampling, infectious grooves, and 
+        memorable melodies. Discovery in particular transformed electronic music by embracing 
+        bright, emotional songwriting and celebrating the sounds of 1970s and 1980s disco, funk, 
+        and pop. The album was accompanied by the animated film Interstella 5555, which tells the 
+        story of the album through music alone, making it one of the most ambitious multimedia 
+        projects in modern music. \n\n
+        
+        Throughout their career, Daft Punk continued to push creative boundaries. Their Alive tour 
+        revolutionized electronic live performances with its iconic pyramid stage, synchronized 
+        lighting, and seamless mashups of their songs. Years later, they surprised audiences 
+        again with Random Access Memories (2013), moving away from heavily electronic production 
+        in favor of live musicians, vintage recording techniques, and collaborations with legendary
+        artists. The album won the Grammy Award for Album of the Year and demonstrated that 
+        electronic artists could create timeless, musicianship-focused records without relying 
+        solely on computers and synthesizers. \n\n
+        
+        Although Daft Punk officially announced their breakup in 2021 after nearly three decades 
+        together, their influence continues to shape electronic music, pop, hip-hop, and even 
+        film scores. Their work has inspired countless producers and artists by showing that 
+        electronic music can be emotionally expressive, technically innovative, and artistically 
+        ambitious all at once. \n\n
+        
+        Daft Punk is often recommended because they consistently challenged expectations while 
+        making music that remained approachable and deeply rewarding. Whether through the d
+        ance-floor energy of Homework, the emotional and nostalgic journey of Discovery, the 
+        groundbreaking live experience of Alive 2007, or the meticulous craftsmanship of 
+        Random Access Memories, they created a body of work that continues to influence artists 
+        across virtually every genre. For many listeners, Daft Punk isn't just one of the greatest 
+        EDM acts. They are one of the most important and innovative musical artists of all time."
         data-songs='[
             {"title":"One More Time","embed":"https://open.spotify.com/embed/track/0DiWol3AO6WpXZgp0goxAV"},
             {"title":"Get Lucky","embed":"https://open.spotify.com/embed/track/2Foc5Q5nqNiosCNqttzHof"},
-            {"title":"Da Funk","embed":"https://open.spotify.com/embed/track/0MyY4WcN7DIfbSmp5yej5z"}
+            {"title":"Da Funk","embed":"https://open.spotify.com/embed/track/5OWhFeNXZ2RGbsGpl3rIc3"}
         ]'>
         <img src="../Images/DaftPunk.jpg" alt="Daft Punk">
         <h4>Daft Punk</h4>
@@ -254,14 +808,43 @@
     <div class="genre-artist-card"
         data-name="Gesaffelstein"
         data-image="../Images/Gesaffelstein.jpeg"
-        data-description="Gesaffelstein is recommended for listeners who enjoy darker, more 
-        cinematic electronic music. Known for his heavy industrial sound, distorted synthesizers, 
-        and minimalist production, the French producer creates music that feels intense, 
-        futuristic, and atmospheric. Rather than focusing on uplifting melodies, Gesaffelstein 
-        builds tension through powerful basslines, sharp rhythms, and haunting textures, making 
-        his work stand out in genres like electro, techno, and industrial."
+        data-description="Gesaffelstein is the stage name of Mike Lévy, a French electronic music 
+        producer, DJ, and composer known for his dark, minimalist, and industrial sound. 
+        Emerging from the French electronic music scene in the early 2010s, he quickly gained 
+        recognition for creating music that combined techno, electro, EBM (Electronic Body Music), 
+        industrial, and cinematic influences. While many electronic artists focus on upbeat 
+        festival anthems, Gesaffelstein is known for crafting tense, brooding, and atmospheric 
+        tracks that feel more like the soundtrack to a psychological thriller than a nightclub. \n\n
+        
+        What makes Gesaffelstein unique is his minimalist approach to production. His tracks 
+        are built around powerful basslines, distorted synthesizers, precise drum programming, 
+        and carefully controlled dynamics. Rather than filling every moment with sound, he often 
+        uses silence and repetition to build suspense, creating an intense listening experience. 
+        His music is frequently described as cold, mechanical, and futuristic, yet it remains 
+        remarkably refined and meticulously produced. \n\n
+        
+        His breakthrough came with his debut album Aleph, which established him as one of 
+        electronic music's most exciting new artists. He later expanded his audience through 
+        collaborations with major artists, including The Weeknd, contributing production to tracks 
+        such as I Was Never There, Lost in the Fire, and several songs on My Dear Melancholy, and 
+        Dawn FM. He has also worked with artists including Lady Gaga, Kanye West, and Pharrell 
+        Williams, bringing his distinctive dark aesthetic into mainstream pop and hip-hop. \n\n
+        
+        Although Gesaffelstein rarely seeks the spotlight, his visual identity has become just as 
+        iconic as his music. Performing almost entirely dressed in black with stark lighting and 
+        minimalist stage design, he creates an atmosphere that complements the cold, industrial 
+        feel of his productions. His live performances prioritize mood and immersion over 
+        spectacle, making them a unique experience within electronic music. \n\n
+        
+        Gesaffelstein is often recommended because he occupies a unique space within electronic 
+        music. Rather than aiming for radio-friendly hooks or massive festival drops, he focuses 
+        on atmosphere, tension, and impeccable sound design. His music rewards careful listening, 
+        revealing new details with every play, and has influenced producers across techno, 
+        synthwave, industrial, hip-hop, and pop. For listeners looking for electronic music 
+        that is darker, more cinematic, and uncompromisingly artistic, Gesaffelstein is one of 
+        the genre's most distinctive voices."
         data-songs='[
-            {"title":"Lost In The Fire (ft. The Weeknd)","embed":"https://open.spotify.com/embed/track/2vXKRlJBXyOcvZYTdNeckS"},
+            {"title":"Lost In The Fire","embed":"https://open.spotify.com/embed/track/2vXKRlJBXyOcvZYTdNeckS"},
             {"title":"Opr","embed":"https://open.spotify.com/embed/track/12Ypr3PCVJ2i7Uwz93q1Vl"},
             {"title":"Pursuit","embed":"https://open.spotify.com/embed/track/2jJIxT6WAIVWzDo3Ou53Q0"}
         ]'>
@@ -273,9 +856,966 @@
 </section>
 </section>
 
+<!-- Hip-Hop -->
+<section>
+<!-- Genre Banner -->
+<section class="genre-banner" style="background-image:url('../Images/Hip-Hop-Banner.jpg');">
+    <div class="genre-banner-overlay"></div>
+    <div class="genre-banner-content">
+        <h1>Hip-Hop</h1>
+    </div>
+</section>
+
+<!-- History & Description -->
+<section class="genre-info">
+    <div class="genre-info-block">
+        <h2>A Brief History</h2>
+        <p>
+            Hip-hop originated in the Bronx, New York City, during the early 1970s as 
+            a cultural movement within African American and Latino communities. DJs such as 
+            DJ Kool Herc began extending the instrumental "breaks" of funk and soul records, 
+            allowing MCs (rappers) to perform rhythmic spoken lyrics over the music. As the 
+            genre grew, hip-hop expanded beyond music to include DJing, MCing, breakdancing, 
+            and graffiti art, becoming a powerful form of creative expression. By the 1990s and 
+            2000s, artists such as Tupac Shakur, The Notorious B.I.G., Eminem, Jay-Z, and 
+            Kendrick Lamar helped transform hip-hop into one of the world's most influential 
+            and commercially successful genres.
+        </p>
+    </div>
+
+    <div class="genre-info-block">
+        <h2>What Makes It Unique</h2>
+        <p>
+            What makes hip-hop unique is its emphasis on rhythm, lyricism, and storytelling. 
+            Instead of relying primarily on singing, artists use rap to express personal 
+            experiences, social issues, and cultural identity through complex rhyme schemes 
+            and wordplay. Hip-hop also pioneered the use of sampling, where producers creatively 
+            reuse portions of existing recordings to create entirely new beats, giving the genre 
+            its distinctive sound.
+        </p>
+    </div>
+</section>
+
+<section class="genre-info">
+    <div class="genre-info-block">
+        <h2>Why It's Popular</h2>
+        <p>
+            Today, hip-hop continues to evolve by blending with genres such as pop, 
+            R&B, rock, and electronic music. Its combination of innovative production, 
+            expressive lyrics, and strong cultural influence has made it one of the most 
+            impactful music genres, shaping fashion, language, art, and popular culture 
+            around the world.
+        </p>
+    </div>
+</section>
+
+<section class="genre-artists">
+    <h2 class="genre-artists-title">Recommended Artists</h2>
+
+    <div class="genre-artists-grid">
+
+    <div class="genre-artist-card"
+        data-name="N.W.A"
+        data-image="../Images/NWA.jpg"
+        data-description="N.W.A (short for Ni***z Wit Attitudes) was an American hip-hop group 
+        formed in Compton, California, in 1987. The group's classic lineup included Eazy-E, 
+        Dr. Dre, Ice Cube, MC Ren, and DJ Yella. Widely regarded as one of the most influential 
+        groups in hip-hop history, N.W.A helped pioneer gangsta rap, bringing raw, unfiltered 
+        stories about life in South Central Los Angeles into mainstream music. \n\n
+        
+        What made N.W.A revolutionary was their uncompromising honesty. At a time when much of 
+        popular music avoided controversial subjects, they rapped about poverty, gang violence, 
+        police brutality, systemic inequality, and the realities of growing up in underserved 
+        communities. Their explicit lyrics sparked widespread debate and criticism, but they also 
+        gave a voice to experiences that many listeners felt had been ignored by mainstream media. \n\n
+        
+        Their landmark debut album, Straight Outta Compton, changed the course of hip-hop. Tracks 
+        such as Straight Outta Compton, Express Yourself, and Gangsta Gangsta combined hard-hitting 
+        beats with vivid storytelling and aggressive delivery. The song F*** tha Police became 
+        one of the most controversial songs in music history, drawing national attention and 
+        even prompting a warning letter from the FBI. While divisive, the song also became a 
+        powerful symbol of protest against police misconduct and remains an important cultural 
+        touchstone. \n\n
+        
+        Although the group was active for only a few years before internal disputes led to its 
+        breakup, the members went on to shape music in different ways. Dr. Dre became one of 
+        hip-hop's greatest producers, launching the careers of artists such as Snoop Dogg, 
+        Eminem, and 50 Cent. Ice Cube built a successful solo music and film career, while Eazy-E 
+        remained an influential figure in West Coast rap until his death in 1995. Together, 
+        their impact extended far beyond the group's original run. \n\n
+        
+        N.W.A is often recommended because they fundamentally changed what hip-hop could be. 
+        They demonstrated that rap could serve as powerful social commentary while remaining 
+        commercially successful, paving the way for generations of artists to tell authentic 
+        stories about their communities. Even decades later, their influence can be heard in 
+        countless hip-hop records, and Straight Outta Compton remains one of the genre's most 
+        essential and historically significant albums."
+        data-songs='[
+            {"title":"Straight Outta Compton","embed":"https://open.spotify.com/embed/track/6KIKRz9eSTXdNsGUnomdtW"},
+            {"title":"Express Yourself","embed":"https://open.spotify.com/embed/track/6NLLIPKjqFRnbCorRNTEHe"},
+            {"title":"Appetite For Destruction","embed":"https://open.spotify.com/embed/track/4fv1OzrStC17Mqck9LGldk"}
+        ]'>
+        <img src="../Images/NWA.jpg" alt="N.W.A">
+        <h4>N.W.A</h4>
+    </div>
+
+    <div class="genre-artist-card"
+        data-name="The Notorious B.I.G"
+        data-image="../Images/Biggie.jpg"
+        data-description="The Notorious B.I.G., born Christopher Wallace and also known as 
+        Biggie Smalls, was an American rapper from Brooklyn, New York, who is widely regarded 
+        as one of the greatest lyricists in hip-hop history. Rising to fame in the mid-1990s, 
+        Biggie became the defining voice of East Coast hip-hop through his effortless flow, vivid 
+        storytelling, and charismatic delivery. Despite a career that lasted only a few years 
+        before his tragic death in 1997 at the age of 24, his influence on rap music remains 
+        immense. \n\n
+        
+        What made Biggie unique was his extraordinary ability to tell stories. His lyrics painted 
+        detailed pictures of life in Brooklyn, covering themes such as poverty, ambition, crime, 
+        success, family, and personal struggle. He combined technical mastery with natural 
+        charisma, delivering complex rhyme schemes and multisyllabic patterns so smoothly that 
+        they sounded effortless. His relaxed, conversational flow became one of the most imitated 
+        styles in hip-hop and continues to influence rappers today. \n\n
+        
+        His debut album, Ready to Die, is widely considered one of the greatest hip-hop albums 
+        ever made. The record follows a loose narrative of his life, balancing gritty street 
+        stories with introspective moments about depression, ambition, and survival. After his 
+        death, his second album, Life After Death (1997), was released and became an instant 
+        classic, showcasing his versatility by blending hardcore rap with radio-friendly hits. 
+        Together, these two albums established Biggie as one of the defining artists of the genre. \n\n
+        
+        Biggie was also a central figure in the famous East Coast–West Coast hip-hop rivalry of the 
+        1990s, alongside Tupac Shakur. While the rivalry became one of the most discussed periods 
+        in hip-hop history, it ultimately ended in tragedy with the deaths of both artists. Today,
+        Biggie is remembered not for the conflict but for his extraordinary talent, lasting 
+        influence, and contributions to the art of rap."
+        data-songs='[
+            {"title":"Hypnotize","embed":"https://open.spotify.com/embed/track/7KwZNVEaqikRSBSpyhXK2j"},
+            {"title":"Kick In The Door","embed":"https://open.spotify.com/embed/track/24CA5I411NVDYodjjmKPx3"},
+            {"title":"Big Poppa","embed":"https://open.spotify.com/embed/track/2g8HN35AnVGIk7B8yMucww"}
+        ]'>
+        <img src="../Images/Biggie.jpg" alt="The Notorious B.I.G">
+        <h4>The Notorious B.I.G</h4>
+    </div>
+
+    <div class="genre-artist-card"
+        data-name="Kendrick Lamar"
+        data-image="../Images/Lamar.jpg"
+        data-description="Kendrick Lamar is an American rapper, songwriter, and producer from 
+        Compton, California, widely regarded as one of the greatest hip-hop artists of all time. 
+        Since emerging in the early 2010s, Kendrick has earned acclaim for his exceptional 
+        lyricism, intricate storytelling, and willingness to tackle complex social, political, 
+        and personal themes. Unlike many mainstream rappers, his albums are often designed as 
+        complete artistic statements, with recurring narratives, symbolism, and musical 
+        experimentation that reward repeated listening. \n\n
+        
+        What sets Kendrick apart is his ability to combine technical brilliance with meaningful 
+        storytelling. His music explores topics such as identity, race, faith, family, mental 
+        health, survivor's guilt, and the pressures of fame. He frequently changes his voice, 
+        flow, and perspective within a single song to portray different characters or emotions, 
+        creating songs that feel more like short films than traditional rap tracks. Musically, 
+        he blends hip-hop with jazz, funk, soul, R&B, and spoken word, making each album distinct 
+        while remaining unmistakably his own. \n\n
+        
+        Kendrick's breakthrough came with good kid, m.A.A.d city, a coming-of-age concept album 
+        that tells the story of growing up in Compton. He followed it with To Pimp a Butterfly, 
+        a groundbreaking record that fused jazz, funk, and conscious hip-hop while exploring themes 
+        of race, inequality, fame, and self-worth. The album is widely considered one of the 
+        greatest hip-hop albums ever made. He continued to evolve with DAMN., which earned him the 
+        Pulitzer Prize for Music—making him the first artist outside the classical and jazz genres to 
+        receive the honor. Later albums such as Mr. Morale & the Big Steppers and GNX further 
+        showcased his willingness to challenge both himself and his audience. \n\n
+
+        Beyond his music, Kendrick is respected for carefully choosing his public appearances and 
+        allowing his work to speak for itself. Rather than chasing trends, he has consistently 
+        prioritized artistic integrity, earning admiration from critics, fellow musicians, and 
+        fans across multiple genres. His influence extends well beyond hip-hop, with many artists 
+        citing him as one of the defining musicians of his generation. \n\n
+        
+        Kendrick Lamar is often recommended because he demonstrates the full artistic potential of 
+        hip-hop. His music goes beyond entertainment, combining elite technical skill with 
+        thoughtful storytelling and social commentary. Whether you're drawn to intricate lyricism, 
+        compelling narratives, or innovative production, Kendrick's discography offers some of the 
+        most ambitious and rewarding music the genre has ever produced."
+        data-songs='[
+            {"title":"Euphoria","embed":"https://open.spotify.com/embed/track/77DRzu7ERs0TX3roZcre7Q"},
+            {"title":"Alright","embed":"https://open.spotify.com/embed/track/3iVcZ5G6tvkXZkZKlMpIUs"},
+            {"title":"reincarnated","embed":"https://open.spotify.com/embed/track/0RgjEkSbeuStKfT2Pa4Zai"}
+        ]'>
+        <img src="../Images/Lamar.jpg" alt="Kendrick Lamar">
+        <h4>Kendrick Lamar</h4>
+    </div>
+
+    </div>
+</section>
+</section>
+
+<!-- Jazz -->
+<section>
+<!-- Genre Banner -->
+<section class="genre-banner" style="background-image:url('../Images/Jazz-Banner.jpg');">
+    <div class="genre-banner-overlay"></div>
+    <div class="genre-banner-content">
+        <h1>Jazz</h1>
+    </div>
+</section>
+
+<!-- History & Description -->
+<section class="genre-info">
+    <div class="genre-info-block">
+        <h2>A Brief History</h2>
+        <p>
+            Jazz originated in New Orleans, Louisiana, during the late 19th and early 
+            20th centuries, blending African American musical traditions with blues, ragtime, 
+            gospel, and European musical influences. As the genre spread across the United 
+            States, pioneers such as Louis Armstrong, Duke Ellington, Charlie Parker, and 
+            Miles Davis helped shape styles including swing, bebop, cool jazz, and jazz fusion. 
+            Today, jazz continues to evolve while influencing countless other genres, from rock 
+            and hip-hop to R&B and pop.
+        </p>
+    </div>
+
+    <div class="genre-info-block">
+        <h2>What Makes It Unique</h2>
+        <p>
+           What makes jazz unique is its emphasis on improvisation, musical expression, and 
+           collaboration. Rather than performing songs exactly as written, jazz musicians often 
+           create spontaneous melodies and solos, making every performance unique. The genre is 
+           also known for its rich harmonies, syncopated rhythms, and expressive use of 
+           instruments such as the saxophone, trumpet, piano, double bass, and drums.
+        </p>
+    </div>
+</section>
+
+<section class="genre-info">
+    <div class="genre-info-block">
+        <h2>Why It's Popular</h2>
+        <p>
+            Jazz remains popular because it offers a balance of creativity, technical skill, 
+            and emotional depth. Its freedom of expression allows musicians to constantly 
+            reinterpret familiar songs and explore new ideas, while its influence on modern music
+            has ensured that jazz continues to inspire audiences and artists around the world.
+        </p>
+    </div>
+</section>
 
 
+<section class="genre-artists">
+    <h2 class="genre-artists-title">Recommended Artists</h2>
 
+    <div class="genre-artists-grid">
+
+    <div class="genre-artist-card"
+        data-name="Billie Holiday"
+        data-image="../Images/Billie-Holiday.jpg"
+        data-description="Billie Holiday was an American jazz singer who is widely regarded 
+        as one of the greatest vocalists in music history. Born in Philadelphia in 1915 and 
+        raised in Baltimore, Holiday rose to prominence during the 1930s and became one of the 
+        defining voices of jazz. Nicknamed Lady Day by saxophonist Lester Young, she was admired 
+        for her deeply expressive singing style, emotional honesty, and unique ability to 
+        interpret the meaning behind every lyric.\n\n
+
+        What made Billie Holiday unique was her extraordinary emotional delivery rather than 
+        vocal power or range. She often sang slightly behind the beat, giving her performances 
+        a relaxed, conversational feel that became one of her signature traits. Her ability to 
+        communicate heartbreak, longing, joy, and resilience through subtle phrasing and tone 
+        transformed jazz singing and influenced generations of vocalists across jazz, soul, 
+        pop, and R&B.\n\n
+
+        Throughout her career, Holiday recorded many timeless jazz standards, including God 
+        Bless the Child, Lover Man, I'll Be Seeing You, and Strange Fruit. Released in 1939,
+        Strange Fruit became one of the most significant songs in American music history. Its 
+        powerful lyrics protesting racial violence and lynching demonstrated that music could 
+        be both artistic and a vehicle for social change, cementing Holiday's legacy as not 
+        only a remarkable singer but also a courageous artist.\n\n
+
+        Despite facing racism, discrimination, personal struggles, and legal troubles 
+        throughout her life, Holiday continued to perform with remarkable passion and 
+        authenticity. Her influence can still be heard in countless artists, including 
+        jazz legends, soul singers, and contemporary vocalists who admire her expressive 
+        phrasing and emotional depth. Her recordings remain among the most celebrated in 
+        jazz history and continue to inspire listeners around the world.\n\n
+        
+        Billie Holiday is often recommended because she demonstrated that great singing is about 
+        emotional connection as much as technical ability. Her intimate style, unforgettable 
+        interpretations, and fearless willingness to address difficult subjects helped redefine 
+        jazz vocals and influenced countless artists across multiple genres. Whether you're 
+        discovering jazz for the first time or exploring its greatest voices, Billie Holiday's 
+        recordings offer some of the most moving and timeless performances ever captured.\n\n"
+        data-songs='[
+            {"title":"Crazy He Calls Me","embed":"https://open.spotify.com/embed/track/0zgYTZC7aAZHk7Gti6UT5N"},
+            {"title":"Lover Man","embed":"https://open.spotify.com/embed/track/0DuWyzeLH09PQcnOMJiRgE"},
+            {"title":"This Is Heaven To Me","embed":"https://open.spotify.com/embed/track/5MGU3lTtAIlFpOaLgeqeCp"}
+        ]'>
+        <img src="../Images/Billie-Holiday.jpg" alt="Billie Holiday">
+        <h4>Billie Holiday</h4>
+    </div>
+
+    <div class="genre-artist-card"
+        data-name="Ella Fitzgerald"
+        data-image="../Images/Ella-Fitzgerald.jpg"
+        data-description="Ella Fitzgerald was an American jazz singer who is widely regarded 
+        as one of the greatest vocalists of all time. Born in Virginia in 1917, Fitzgerald rose 
+        to fame after winning an amateur talent competition at the Apollo Theater in Harlem. 
+        Over a career spanning nearly six decades, she became known as the First Lady of Song 
+        for her extraordinary vocal talent, impeccable technique, and enduring influence on 
+        jazz and popular music.\n\n
+
+        What makes Ella Fitzgerald unique is her remarkable vocal range, flawless pitch, and 
+        exceptional improvisational ability. She was a master of scat singing, a style of 
+        vocal improvisation in which singers use nonsensical syllables to imitate the creativity 
+        and spontaneity of jazz instruments. Her effortless ability to improvise complex 
+        melodies, combined with her warm tone and crystal-clear diction, made her one of the 
+        most technically accomplished singers in music history.\n\n
+
+        Throughout her career, Fitzgerald recorded hundreds of songs across jazz, swing, blues, 
+        pop, and the Great American Songbook. Her celebrated Songbook series paid tribute to 
+        legendary composers such as George Gershwin, Cole Porter, Duke Ellington, Irving Berlin, 
+        and Rodgers & Hart, introducing these timeless works to new generations of listeners. 
+        She also collaborated frequently with jazz icons, most notably Louis Armstrong, 
+        producing beloved duet albums that remain classics of the genre.\n\n
+
+        Despite facing racial discrimination throughout much of her career, Fitzgerald's talent 
+        earned her international acclaim and helped break barriers in the entertainment 
+        industry. She received numerous Grammy Awards, the National Medal of Arts, and the 
+        Presidential Medal of Freedom, leaving behind a legacy that continues to inspire 
+        singers across jazz, pop, soul, and R&B.\n\n
+        
+        Ella Fitzgerald is often recommended because she represents the very best of jazz 
+        singing. Her unmatched technical ability, joyful performances, and timeless 
+        interpretations continue to influence vocalists across countless genres. Whether you're 
+        discovering jazz for the first time or exploring the greatest voices in music history, 
+        Ella Fitzgerald's recordings offer a perfect introduction to the artistry, elegance, 
+        and improvisational spirit of jazz."
+        data-songs='[
+            {"title":"Dream a Little Dream of Me","embed":"https://open.spotify.com/embed/track/3sStLgW88rf1QS6yLLW2f9"},
+            {"title":"Misty","embed":"https://open.spotify.com/embed/track/4kF394GKEnI13QdZBM9mxM"},
+            {"title":"Undecided","embed":"https://open.spotify.com/embed/track/36KStm44i8gAqnQkm3PY9c"}
+        ]'>
+        <img src="../Images/Ella-Fitzgerald.JPG" alt="Ella Fitzgerald">
+        <h4>Ella Fitzgerald</h4>
+    </div>
+
+    <div class="genre-artist-card"
+        data-name="Louis Armstrong"
+        data-image="../Images/Louis-Armstrong.jpg"
+        data-description="Louis Armstrong was an American trumpeter, singer, composer, and 
+        bandleader who is widely regarded as one of the most influential figures in the history 
+        of jazz. Born in New Orleans in 1901, Armstrong rose from humble beginnings to become an 
+        international music icon. Nicknamed Satchmo and Pops, he revolutionized jazz through his 
+        extraordinary trumpet playing, distinctive gravelly voice, and charismatic stage 
+        presence, helping transform jazz from ensemble-based music into an art form that 
+        celebrated individual expression.\n\n
+
+        What makes Louis Armstrong unique is his groundbreaking approach to improvisation. 
+        Before Armstrong, jazz often emphasized collective performance, but his virtuosic 
+        trumpet solos demonstrated that individual musicians could become the focal point of a 
+        performance. His inventive phrasing, rhythmic feel, and technical brilliance set new 
+        standards for jazz musicians, while his warm personality and unmistakable singing voice 
+        made him one of the most beloved entertainers of the 20th century.\n\n
+
+        Throughout his career, Armstrong recorded countless classics that helped bring jazz to 
+        audiences around the world. His recordings of West End Blues, What a Wonderful World, 
+        Hello, Dolly!, and La Vie En Rose remain timeless masterpieces. He also collaborated 
+        extensively with fellow jazz legend Ella Fitzgerald, producing celebrated duet albums 
+        that showcased the chemistry between two of jazz's greatest voices.\n\n
+
+        Beyond his musical achievements, Armstrong played a crucial role in popularizing jazz 
+        internationally. Through extensive touring and countless performances, he introduced 
+        audiences across the globe to American jazz, influencing musicians in every corner of the 
+        world. His legacy extends far beyond jazz, with artists from pop, rock, R&B, and 
+        classical music citing him as a major influence.\n\n
+        
+        Louis Armstrong is often recommended because he helped shape modern jazz more than almost 
+        any other musician. His innovative trumpet playing, unforgettable voice, and joyful 
+        approach to performance continue to inspire artists and listeners alike. Whether you're 
+        exploring jazz for the first time or discovering its greatest pioneers, Louis Armstrong's 
+        recordings offer a perfect introduction to the genre's creativity, energy, and enduring 
+        spirit."
+        data-songs='[
+            {"title":"Mack the Knife","embed":"https://open.spotify.com/embed/track/55B21E0EUDR2ulqZihVEp9"},
+            {"title":"What A Wonderful World","embed":"https://open.spotify.com/embed/track/29U7stRjqHU6rMiS8BfaI9"},
+            {"title":"When Youre Smiling","embed":"https://open.spotify.com/embed/track/78HOAddeAcXmcuhoanspry"}
+        ]'>
+        <img src="../Images/Louis-Armstrong.jpg" alt="Louis Armstrong">
+        <h4>Louis Armstrong</h4>
+    </div>
+
+    </div>
+</section>
+</section>
+
+<!-- Metal -->
+<section>
+<!-- Genre Banner -->
+<section class="genre-banner" style="background-image:url('../Images/Metal-Banner.jpg');">
+    <div class="genre-banner-overlay"></div>
+    <div class="genre-banner-content">
+        <h1>Metal</h1>
+    </div>
+</section>
+
+<!-- History & Description -->
+<section class="genre-info">
+    <div class="genre-info-block">
+        <h2>A Brief History</h2>
+        <p>
+            Metal music emerged in the late 1960s and early 1970s, evolving from hard rock and 
+            blues rock. Bands such as Black Sabbath, Led Zeppelin, and Deep Purple laid the 
+            foundation with heavier guitar riffs, louder amplification, and darker themes. 
+            Throughout the following decades, metal expanded into many subgenres, including 
+            thrash, death, black, power, and symphonic metal, with bands like Metallica, Iron 
+            Maiden, Slayer, and Nightwish helping shape its global popularity.
+        </p>
+    </div>
+
+    <div class="genre-info-block">
+        <h2>What Makes It Unique</h2>
+        <p>
+           What makes metal unique is its emphasis on heavy guitar riffs, powerful drumming, 
+           and high-energy performances. Distorted electric guitars, fast tempos, technical 
+           musicianship, and intense vocals are hallmarks of the genre, while lyrical themes 
+           often explore fantasy, mythology, personal struggles, history, or social issues. 
+           Despite its reputation for heaviness, metal encompasses a wide range of styles, from 
+           melodic and orchestral to fast and aggressive.
+        </p>
+    </div>
+</section>
+
+<section class="genre-info">
+    <div class="genre-info-block">
+        <h2>Why It's Popular</h2>
+        <p>
+            Metal remains popular because of its intensity, musical complexity, and 
+            passionate fan community. Its wide variety of subgenres allows listeners to 
+            find styles that suit their tastes, while its emphasis on technical skill and 
+            emotional expression has made metal one of the most influential and enduring 
+            genres in modern music.
+        </p>
+    </div>
+</section>
+
+
+<section class="genre-artists">
+    <h2 class="genre-artists-title">Recommended Artists</h2>
+
+    <div class="genre-artists-grid">
+
+    <div class="genre-artist-card"
+        data-name="Black Sabbath"
+        data-image="../Images/Black-Sabbath.png"
+        data-description="Black Sabbath was an English heavy metal band formed in Birmingham 
+        in 1968, consisting of Ozzy Osbourne, Tony Iommi, Geezer Butler, and Bill Ward. Widely 
+        regarded as the pioneers of heavy metal, Black Sabbath transformed rock music by 
+        introducing darker guitar tones, heavier riffs, and lyrical themes that explored fear, 
+        war, religion, and the supernatural. Their groundbreaking sound laid the foundation for 
+        nearly every subgenre of metal that followed.\n\n
+
+        What makes Black Sabbath unique is their ability to create an atmosphere that was 
+        unlike anything heard before. Tony Iommi's heavy, downtuned guitar riffs, Geezer Butler's 
+        thunderous bass lines, Bill Ward's dynamic drumming, and Ozzy Osbourne's haunting vocals 
+        combined to produce a sound that was simultaneously powerful, ominous, and unforgettable.
+        Rather than focusing solely on speed or technical complexity, the band emphasized 
+        crushing riffs, memorable melodies, and dark storytelling, elements that would become 
+        defining characteristics of heavy metal.\n\n
+
+        Black Sabbath's self-titled debut album, released in 1970, is widely considered the 
+        birth of heavy metal. Later that same year, the band released Paranoid, featuring 
+        some of the most influential songs in rock history, including Paranoid, Iron Man, and 
+        War Pigs. These tracks established the blueprint for heavy metal and demonstrated that 
+        the genre could combine memorable hooks with social commentary and powerful 
+        musicianship. Throughout the 1970s, albums such as Master of Reality, Vol. 4, and 
+        Sabbath Bloody Sabbath further expanded the band's influence and cemented their 
+        legendary status.\n\n
+
+        Beyond their own success, Black Sabbath inspired generations of musicians across 
+        countless metal subgenres, including doom metal, thrash metal, stoner metal, and sludge 
+        metal. Bands such as Metallica, Iron Maiden, Slayer, Pantera, and countless others have 
+        cited Black Sabbath as a major influence. Their impact extends far beyond metal, with 
+        many hard rock and alternative artists also drawing inspiration from their innovative 
+        sound.\n\n
+        
+        Black Sabbath is often recommended because they created the blueprint for heavy metal. 
+        Their unforgettable riffs, dark atmosphere, and groundbreaking songwriting established 
+        the foundation upon which countless metal bands have built their careers. Whether 
+        you're discovering metal for the first time or exploring the genre's origins, Black 
+        Sabbath's catalog offers an essential listening experience that continues to define 
+        what heavy metal is more than fifty years after its inception.\n\n"
+        data-songs='[
+            {"title":"War Pigs","embed":"https://open.spotify.com/embed/track/6TYQRlRci6AkVrN9a5C7ne"},
+            {"title":"N.I.B","embed":"https://open.spotify.com/embed/track/3XclwoQxz4p6Dl7VUf90KW"},
+            {"title":"Heaven and Hell","embed":"https://open.spotify.com/embed/track/5qxN63QA4Hk1zgdLCsZFE2"}
+        ]'>
+        <img src="../Images/Black-Sabbath.png" alt="Black Sabbath">
+        <h4>Black Sabbath</h4>
+    </div>
+
+    <div class="genre-artist-card"
+        data-name="Gojira"
+        data-image="../Images/Gojira.jpg"
+        data-description="Gojira is a French heavy metal band formed in 1996 in Bayonne, 
+        consisting of brothers Joe Duplantier and Mario Duplantier, alongside Christian 
+        Andreu and Jean-Michel Labadie. Widely regarded as one of the most influential modern 
+        metal bands, Gojira is celebrated for combining crushingly heavy riffs with progressive 
+        songwriting, technical musicianship, and meaningful lyrical themes. Their music has 
+        helped introduce a new generation of listeners to progressive and extreme metal while
+        earning respect from fans across the wider rock community.\n\n
+
+        What makes Gojira unique is their ability to balance immense heaviness with emotional 
+        depth and musical sophistication. Their sound blends elements of death metal, progressive 
+        metal, groove metal, and technical metal, featuring massive guitar riffs, intricate 
+        rhythms, soaring melodies, and Mario Duplantier's highly acclaimed drumming. Unlike 
+        many extreme metal bands, Gojira frequently writes about nature, environmental 
+        conservation, spirituality, humanity, and personal growth, giving their music a 
+        thoughtful and uplifting dimension despite its aggressive sound.\n\n
+
+        The band gained international recognition with From Mars to Sirius, a concept album 
+        exploring humanity's relationship with the planet and the natural world. They continued 
+        to build their reputation through critically acclaimed releases such as The Way of All 
+        Flesh, L'Enfant Sauvage, Magma, and Fortitude. Magma, written following the passing of 
+        the Duplantier brothers' mother, showcased a more melodic and emotionally vulnerable 
+        side of the band while still retaining their signature intensity. Their commitment to 
+        artistic evolution has made them one of the most respected names in contemporary metal.\n\n
+
+        Beyond their music, Gojira is admired for its environmental activism and humanitarian 
+        efforts. The band has consistently used its platform to raise awareness for wildlife 
+        conservation, climate change, and indigenous rights, demonstrating that heavy metal can 
+        address important global issues while remaining musically uncompromising. Their powerful 
+        live performances and genuine passion have earned them a loyal worldwide fanbase.\n\n
+        
+        Gojira is often recommended because they demonstrate that heavy metal can be both 
+        intellectually engaging and emotionally powerful. Their combination of technical 
+        excellence, meaningful lyrics, environmental advocacy, and unforgettable live 
+        performances has made them one of the defining metal bands of the 21st century. 
+        Whether you're new to metal or exploring progressive heavy music, Gojira's catalog offers 
+        a compelling blend of intensity, artistry, and purpose.\n\n"
+        data-songs='[
+            {"title":"Standard","embed":"https://open.spotify.com/embed/track/60fUDmIWuKhngaeBIVhqIV"},
+            {"title":"Flying Whales","embed":"https://open.spotify.com/embed/track/5OjCsHeByDYEGxMrb1z8KQ"},
+            {"title":"Mea Culpa","embed":"https://open.spotify.com/embed/track/4AFjPeecGnS3999PV5iOSK"}
+        ]'>
+        <img src="../Images/Gojira.jpg" alt="Gojira">
+        <h4>Gojira</h4>
+    </div>
+
+    <div class="genre-artist-card"
+        data-name="System Of A Down"
+        data-image="../Images/SOAD.jpg"
+        data-description="System of a Down is an Armenian-American heavy metal band 
+        formed in Glendale, California, in 1994. The band consists of Serj Tankian, Daron 
+        Malakian, Shavo Odadjian, and John Dolmayan. Widely regarded as one of the most 
+        innovative metal bands of the 21st century, System of a Down is known for blending 
+        heavy metal with alternative rock, progressive metal, punk, folk, and traditional 
+        Armenian musical influences. Their fearless experimentation and socially conscious 
+        lyrics have earned them a devoted global following.\n\n
+
+        What makes System of a Down unique is their unpredictability. Their songs often shift 
+        rapidly between aggressive metal riffs, melodic passages, frantic rhythms, and unexpected 
+        moments of humor, creating a sound unlike any other band. Serj Tankian's dynamic vocal 
+        range, Daron Malakian's unconventional songwriting, and the band's willingness to 
+        challenge musical conventions have made them one of the most distinctive acts in 
+        modern metal.\n\n
+
+        Throughout their career, System of a Down released a series of critically acclaimed 
+        albums, including System of a Down, Toxicity, Steal This Album!, Mezmerize, and 
+        Hypnotize. Toxicity is widely regarded as their masterpiece, featuring songs that 
+        combine powerful riffs with thoughtful commentary on war, politics, media, addiction, and 
+        social inequality. Their music often addresses human rights and the recognition of the 
+        Armenian Genocide, reflecting the band's cultural heritage and commitment to activism.\n\n
+
+        Beyond their music, System of a Down is admired for using their platform to raise 
+        awareness about political and humanitarian issues. Their energetic live performances, 
+        unconventional song structures, and willingness to speak out on important topics have 
+        inspired countless bands across alternative metal, progressive metal, and hard rock. 
+        Even after long periods without new studio albums, their influence continues to grow 
+        among newer generations of metal fans.\n\n"
+        data-songs='[
+            {"title":"Chop Suey!","embed":"https://open.spotify.com/embed/track/2DlHlPMa4M17kufBvI2lEN"},
+            {"title":"B.Y.O.B","embed":"https://open.spotify.com/embed/track/0EYOdF5FCkgOJJla8DI2Md"},
+            {"title":"Lonely Day","embed":"https://open.spotify.com/embed/track/1VNWaY3uNfoeWqb5U8x2QX"}
+        ]'>
+        <img src="../Images/SOAD.jpg" alt="System Of A Down">
+        <h4>System Of A Down</h4>
+    </div>
+
+    </div>
+</section>
+</section>
+
+<!-- Rock -->
+<section>
+<!-- Genre Banner -->
+<section class="genre-banner" style="background-image:url('../Images/Rock-Banner.jpg');">
+    <div class="genre-banner-overlay"></div>
+    <div class="genre-banner-content">
+        <h1>Rock</h1>
+    </div>
+</section>
+
+<!-- History & Description -->
+<section class="genre-info">
+    <div class="genre-info-block">
+        <h2>A Brief History</h2>
+        <p>
+            Rock music emerged in the 1950s, evolving from rock and roll, which blended 
+            elements of blues, rhythm and blues (R&B), country, and gospel music. Early pioneers 
+            such as Chuck Berry, Little Richard, and Elvis Presley helped popularize the genre, 
+            while bands like The Beatles, Led Zeppelin, Queen, and Nirvana expanded its sound in 
+            the decades that followed. Over time, rock developed into numerous subgenres, 
+            including hard rock, punk rock, alternative rock, progressive rock, and indie rock, 
+            making it one of the most influential genres in modern music.
+        </p>
+    </div>
+
+    <div class="genre-info-block">
+        <h2>What Makes It Unique</h2>
+        <p>
+           What makes rock unique is its emphasis on electric guitars, powerful rhythms, 
+           and expressive performances. Most rock songs feature electric guitar, bass, 
+           drums, and vocals, often delivering energetic melodies and emotionally driven 
+           lyrics. The genre is also known for its memorable guitar riffs, dynamic live 
+           performances, and its willingness to experiment with new sounds and musical styles.
+        </p>
+    </div>
+</section>
+
+<section class="genre-info">
+    <div class="genre-info-block">
+        <h2>Why It's Popular</h2>
+        <p>
+            Rock remains popular because of its energy, versatility, and ability to 
+            connect with listeners through themes such as love, freedom, rebellion, 
+            and personal struggles. Its influence can be heard across countless modern genres, 
+            and its iconic artists and albums continue to inspire new generations of musicians 
+            and fans around the world.
+        </p>
+    </div>
+</section>
+
+
+<section class="genre-artists">
+    <h2 class="genre-artists-title">Recommended Artists</h2>
+
+    <div class="genre-artists-grid">
+
+    <div class="genre-artist-card"
+        data-name="AC/DC"
+        data-image="../Images/ACDC.jpg"
+        data-description="AC/DC is an Australian rock band formed in Sydney in 1973 by brothers 
+        Malcolm Young and Angus Young. Widely regarded as one of the greatest rock bands of all 
+        time, AC/DC built its reputation on hard-hitting guitar riffs, high-energy performances, 
+        and straightforward, no-nonsense rock music. Although often associated with hard rock 
+        and heavy metal, the band has consistently described its music as simply rock and roll, 
+        staying true to its signature sound for more than five decades.\n\n
+
+        What makes AC/DC unique is their remarkable consistency. While many bands reinvented 
+        themselves over the years, AC/DC remained committed to powerful blues-inspired guitar 
+        riffs, driving rhythms, memorable choruses, and electrifying live performances. Angus 
+        Young's energetic stage presence—complete with his iconic schoolboy uniform and 
+        duckwalk—became one of the most recognizable images in rock music, while the band's 
+        songs celebrate themes of freedom, rebellion, and having a good time.\n\n
+
+        The band achieved international success with albums such as Highway to Hell, featuring 
+        original lead singer Bon Scott. Following Scott's death in 1980, Brian Johnson joined as 
+        lead vocalist, and AC/DC released Back in Black, which became one of the best-selling 
+        albums of all time. Dedicated to Bon Scott's memory, the album includes some of the 
+        band's most iconic songs and remains a landmark achievement in rock history.\n\n
+
+        Throughout their career, AC/DC has sold hundreds of millions of records worldwide and 
+        has been inducted into the Rock and Roll Hall of Fame. Their influence extends across 
+        hard rock, heavy metal, and classic rock, inspiring countless bands with their 
+        unmistakable guitar sound and timeless songwriting. Even after decades in the music 
+        industry, AC/DC continues to fill stadiums and attract new generations of fans.\n\n
+        
+        AC/DC is often recommended because they represent the essence of rock music: powerful 
+        guitar riffs, infectious energy, and unforgettable live performances. Their music is 
+        straightforward, timeless, and instantly recognizable, making them an ideal introduction 
+        to hard rock. Whether you're exploring classic rock for the first time or looking for 
+        music that never loses its intensity, AC/DC's catalog remains one of the greatest and 
+        most influential in rock history."
+        data-songs='[
+            {"title":"Highway to Hell","embed":"https://open.spotify.com/embed/track/2zYzyRzz6pRmhPzyfMEC8s"},
+            {"title":"Back In Black","embed":"https://open.spotify.com/embed/track/08mG3Y1vljYA6bvDt4Wqkj"},
+            {"title":"For Those About to Rock","embed":"https://open.spotify.com/embed/track/6CszSinwzUcQRponsCm2CR"}
+        ]'>
+        <img src="../Images/ACDC.jpg" alt="AC/DC">
+        <h4>AC/DC</h4>
+    </div>
+
+    <div class="genre-artist-card"
+        data-name="The Beatles"
+        data-image="../Images/The-Beatles.jpg"
+        data-description="The Beatles were an English rock band formed in Liverpool in 1960, 
+        consisting of John Lennon, Paul McCartney, George Harrison, and Ringo Starr. Widely 
+        regarded as the most influential band in the history of popular music, The Beatles 
+        revolutionized rock by combining exceptional songwriting, innovative recording 
+        techniques, and a willingness to experiment with different musical styles. Their 
+        influence extends far beyond rock, shaping pop, psychedelic, folk, classical, and 
+        electronic music for generations to come.\n\n
+
+        What makes The Beatles unique is their remarkable evolution as artists. 
+        Beginning with energetic rock and roll inspired by early American artists, they quickly 
+        developed into pioneers of studio experimentation, incorporating orchestras, Indian 
+        instruments, tape manipulation, and groundbreaking production techniques into their 
+        music. Their partnership with producer George Martin helped redefine what was possible 
+        in the recording studio, turning albums into complete artistic experiences rather than 
+        simply collections of songs.\n\n
+
+        Throughout the 1960s, The Beatles released a series of landmark albums that transformed 
+        popular music. Rubber Soul introduced greater lyrical maturity and folk influences, 
+        Revolver pushed the boundaries of studio production, and Sgt. Pepper's Lonely Hearts 
+        Club Band became one of the first widely recognized concept albums. Their final 
+        recordings, including Abbey Road, demonstrated a level of musical sophistication and 
+        creativity that continues to inspire artists across every genre.\n\n
+
+        Beyond their music, The Beatles became global cultural icons. Their immense popularity 
+        sparked Beatlemania, influencing fashion, film, youth culture, and social attitudes 
+        around the world. Despite disbanding in 1970, their music remains among the best-selling 
+        and most celebrated in history, with countless musicians citing them as a primary 
+        influence on their own work.\n\n
+        
+        The Beatles are often recommended because they transformed the possibilities of rock 
+        music while creating songs that remain timeless and universally loved. Their 
+        extraordinary songwriting, constant innovation, and cultural impact have made them the 
+        benchmark by which many artists are measured. Whether you're exploring rock for the 
+        first time or studying the history of popular music, The Beatles' catalog offers an 
+        essential listening experience that continues to inspire audiences more than half a 
+        century later."
+        data-songs='[
+            {"title":"Back In The U.S.S.R","embed":"https://open.spotify.com/embed/track/0j3p1p06deJ7f9xmJ9yG22"},
+            {"title":"While My Guitar Gently Weeps","embed":"https://open.spotify.com/embed/track/6ZHCQehGCpGWTi6wEzs8vf"},
+            {"title":"Hey Jude","embed":"https://open.spotify.com/embed/track/0aym2LBJBk9DAYuHHutrIl"}
+        ]'>
+        <img src="../Images/The-Beatles.jpg" alt="The Beatles">
+        <h4>The Beatles</h4>
+    </div>
+
+    <div class="genre-artist-card"
+        data-name="Pink Floyd"
+        data-image="../Images/Pink-Floyd.jpg"
+        data-description="Pink Floyd was an English rock band formed in London in 1965, 
+        best known for pioneering progressive rock and psychedelic rock. The band's most 
+        celebrated lineup consisted of David Gilmour, Roger Waters, Richard Wright, and Nick 
+        Mason. Widely regarded as one of the greatest rock bands of all time, Pink Floyd became 
+        famous for creating immersive concept albums that combined thought-provoking lyrics, 
+        innovative production, and atmospheric soundscapes.\n\n
+
+        What makes Pink Floyd unique is their ability to tell stories through entire albums 
+        rather than individual songs. Their music often explores themes such as time, mental 
+        health, war, greed, isolation, and the human condition. By blending soaring guitar 
+        solos, rich synthesizers, experimental sound effects, and philosophical lyrics, the
+        band created cinematic listening experiences that encouraged audiences to experience 
+        albums from beginning to end.\n\n
+
+        Throughout the 1970s, Pink Floyd released a series of landmark albums that transformed 
+        rock music. The Dark Side of the Moon became one of the best-selling and most 
+        influential albums in history, praised for its seamless flow and exploration of life's
+        pressures. They followed it with Wish You Were Here, a tribute to former band 
+        member Syd Barrett, and The Wall, an ambitious rock opera examining loneliness, fame, 
+        and personal trauma. These albums established Pink Floyd as pioneers of the concept 
+        album and progressive rock.\n\n
+
+        Beyond their music, Pink Floyd revolutionized live performances through elaborate 
+        stage productions featuring lasers, giant inflatable props, circular projection screens, 
+        and synchronized visual effects. Their concerts became immersive multimedia experiences, 
+        influencing countless artists and setting new standards for live rock performances.\n\n
+        
+        Pink Floyd is often recommended because they elevated rock music into an immersive 
+        artistic experience. Their unforgettable melodies, philosophical lyrics, groundbreaking 
+        production, and ambitious concept albums continue to influence musicians across rock, 
+        electronic, and film music. Whether you're drawn to emotional storytelling, experimental 
+        sound design, or epic musical journeys, Pink Floyd's catalog offers some of the most 
+        rewarding and influential works in rock history."
+        data-songs='[
+            {"title":"Time","embed":"https://open.spotify.com/embed/track/3TO7bbrUKrOSPGRTB5MeCz"},
+            {"title":"Wish You Were Here","embed":"https://open.spotify.com/embed/track/6mFkJmJqdDVQ1REhVfGgd1"},
+            {"title":"Comfortably Numb","embed":"https://open.spotify.com/embed/track/7ajPDMxJkj2UCCGE2tnC9u"}
+        ]'>
+        <img src="../Images/Pink-Floyd.jpg" alt="Pink Floyd">
+        <h4>Pink Floyd</h4>
+    </div>
+
+    </div>
+</section>
+</section>
+
+
+<!-- Soundtracks -->
+<section>
+<!-- Genre Banner -->
+<section class="genre-banner" style="background-image:url('../Images/Elden-Ring.jpg');">
+    <div class="genre-banner-overlay"></div>
+    <div class="genre-banner-content">
+        <h1>Soundtracks</h1>
+    </div>
+</section>
+
+<!-- History & Description -->
+<section class="genre-info">
+    <div class="genre-info-block">
+        <h2>A Brief History</h2>
+        <p>
+            Soundtrack music originated alongside the silent films of the early 1900s, 
+            when live pianists and orchestras accompanied movies to enhance emotion and 
+            storytelling. As films gained synchronized sound in the late 1920s, composers 
+            began writing original scores specifically for movies, helping establish the 
+            soundtrack as its own musical genre. Over time, iconic composers such as John 
+            Williams, Ennio Morricone, Hans Zimmer, and Joe Hisaishi elevated film music into 
+            an art form, while television and video games further expanded the genre with 
+            memorable scores that have become beloved in their own right.
+        </p>
+    </div>
+
+    <div class="genre-info-block">
+        <h2>What Makes It Unique</h2>
+        <p>
+            What makes soundtrack music unique is that it is written to support a story rather 
+            than stand alone. Instead of following traditional song structures, soundtrack 
+            pieces are composed to enhance emotions, establish atmosphere, and reflect characters 
+            or important moments. Many composers use recurring musical themes, known as leitmotifs, 
+            to represent specific characters, places, or ideas, helping audiences form a deeper 
+            emotional connection to the story. It is also catergorized as a standalone genre because 
+            they are categorized by their purpose and origin rather than a specific musical style.
+        </p>
+    </div>
+</section>
+
+<section class="genre-info">
+    <div class="genre-info-block">
+        <h2>Why It's Popular</h2>
+        <p>
+            Soundtracks remain popular because they allow listeners to relive the 
+            emotions and memories of their favorite films, television shows, and video games. 
+            Their combination of orchestral, electronic, rock, pop, and world music influences 
+            also makes the genre incredibly diverse. Whether heard during a movie or on its own, 
+            a great soundtrack has the power to tell a story without words and create a lasting 
+            emotional impact.
+        </p>
+    </div>
+</section>
+
+<section class="genre-artists">
+    <h2 class="genre-artists-title">Recommended Composers/Soundtracks</h2>
+
+    <div class="genre-artists-grid">
+
+    <div class="genre-artist-card"
+        data-name="Hans Zimmer"
+        data-image="../Images/Hans_Zimmer.jpg"
+        data-description="Hans Zimmer is a German film composer and music producer who is 
+        widely regarded as one of the greatest and most influential composers in cinema history. 
+        Beginning his career in the 1980s, Zimmer revolutionized film scoring by blending 
+        traditional orchestral music with electronic elements, creating a powerful, modern 
+        sound that has defined countless blockbuster films. His work spans a wide range of 
+        genres, from action and science fiction to drama and animation, and his music has 
+        become instantly recognizable even to people who have never seen the films. \n\n
+        
+        What sets Hans Zimmer apart is his ability to use music to enhance storytelling. 
+        Rather than simply accompanying the action on screen, his scores often become an 
+        emotional voice of the film itself, helping audiences feel tension, triumph, sorrow, 
+        wonder, or hope. He is known for building memorable themes from simple musical ideas, 
+        layering orchestral instruments with synthesizers, percussion, and innovative sound 
+        design to create music that is both emotionally powerful and sonically unique.
+        
+        Throughout his career, Zimmer has composed music for many of the most acclaimed films of 
+        the past four decades. His scores for The Lion King, Gladiator, The Dark Knight Trilogy, 
+        Inception, Interstellar, Dune, and Pirates of the Caribbean have become iconic, influencing 
+        not only film music but also video game soundtracks, television, and even modern trailer 
+        music. He has received numerous awards, including multiple Academy Awards, Grammy Awards,
+        and Golden Globe Awards, cementing his reputation as one of the industry's greatest composers.
+        
+        Beyond his own work, Zimmer has had an enormous impact on film music through his mentoring of 
+        younger composers. Many successful soundtrack composers have trained or collaborated with him, 
+        helping shape the sound of modern Hollywood scores. His influence can be heard across 
+        countless films released over the past two decades, making him one of the most important 
+        figures in contemporary cinematic music."
+        data-songs='[
+            {"title":"Time - Inception","embed":"https://open.spotify.com/embed/track/6ZFbXIJkuI1dVNWvzJzown"},
+            {"title":"Cornfield Chase - Interstellar","embed":"https://open.spotify.com/embed/track/6pWgRkpqVfxnj3WuIcJ7WP"},
+            {"title":"Oogway Ascends - Kung Fu Panda","embed":"https://open.spotify.com/embed/track/1dZCiUTIbbvwOCALmzBh9y"}
+        ]'>
+        <img src="../Images/Hans_Zimmer.jpg" alt="Hanz Zimmer">
+        <h4>Hans Zimmer</h4>
+    </div>
+
+    <div class="genre-artist-card"
+        data-name="John Williams"
+        data-image="../Images/Ross-JohnWilliams01.jpg"
+        data-description="John Williams is an American composer, conductor, and pianist who is 
+        widely regarded as the greatest film composer of all time. With a career spanning more 
+        than six decades, Williams has created some of the most recognizable and beloved pieces 
+        of music ever written for film. His orchestral scores have become inseparable from the 
+        movies they accompany, helping define the sound of modern cinema and inspiring generations 
+        of composers and musicians. \n\n
+
+        What makes John Williams unique is his mastery of the leitmotif—the use of recurring 
+        musical themes to represent specific characters, places, or ideas. Much like Richard 
+        Wagner's operas, Williams gives each important character or concept its own memorable 
+        melody, allowing the music to tell part of the story alongside the visuals. His scores 
+        are rooted in the traditions of classical composers such as Holst, Korngold, and 
+        Tchaikovsky, yet they remain fresh, cinematic, and instantly recognizable. Rich
+        orchestration, soaring melodies, and emotional depth have become his trademark. \n\n
+
+        Williams first gained widespread recognition in the 1970s through his collaboration 
+        with director Steven Spielberg, composing unforgettable scores for films such as Jaws, 
+        E.T. the Extra-Terrestrial, Jurassic Park, Schindler's List, and Indiana Jones. His 
+        partnership with George Lucas on Star Wars transformed film music, reviving the grand 
+        symphonic style at a time when many Hollywood scores had become smaller in scale. The 
+        Star Wars soundtrack is now considered one of the greatest film scores ever composed, 
+        with themes that are recognized around the world. \n\n
+
+        Over the course of his career, Williams has earned dozens of Grammy Awards, BAFTAs, 
+        Golden Globes, and five Academy Awards, while becoming one of the most nominated 
+        individuals in Oscar history. His influence extends far beyond Hollywood, as his 
+        music is regularly performed by orchestras worldwide and studied by aspiring composers 
+        as the gold standard of cinematic storytelling through music."
+        data-songs='[
+            {"title":"Dual of the Fates - Star Wars","embed":"https://open.spotify.com/embed/track/1ghlpxVfPbFH2jenrv9vVw"},
+            {"title":"Theme from Jurassic Park","embed":"https://open.spotify.com/embed/track/Follow link (ctrl + click)"},
+            {"title":"Theme from Schindler List","embed":"https://open.spotify.com/embed/track/42gZM6AQ9BDMaTyTmMDVlN"}
+        ]'>
+        <img src="../Images/Ross-JohnWilliams01.jpg" alt="John Williams">
+        <h4>John Williams</h4>
+    </div>
+
+    <div class="genre-artist-card"
+        data-name="Umamusume"
+        data-image="../Images/uma_musume.jpg"
+        data-description="Unlike many games that have a single, well-known composer, Umamusume: 
+        Pretty Derby features music created by a team of composers and arrangers working under 
+        Cygames. The franchise's soundtrack spans orchestral film music, pop, rock, EDM, and idol 
+        music, reflecting both its dramatic racing scenes and its energetic live performances. \n\n
+        
+        Among the most notable composers are: \n\n
+        Tetsuya Uchida – One of the principal composers for the series, responsible for much of its emotional orchestral score and dramatic race music. His work balances cinematic tension with uplifting melodies, helping make the races feel exciting and emotionally rewarding. \n\n
+        Yoshiaki Fujisawa – Best known for composing anime soundtracks such as A Place Further than the Universe and Land of the Lustrous, Fujisawa has contributed orchestral arrangements and dramatic pieces to the franchise. His style emphasizes rich harmonies and emotional storytelling. \n\n
+        Keiki Kobayashi – Famous for his work on the Ace Combat series, Kobayashi has contributed to Umamusume's music, bringing his signature cinematic style that blends orchestral writing with modern electronic elements. \n\n
+
+        What makes the Umamusume soundtrack unique is its incredible variety. During story 
+        scenes and races, the music often resembles the score of a sports film, using full 
+        orchestras, choir, and dramatic crescendos to heighten the excitement. After races, 
+        the tone shifts completely, with the winning characters performing upbeat J-pop idol 
+        songs complete with choreography. This seamless transition between cinematic scoring and 
+        polished pop production gives the series a musical identity unlike almost any other game. \n\n 
+        
+        The composers behind Umamusume: Pretty Derby are often recommended because they 
+        successfully blend the emotional impact of film scores with the catchy appeal of Japanese 
+        pop music. Whether you're listening to the adrenaline-filled race themes or the uplifting 
+        idol performances, the soundtrack consistently delivers memorable melodies, polished 
+        production, and a strong sense of emotion—making it one of the standout game soundtracks 
+        in recent years."
+        data-songs='[
+            {"title":"Prix de l Arc de Triomphe","embed":"https://open.spotify.com/embed/track/3Fycx4qXuQT07J66fS9n3j"},
+            {"title":"By My Decree","embed":"https://open.spotify.com/embed/track/3ocYVarcmradbXIHKY44Ks"},
+            {"title":"Umapyoi Legend","embed":"https://open.spotify.com/embed/track/0uB1QGOrJtZtFslsoSdRAv"}
+        ]'>
+        <img src="../Images/uma_musume.jpg" alt="Umamusume: Pretty Derby">
+        <h4>Umamusume: Pretty Derby</h4>
+    </div>
+
+    </div>
+</section>
+</section>
 
 <!-- Artist Modal (reused across every genre page) -->
 <div class="artist-modal-backdrop">
@@ -311,7 +1851,20 @@
 
     </div>
 </div>
-    
+
+<!-- Now Playing Toast -->
+<div class="toast-container position-fixed bottom-0 end-0 p-3" style="z-index:1080;">
+    <div id="nowPlayingToast" class="toast align-items-center text-bg-dark border-0" role="alert" aria-live="assertive" aria-atomic="true">
+        <div class="d-flex">
+            <div class="toast-body">
+                Now playing: <span id="nowPlayingText"></span>
+            </div>
+            <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+        </div>
+    </div>
+</div>
+
+<!-- Footer -->
 <footer class="site-footer">
     <div class="footer-top">
         <div class="footer-brand">
@@ -319,7 +1872,7 @@
             <p>Discover something new.</p>
         </div>
 
-        <div class="footer-links">
+       <div class="footer-links">
             <div class="footer-col">
                 <h5>Discover</h5>
                 <a href="index.html">Home</a>

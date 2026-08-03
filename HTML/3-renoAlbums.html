@@ -6,18 +6,21 @@
     <title>Albums</title>
 
     <!-- Bootstrap -->
-     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- CSS -->
     <link rel="stylesheet" href="../CSS/mainstyle.css">
-    <link rel="stylesheet" href="../CSS/albums.css">
+    <link rel="stylesheet" href="../CSS/3albums.css">
 
     <!-- JavaScript -->
      <script src="../JavaScript/dropdown.js" defer></script>
      <script src="../JavaScript/albumModal.js" defer></script>
      <script src="../JavaScript/filter.js" defer></script>
+     <script src="../JavaScript/toastNotify.js" defer></script>
 
 </head>
+
 <body>
     <!-- Navigation -->
     <nav class="main-nav">
@@ -34,19 +37,19 @@
         </button>
 
         <div class="explore-menu">
-            <a href="index.html">Home</a>
-            <a href="2-genre.html">Genres</a>
-            <a href="3-renoAlbums.html">Renowned Albums</a>
-            <a href="4-renoSingles.html">Renowned Singles</a>
-            <a href="5-renoArtists.html">Renowned Artists</a>
-            <a href="6-renoMV.html">Renowned Music Videos</a>
-            <a href="7-vocaloids.html">Vocaloids</a>
-            <a href="8-history.html">History of Music</a>
-            <a href="9-musicProd.html">Mordern Music Production</a>
-            <a href="10-aifuture.html">AI and the Future of Music</a>
-            <a href="11-forums.html">Forums</a>
-            <a href="12-about.html">Who We Are</a>
-        </div>
+                <a href="index.html">Home</a>
+                <a href="2-genre.html">Genres</a>
+                <a href="3-renoAlbums.html">Renowned Albums</a>
+                <a href="4-renoSingles.html">Renowned Singles</a>
+                <a href="5-renoArtists.html">Renowned Artists</a>
+                <a href="6-renoMV.html">Renowned Music Videos</a>
+                <a href="7-vocaloids.html">Vocaloids</a>
+                <a href="8-history.html">History of Music</a>
+                <a href="9-musicProd.html">Mordern Music Production</a>
+                <a href="10-aifuture.html">AI and the Future of Music</a>
+                <a href="11-forums.html">Forums</a>
+                <a href="12-about.html">Who We Are</a>
+            </div>
     </div>
 </nav>
 
@@ -58,6 +61,7 @@
     <div class="genre-filter">
         <button class="genre-filter-btn active" data-genre="all">All</button>
         <button class="genre-filter-btn" data-genre="edm">EDM</button>
+        <button class="genre-filter-btn" data-genre="rap">Rap</button>
         <button class="genre-filter-btn" data-genre="rock">Rock</button>
 
     </div>
@@ -95,21 +99,21 @@
                 "title":"One More Time",
                 "embed":"https://open.spotify.com/embed/track/0DiWol3AO6WpXZgp0goxAV",
                 "background":"One More Time was one of the earliest songs created for Discovery, having been completed as early as 1998 before finally being released as the lead single in late 2000. Daft Punk wanted the song to embody pure celebration&#8212;less about storytelling and more about capturing the feeling of a perfect night on the dance floor. They intentionally embraced an uplifting, almost childlike sense of joy, contrasting with the darker, more underground sound of their previous album, Homework.\\n\\nThe vocals were provided by American house singer Romanthony, whose voice was heavily compressed and Auto-Tuned. Rather than correcting imperfections, Daft Punk used Auto-Tune as an artistic instrument, helping define the futuristic sound that would become synonymous with the album. At the time, this was controversial, but it later became one of the song&#39;s defining characteristics.\\n\\nWithin Interstella 5555, One More Time accompanies the opening celebration of the alien band before they are kidnapped, making the song forever associated with the film&#39;s vibrant opening sequence.",
-                "trivia":"Elements of the song were sampled from Eddie Johns&#39;s 1979 disco track More Spell on You.",
+                "trivia":"- Elements of the song were sampled from Eddie Johns&#39;s 1979 disco track More Spell on You. \\n\\n- The iconic Auto-Tuned vocals were a deliberate creative choice, not a technical necessity. \\n\\n- Frequently appears on lists of the greatest dance songs ever recorded.",
                 "lyricsUrl":"https://genius.com/Daft-punk-one-more-time-lyrics"
             },
             {
                 "title":"Digital Love",
                 "embed":"https://open.spotify.com/embed/track/2VEZx7NWsZ1D0eJ4uv5Fym",
-                "background":"A dreamy, disco-tinged love song built around a sampled keyboard riff from George Duke\u2019s \u201cI Love You More.\u201d Often cited as one of the album\u2019s most emotionally resonant tracks.",
-                "trivia":"At the time, using Auto-Tune this way was controversial, but it later became one of the song&#39;s defining characteristics.",
+                "background":"Digital Love is one of the most melodic and sentimental tracks on Discovery. Rather than focusing on the dance floor, it tells the story of someone dreaming about falling in love, only to wake up and realize it never happened. The lyrics blur the line between fantasy and reality, fitting perfectly with Discovery&#39;s nostalgic themes of childhood imagination and idealized romance.\\n\\nMusically, the song draws heavily from late-1970s and early-1980s pop, combining disco grooves with vintage synthesizers, a Wurlitzer piano, and a soaring guitar solo that feels more like classic arena rock than electronic music. This fusion helped establish Discovery as an album that celebrated pop music just as much as house music.\\n\\n",
+                "trivia":"- Features one of Daft Punk&#39;s few prominent guitar-style solos, created using keyboards and production techniques rather than a traditional rock performance. \\n\\n- Considered by many fans to be one of Daft Punk&#39;s most underrated songs. \\n\\n- Blends disco, funk, pop, jazz, and new wave influences into a single track. \\n\\n- The title reflects both digital technology and an idealized, almost imaginary romance.",
                 "lyricsUrl":"https://genius.com/Daft-punk-digital-love-lyrics"
             },
             {
                 "title":"Something About Us",
                 "embed":"https://open.spotify.com/embed/track/1NeLwFETswx8Fzxl2AFl91",
-                "background":"A slow, soulful ballad that stands apart from the album\u2019s more upbeat tracks, showing Daft Punk\u2019s range beyond dancefloor-focused production.",
-                "trivia":"At the time, using Auto-Tune this way was controversial, but it later became one of the song&#39;s defining characteristics.\\n\\nWithin Interstella 5555, One More Time accompanies the opening celebration of the alien band before they are kidnapped, making the song forever associated with the film&#39;s vibrant opening sequence.",
+                "background":"Something About Us is arguably the emotional centerpiece of Discovery. Slowing the pace dramatically, it tells the story of someone confessing feelings while acknowledging that the relationship may never truly happen. Unlike most Daft Punk songs, which rely on repetition and dance rhythms, this track places its focus on vulnerability, restraint, and emotion. \\n\\n Thomas Bangalter performs the lead vocals himself, delivering one of the duo&#39;s most personal performances. The understated production—soft bass, gentle drum machine, and warm synthesizers—allows the lyrics to take center stage, making it one of the most human songs in Daft Punk&#39;s catalogue.",
+                "trivia":"- One of the few Daft Punk songs with lead vocals. \\n\\n- One of the least electronic-sounding songs on Discovery, borrowing heavily from smooth soul and soft R&B. \\n\\n- Although never as commercially successful as One More Time, it has become one of the duo&#39;s most beloved deep cuts.",
                 "lyricsUrl":"https://genius.com/Daft-punk-something-about-us-lyrics"
             }
         ]'>
@@ -146,22 +150,22 @@
                 {
                     "title":"Give Life Back To Music",
                     "embed":"https://open.spotify.com/embed/track/0dEIca2nhcxDUV8C5QkPYb",
-                    "background":"One More Time was one of the earliest songs created for Discovery, having been completed as early as 1998 before finally being released as the lead single in late 2000. Daft Punk wanted the song to embody pure celebration&#8212;less about storytelling and more about capturing the feeling of a perfect night on the dance floor. They intentionally embraced an uplifting, almost childlike sense of joy, contrasting with the darker, more underground sound of their previous album, Homework.\\n\\nThe vocals were provided by American house singer Romanthony, whose voice was heavily compressed and Auto-Tuned. Rather than correcting imperfections, Daft Punk used Auto-Tune as an artistic instrument, helping define the futuristic sound that would become synonymous with the album. At the time, this was controversial, but it later became one of the song&#39;s defining characteristics.\\n\\nWithin Interstella 5555, One More Time accompanies the opening celebration of the alien band before they are kidnapped, making the song forever associated with the film&#39;s vibrant opening sequence.",
-                    "trivia":"At the time, using Auto-Tune this way was controversial, but it later became one of the song&#39;s defining characteristics.\\n\\nWithin Interstella 5555, One More Time accompanies the opening celebration of the alien band before they are kidnapped, making the song forever associated with the film&#39;s vibrant opening sequence.",
+                    "background":"Give Life Back to Music serves as the opening track of Random Access Memories and acts as Daft Punk&#39;s mission statement for the entire album. After years of producing heavily electronic music, Thomas Bangalter and Guy-Manuel de Homem-Christo wanted to celebrate the musicianship of the 1970s and 1980s by recording with live instruments, session musicians, and vintage analog equipment. The song&#39;s title reflects their desire to reconnect modern music with the warmth and spontaneity of live performance.\\n\\n Unlike many of Daft Punk&#39;s earlier works, the song was recorded using live drums, bass, guitars, and keyboards instead of relying primarily on samples. The duo collaborated with legendary session musicians, including guitarist Nile Rodgers, whose signature funk style helped define the track&#39;s energetic groove.\\n\\n The song sets the tone for Random Access Memories, introducing themes of nostalgia, craftsmanship, and rediscovering the joy of making music with real performers. It marks the beginning of an album that intentionally moves away from digital production techniques in favor of live recording.",
+                    "trivia":"- Features legendary guitarist Nile Rodgers of Chic. \\n\\n- Recorded almost entirely with live musicians instead of samples. \\n\\n- The album went on to win the Grammy Award for Album of the Year in 2014.",
                     "lyricsUrl":"https://genius.com/Daft-punk-give-life-back-to-music-lyrics"
                 },
                 {
                     "title":"Giorgo by Mordor",
                     "embed":"https://open.spotify.com/embed/track/0oks4FnzhNp5QPTZtoet7c",
-                    "background":"A dreamy, disco-tinged love song built around a sampled keyboard riff from George Duke\u2019s \u201cI Love You More.\u201d Often cited as one of the album\u2019s most emotionally resonant tracks.",
-                    "trivia":"At the time, using Auto-Tune this way was controversial, but it later became one of the song&#39;s defining characteristics.",
+                    "background":"Giorgio by Moroder is a tribute to pioneering Italian producer Giorgio Moroder, widely regarded as one of the fathers of electronic disco and synth-driven pop music. Rather than writing a traditional song, Daft Punk built the track around an interview with Moroder, who recounts his early life, his passion for music, and his decision to pursue a completely new sound using synthesizers.\\n\\n As Moroder&#39;s story progresses, the music evolves alongside his career. It begins with simple instrumentation before gradually expanding into disco, funk, orchestral arrangements, jazz-inspired sections, and electronic music. This musical progression mirrors the evolution of modern popular music and demonstrates how one artist&#39;s innovations influenced generations of musicians.\\n\\n The recording was carefully produced using several different microphones from various decades. Each microphone corresponds to a different period of Moroder&#39s life, subtly recreating the sound quality of each era and adding another layer of storytelling to the track.\\n\\n",
+                    "trivia":"- Features narration by legendary producer Giorgio Moroder himself. \\n\\n- Uses multiple vintage microphones to represent different decades of Moroder&#39;s life. \\n\\n- Contains live orchestral performances alongside electronic instrumentation. \\n\\n- One of the longest tracks in Daft Punk&#39;s catalogue at over nine minutes.",
                     "lyricsUrl":""
                 },
                 {
                     "title":"Get Lucky",
                     "embed":"https://open.spotify.com/embed/track/69kOkLUCkxIZYexIgSG8rq",
-                    "background":"A slow, soulful ballad that stands apart from the album\u2019s more upbeat tracks, showing Daft Punk\u2019s range beyond dancefloor-focused production.",
-                    "trivia":"At the time, using Auto-Tune this way was controversial, but it later became one of the song&#39;s defining characteristics.\\n\\nWithin Interstella 5555, One More Time accompanies the opening celebration of the alien band before they are kidnapped, making the song forever associated with the film&#39;s vibrant opening sequence.",
+                    "background":"Get Lucky became Daft Punk&#39;s biggest commercial success and the defining single from Random Access Memories. The song was born from the duo&#39;s desire to recreate the timeless feel of late-1970s disco and funk while presenting it through a modern production style. Featuring Pharrell Williams on vocals and Nile Rodgers on guitar, the track celebrates optimism, human connection, and enjoying the present moment.\\n\\n The lyrics intentionally leave room for interpretation. While many listeners associate the phrase get lucky with romance, Pharrell Williams explained that the song is more broadly about finding good fortune, embracing opportunity, and staying positive. This universal message helped make the song resonate with audiences around the world.\\n\\n Recorded almost entirely with live instruments, the song reflects Daft Punk&#39;s commitment to authentic musicianship throughout Random Access Memories. Its infectious groove, clean production, and timeless sound helped bridge generations of listeners, introducing younger audiences to classic disco influences while appealing to longtime music fans.",
+                    "trivia":"- Became Daft Punk&#39;s first Top 10 hit on the US Billboard Hot 100. \\n\\n- Won Record of the Year and Best Pop Duo/Group Performance at the 2014 Grammy Awards. \\n\\n- Before its release, Daft Punk generated enormous anticipation with only short teaser clips, creating one of the most successful music marketing campaigns of the decade.",
                     "lyricsUrl":""
                 }
             ]'>
@@ -199,28 +203,81 @@
                 {
                     "title":"Welcome To The Black Parade",
                     "embed":"https://open.spotify.com/embed/track/5wQnmLuC1W7ATsArWACrgW",
-                    "background":"One More Time was one of the earliest songs created for Discovery, having been completed as early as 1998 before finally being released as the lead single in late 2000. Daft Punk wanted the song to embody pure celebration&#8212;less about storytelling and more about capturing the feeling of a perfect night on the dance floor. They intentionally embraced an uplifting, almost childlike sense of joy, contrasting with the darker, more underground sound of their previous album, Homework.\\n\\nThe vocals were provided by American house singer Romanthony, whose voice was heavily compressed and Auto-Tuned. Rather than correcting imperfections, Daft Punk used Auto-Tune as an artistic instrument, helping define the futuristic sound that would become synonymous with the album. At the time, this was controversial, but it later became one of the song&#39;s defining characteristics.\\n\\nWithin Interstella 5555, One More Time accompanies the opening celebration of the alien band before they are kidnapped, making the song forever associated with the film&#39;s vibrant opening sequence.",
-                    "trivia":"At the time, using Auto-Tune this way was controversial, but it later became one of the song&#39;s defining characteristics.\\n\\nWithin Interstella 5555, One More Time accompanies the opening celebration of the alien band before they are kidnapped, making the song forever associated with the film&#39;s vibrant opening sequence.",
-                    "lyricsUrl":"https://genius.com/Daft-punk-give-life-back-to-music-lyrics"
+                    "background":"Welcome to the Black Parade is the centerpiece of The Black Parade and introduces the album&#39;s main character, known as The Patient. The song tells the story of a man reflecting on his life as he faces death from cancer. Through memories of his father taking him to see a marching band, he finds the strength to face death with courage and carry on the legacy of those who came before him.\\n\\n Gerard Way wrote the song as the emotional heart of the album, drawing inspiration from classic rock operas and theatrical performances by bands such as Queen, Pink Floyd, and David Bowie. The gradual build from a soft piano ballad into a triumphant rock anthem symbolizes The Patient&#39;s journey from fear and uncertainty to acceptance and determination.\\n\\n The song also became an anthem for My Chemical Romance fans, with its message of perseverance resonating far beyond the album&#39s fictional narrative. Even after the band&#39;s breakup and reunion, it remains their signature song and a defining anthem of the 2000s emo and alternative rock scene.",
+                    "trivia":"- The famous opening piano melody is instantly recognizable and has become one of rock&#39s most iconic intros. \\n\\n- Gerard Way has said the song took a long time to perfect because it needed to represent the entire album. \\n\\n- The marching band imagery inspired the album&#39s military-style aesthetic and costumes. \\n\\n- Frequently closes My Chemical Romance&#39s live concerts, with audiences singing nearly every lyric. \\n\\n- Certified multi-platinum and widely regarded as one of the greatest rock songs of the 21st century.",
+                    "lyricsUrl":"https://genius.com/My-chemical-romance-welcome-to-the-black-parade-lyrics"
                 },
                 {
                     "title":"Mama",
                     "embed":"https://open.spotify.com/embed/track/0Zh3tKIphLOvQux4dA6PFZ",
-                    "background":"A dreamy, disco-tinged love song built around a sampled keyboard riff from George Duke\u2019s \u201cI Love You More.\u201d Often cited as one of the album\u2019s most emotionally resonant tracks.",
-                    "trivia":"At the time, using Auto-Tune this way was controversial, but it later became one of the song&#39;s defining characteristics.",
-                    "lyricsUrl":""
+                    "background":"Mama is one of the darkest and most theatrical songs on The Black Parade. It is sung from the perspective of a soldier who has committed horrific acts during war and now writes to his mother while overwhelmed by guilt, fear, and regret. Rather than glorifying warfare, the song portrays the psychological damage and moral consequences experienced by those caught in conflict.\\n\\n Musically, Mama draws inspiration from cabaret, punk rock, and musical theatre. Gerard Way cited influences such as Bertolt Brecht and Kurt Weill, giving the song a chaotic and theatrical atmosphere that matches the mental unraveling of its narrator. The shifting tempos and dramatic vocal performances reinforce the feeling of descending into madness.\\n\\n The song also features guest vocals from Liza Minnelli, whose haunting performance adds another layer of theatricality. Her appearance was unexpected but perfectly complemented the song&#39s dark, vaudeville-inspired style, making Mama one of the album&#39s most unique tracks.",
+                    "trivia":"- Features guest vocals from legendary actress and singer Liza Minnelli. \\n\\n- Blends punk rock with cabaret and theatrical influences. \\n\\n- One of the most complex and dramatic songs in My Chemical Romance&#39s catalogue. \\n\\n- Its lyrics contain numerous references to war, death, and religious imagery. \\n\\n- A fan favorite for its unpredictable structure and theatrical performances during live shows.",
+                    "lyricsUrl":"https://genius.com/My-chemical-romance-mama-lyrics"
                 },
                 {
                     "title":"Disenchanted",
                     "embed":"https://open.spotify.com/embed/track/6T7MAQCekVb3UnCykjX3BP",
-                    "background":"A slow, soulful ballad that stands apart from the album\u2019s more upbeat tracks, showing Daft Punk\u2019s range beyond dancefloor-focused production.",
-                    "trivia":"At the time, using Auto-Tune this way was controversial, but it later became one of the song&#39;s defining characteristics.\\n\\nWithin Interstella 5555, One More Time accompanies the opening celebration of the alien band before they are kidnapped, making the song forever associated with the film&#39;s vibrant opening sequence.",
-                    "lyricsUrl":""
+                    "background":"Disenchanted serves as one of the final emotional moments on The Black Parade. As The Patient reflects on his life, he realizes that many of his dreams and expectations did not come true. Rather than expressing anger, the song captures a quiet sense of disappointment and acceptance, acknowledging that life is often more complicated than people imagine.\\n\\n Originally written under the working title Shut Up and Play, the song nearly did not make the final version of the album. Gerard Way ultimately decided it was essential because it represented the emotional vulnerability of The Patient before the album reached its conclusion. Its softer instrumentation provides a moment of reflection amid the album&#39s larger theatrical moments.\n\n Many fans interpret Disenchanted as Gerard Way&#39s commentary on fame and the pressures of the music industry, although its lyrics are intentionally broad enough to resonate with anyone who has experienced disappointment or lost innocence. This universality has helped the song become one of the album&#39s most emotionally impactful tracks.",
+                    "trivia":"- Nearly missed inclusion on The Black Parade before Gerard Way decided to keep it. \\n\\n- One of the album&#39s quietest and most introspective songs. \\n\\n- Frequently praised by fans as one of My Chemical Romance&#39s most emotionally honest songs.",
+                    "lyricsUrl":"https://genius.com/My-chemical-romance-disenchanted-lyrics"
                 }
             ]'>
             <img src="../Images/The_Black_Parade.jpg" alt="The Black Parade">
             <h4>The Black Parade</h4>
             <p>My Chemical Romance</p>
+        </div>
+
+                <div class="album-card"
+             data-title="The Black Parade"
+             data-genre="rap"
+             data-artist="My Chemical Romance"
+             data-cover="../Images/The_Black_Parade.jpg"
+             data-description="The Black Parade is My Chemical Romance's most ambitious and 
+             celebrated album, combining punk rock, alternative rock, emo, and classic rock 
+             into a dramatic concept album about life, death, and the human experience. The 
+             story follows a character known as The Patient, who reflects on his memories, 
+             fears, and regrets as he faces the end of his life. Inspired by classic rock 
+             operas such as The Wall, the album delivers an emotional narrative through powerful 
+             lyrics and theatrical performances.\n\n
+             
+             What makes The Black Parade so iconic is its ability to 
+             balance deeply personal themes with unforgettable songs. Tracks like Welcome to the 
+             Black Parade, Famous Last Words, Teenagers, and I Don't Love You each explore 
+             different emotions, from hope and resilience to loss and defiance. The album's 
+             cinematic production, memorable guitar work, and passionate vocals create an 
+             experience that feels larger than life while remaining deeply relatable.\n\n
+             
+             Since its release in 2006, The Black Parade has become one of the defining rock 
+             albums of the 21st century, inspiring countless artists and earning a devoted 
+             global fanbase. More than just a collection of songs, it is a complete musical 
+             journey that encourages listeners to confront fear, embrace life's challenges, 
+             and carry on in the face of adversity.\n\n"
+             data-tracks='[
+                {
+                    "title":"Excursions",
+                    "embed":"https://open.spotify.com/embed/track/4tEaytMs86hIaOSsiGoLcP",
+                    "background":"Welcome to the Black Parade is the centerpiece of The Black Parade and introduces the album&#39;s main character, known as The Patient. The song tells the story of a man reflecting on his life as he faces death from cancer. Through memories of his father taking him to see a marching band, he finds the strength to face death with courage and carry on the legacy of those who came before him.\\n\\n Gerard Way wrote the song as the emotional heart of the album, drawing inspiration from classic rock operas and theatrical performances by bands such as Queen, Pink Floyd, and David Bowie. The gradual build from a soft piano ballad into a triumphant rock anthem symbolizes The Patient&#39;s journey from fear and uncertainty to acceptance and determination.\\n\\n The song also became an anthem for My Chemical Romance fans, with its message of perseverance resonating far beyond the album&#39s fictional narrative. Even after the band&#39;s breakup and reunion, it remains their signature song and a defining anthem of the 2000s emo and alternative rock scene.",
+                    "trivia":"- The famous opening piano melody is instantly recognizable and has become one of rock&#39s most iconic intros. \\n\\n- Gerard Way has said the song took a long time to perfect because it needed to represent the entire album. \\n\\n- The marching band imagery inspired the album&#39s military-style aesthetic and costumes. \\n\\n- Frequently closes My Chemical Romance&#39s live concerts, with audiences singing nearly every lyric. \\n\\n- Certified multi-platinum and widely regarded as one of the greatest rock songs of the 21st century.",
+                    "lyricsUrl":"https://genius.com/My-chemical-romance-welcome-to-the-black-parade-lyrics"
+                },
+                {
+                    "title":"Mama",
+                    "embed":"https://open.spotify.com/embed/track/0Zh3tKIphLOvQux4dA6PFZ",
+                    "background":"Mama is one of the darkest and most theatrical songs on The Black Parade. It is sung from the perspective of a soldier who has committed horrific acts during war and now writes to his mother while overwhelmed by guilt, fear, and regret. Rather than glorifying warfare, the song portrays the psychological damage and moral consequences experienced by those caught in conflict.\\n\\n Musically, Mama draws inspiration from cabaret, punk rock, and musical theatre. Gerard Way cited influences such as Bertolt Brecht and Kurt Weill, giving the song a chaotic and theatrical atmosphere that matches the mental unraveling of its narrator. The shifting tempos and dramatic vocal performances reinforce the feeling of descending into madness.\\n\\n The song also features guest vocals from Liza Minnelli, whose haunting performance adds another layer of theatricality. Her appearance was unexpected but perfectly complemented the song&#39s dark, vaudeville-inspired style, making Mama one of the album&#39s most unique tracks.",
+                    "trivia":"- Features guest vocals from legendary actress and singer Liza Minnelli. \\n\\n- Blends punk rock with cabaret and theatrical influences. \\n\\n- One of the most complex and dramatic songs in My Chemical Romance&#39s catalogue. \\n\\n- Its lyrics contain numerous references to war, death, and religious imagery. \\n\\n- A fan favorite for its unpredictable structure and theatrical performances during live shows.",
+                    "lyricsUrl":"https://genius.com/My-chemical-romance-mama-lyrics"
+                },
+                {
+                    "title":"Disenchanted",
+                    "embed":"https://open.spotify.com/embed/track/6T7MAQCekVb3UnCykjX3BP",
+                    "background":"Disenchanted serves as one of the final emotional moments on The Black Parade. As The Patient reflects on his life, he realizes that many of his dreams and expectations did not come true. Rather than expressing anger, the song captures a quiet sense of disappointment and acceptance, acknowledging that life is often more complicated than people imagine.\\n\\n Originally written under the working title Shut Up and Play, the song nearly did not make the final version of the album. Gerard Way ultimately decided it was essential because it represented the emotional vulnerability of The Patient before the album reached its conclusion. Its softer instrumentation provides a moment of reflection amid the album&#39s larger theatrical moments.\n\n Many fans interpret Disenchanted as Gerard Way&#39s commentary on fame and the pressures of the music industry, although its lyrics are intentionally broad enough to resonate with anyone who has experienced disappointment or lost innocence. This universality has helped the song become one of the album&#39s most emotionally impactful tracks.",
+                    "trivia":"- Nearly missed inclusion on The Black Parade before Gerard Way decided to keep it. \\n\\n- One of the album&#39s quietest and most introspective songs. \\n\\n- Frequently praised by fans as one of My Chemical Romance&#39s most emotionally honest songs.",
+                    "lyricsUrl":"https://genius.com/My-chemical-romance-disenchanted-lyrics"
+                }
+            ]'>
+            <img src="../Images/Low-End-Theory.jpg" alt="The Low End Theory">
+            <h4>The Low End Theory</h4>
+            <p>A Tribe Called Quest</p>
         </div>
 
     </div>
@@ -263,6 +320,17 @@
     </div>
 </div>
 
+<!-- Now Playing Toast -->
+<div class="toast-container position-fixed bottom-0 end-0 p-3" style="z-index:1080;">
+    <div id="nowPlayingToast" class="toast align-items-center text-bg-dark border-0" role="alert" aria-live="assertive" aria-atomic="true">
+        <div class="d-flex">
+            <div class="toast-body">
+                Now playing: <span id="nowPlayingText"></span>
+            </div>
+            <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+        </div>
+    </div>
+</div>
     
 <footer class="site-footer">
     <div class="footer-top">
@@ -271,7 +339,7 @@
             <p>Discover something new.</p>
         </div>
 
-        <div class="footer-links">
+       <div class="footer-links">
             <div class="footer-col">
                 <h5>Discover</h5>
                 <a href="index.html">Home</a>

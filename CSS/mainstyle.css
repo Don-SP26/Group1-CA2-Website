@@ -5,7 +5,7 @@
     font-family:Arial, Helvetica, sans-serif;
 }
 
-h1, h2, h3, h4  {
+h1, h2, h3, h4, p  {
     color: white;
 }
 
@@ -18,10 +18,13 @@ section{
     margin-bottom: 50px;
 }
 
-.body-content{
-    padding: 0 0 50px 50px;
+.hero-content{
+    width:600px;   /* wider than most phone screens (~375-430px) */
+    left:50px;
 }
-
+.hero-content h1{
+    font-size:6rem; /* ~96px — will overflow badly on mobile */
+}
 /* Explore Dropdown */
 
 .nav-explore{
@@ -204,4 +207,16 @@ section{
     font-size:.85rem;
 }
 
+@media (max-width:480px){
+    .main-nav{
+        padding:14px 20px;
+    }
 
+    .site-footer{
+        padding:30px 20px;
+    }
+
+    .footer-links{
+        gap:30px;
+    }
+}

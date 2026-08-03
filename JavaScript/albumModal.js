@@ -85,6 +85,8 @@ function playTrack(embedUrl, li) {
 
     li.classList.add('playing');
     modalPlayer.src = embedUrl;
+
+    showNowPlaying(li.querySelector('.track-title').textContent);
 }
 
 function closeModal() {

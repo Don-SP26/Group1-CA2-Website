@@ -21,7 +21,10 @@ function openModal(card) {
     modalImage.src = image;
     modalImage.alt = name;
     modalName.textContent = name;
-    modalDescription.textContent = description;
+    modalDescription.innerHTML = description
+    .split('\\n\\n')
+    .map(paragraph => `<p>${paragraph}</p>`)
+    .join('');
 
     // Rebuild the song list for this artist
     modalSongList.innerHTML = '';
@@ -41,18 +44,19 @@ function openModal(card) {
 }
 
 function playSong(embedUrl, li) {
-    // Clear "playing" highlight from any previously selected song
     document.querySelectorAll('.artist-modal-song-list li').forEach(item => {
         item.classList.remove('playing');
     });
 
     li.classList.add('playing');
     modalPlayer.src = embedUrl;
+
+    showNowPlaying(li.textContent);
 }
 
 function closeModal() {
     modalBackdrop.classList.remove('open');
-    modalPlayer.src = ''; // stops playback by clearing the iframe entirely
+    modalPlayer.src = '';
 }
 
 modalClose.addEventListener('click', closeModal);
