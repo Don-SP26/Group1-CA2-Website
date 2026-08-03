@@ -1,17 +1,12 @@
-function toggleBTS(){
+function toggleBTS(id){
 
-    let section = document.getElementById("bts");
+    let section = document.getElementById(id);
 
     if(section.style.display === "none"){
-
         section.style.display = "block";
-
     }
-
     else{
-
         section.style.display = "none";
-
     }
 
 }
