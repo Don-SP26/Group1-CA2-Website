@@ -1,6 +1,4 @@
-/* =========================================================
-   PAGE 10: AI and the Future of Music  → <body class="page-ai-future">
-   ========================================================= */
+/* PAGE 10 CSS STYLING */
 /* Remove box background and border but keep spacing */
 body.page-ai-future .box {
     background: #1c1c1c;
@@ -49,11 +47,7 @@ body.page-ai-future ul li {
 }
 
 
-/* =========================================================
-   PAGE 11: Forums  → <body class="page-forums">
-   ========================================================= */
-
-
+/* PAGE 11 CSS STYLING */
 /* Custom-only styles: colors, hover states, and values not on Bootstrap's scale */
 body.page-forums .forum-layout {
     max-width: 1200px; /* not a Bootstrap container breakpoint */
@@ -194,9 +188,7 @@ body.page-forums .forum-tab.active {
 }
 
 
-/* =========================================================
-   PAGE 12: Who We Are  → <body class="page-about">
-   ========================================================= */
+/* PAGE 12 CSS STYLING */
 /* Custom-only styles: colors, hover effects, and values not on Bootstrap's scale */
 body.page-about .about-section {
     max-width: 1200px; /* keep for overall width control */
