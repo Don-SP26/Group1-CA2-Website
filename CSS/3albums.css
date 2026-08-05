@@ -3,6 +3,8 @@
 .albums-grid-title{
     font-size:2rem;
     margin-bottom:30px;
+    font-weight: bold;
+    text-align: center;
 }
 
 .albums-grid-container{
