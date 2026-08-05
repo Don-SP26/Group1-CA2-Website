@@ -86,6 +86,17 @@
     position: relative;
 }
 
+/* Force popup text to be black */
+.popup-content,
+.popup-content h2,
+.popup-content h4,
+.popup-content p,
+.popup-content li,
+.popup-content span{
+    color: #000 !important;
+}
+
+
 /* Close Button */
 .close-btn{
     position: absolute;

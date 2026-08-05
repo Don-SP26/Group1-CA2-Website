@@ -1,175 +1,163 @@
-:root{
-  --bg: #121014;
-  --stub: #1c191f;
-  --stub-line: #322d36;
-  --gold: #e8b84b;
-  --rose: #c4536b;
-  --paper: #f5f1e8;
-  --muted: #8b8690;
-}
-
-*{box-sizing:border-box; margin:0; padding:0;}
-
-body{
-  background:
-    radial-gradient(circle at 15% 8%, rgba(17, 17, 17, 0.08), transparent 40%),
-    radial-gradient(circle at 85% 90%, rgba(12, 12, 12, 0.08), transparent 45%),
-    var(--bg);
-  color: var(--paper);
-  font-family: 'Inter', sans-serif;
-  min-height: 100vh;
-  padding-bottom: 40px;
-}
-
-.text-center{
-  text-align:center;
-  padding: 64px 6vw 40px;
-  max-width: 760px;
-  margin: 0 auto;
-}
-.eyebrow{
-  font-family:'JetBrains Mono', monospace;
-  font-size: 0.72rem;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-  color: var(--rose);
-  margin-bottom: 14px;
-}
-.text-center h1{
-  font-family:'Anton', sans-serif;
-  font-size: clamp(2.2rem, 6vw, 3.6rem);
-  line-height: 1.05;
-  letter-spacing: 0.5px;
-  text-transform: uppercase;
-  background: linear-gradient(180deg, var(--paper) 60%, var(--gold));
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-}
-.text-center p{
-  margin-top: 16px;
-  color: var(--muted);
-  font-size: 1rem;
-  line-height: 1.6;
-}
-
-.grid{
-  max-width: 1180px;
-  margin: 30px auto 0;
-  padding: 0 5vw;
-  display:grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 26px;
-}
-@media (max-width: 900px){ .grid{ grid-template-columns: repeat(2,1fr);} }
-@media (max-width: 600px){ .grid{ grid-template-columns: 1fr;} }
-
-.card{
-  background: var(--stub);
-  border: 1px solid var(--stub-line);
-  border-radius: 10px;
-  overflow: hidden;
-  position: relative;
-  transition: transform .25s ease, box-shadow .25s ease;
-}
-.card:hover{
-  transform: translateY(-4px);
-  box-shadow: 0 14px 30px rgba(0,0,0,0.4);
-}
-
-.avatar{
-  height: 168px;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  position: relative;
-}
-.avatar .initials{
-  font-family:'Anton', sans-serif;
-  font-size: 2.6rem;
-  letter-spacing: 2px;
-  color: rgba(245,241,232,0.92);
-  text-shadow: 0 0 30px rgba(0,0,0,0.4);
-}
-.avatar::after{
-  content:"";
-  position:absolute;
-  inset:0;
-  background: radial-gradient(circle at 50% 35%, rgba(255,255,255,0.10), transparent 60%);
-}
-
-.perf{
-  position: relative;
-  height: 1px;
-  border-top: 1px dashed var(--stub-line);
-  margin: 0 18px;
-}
-.perf::before, .perf::after{
-  content:"";
-  position:absolute;
-  top:-9px;
-  width:18px;
-  height:18px;
-  background: var(--bg);
-  border-radius:50%;
-}
-.perf::before{ left:-27px; }
-.perf::after{ right:-27px; }
-
-.stub-info{
-  padding: 16px 18px 8px;
-}
-.name{
-  font-family:'Anton', sans-serif;
-  font-size: 1.2rem;
-  letter-spacing: 0.5px;
-  text-transform: uppercase;
-}
-.meta{
-  font-family:'JetBrains Mono', monospace;
-  font-size: 0.68rem;
-  letter-spacing: 1px;
-  color: var(--muted);
-  text-transform: uppercase;
-  margin-top: 4px;
-}
-
-.expand-btn{
+/* Card Section Container Box */
+.grid-container {
+  background: linear-gradient(145deg, #121118, #0a090d); /* Subtle sleek dark gradient */
+  border: 1px solid #bbb5d4;                              /* Soft subtle border */
+  border-radius: 20px;                                     /* Rounded corners */
+  padding: 35px;                                           /* Space inside around cards */
+  box-shadow: 0 15px 35px rgba(56, 55, 55, 0.5);              /* Soft shadow under container */
   width: 100%;
-  background: none;
-  border: none;
-  color: var(--gold);
-  font-family:'JetBrains Mono', monospace;
-  font-size: 0.72rem;
-  letter-spacing: 1.5px;
+}
+
+/* Ensure grid fits perfectly inside container */
+.artist-grid {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
+/* Reset & Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+body {
+  background-color: #0b0a0e;
+  color: #e0e0e0;
+  min-height: 100vh;
+}
+
+/* Page Container */
+.container {
+  max-width: 1150px;
+  margin: 0 auto;
+  padding: 20px 20px 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Header Text */
+.header {
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 35px;
+}
+
+.header h1 {
+  font-size: 2.2rem;
+  letter-spacing: 3px;
+  color: #dcd6f7;
+  line-height: 1.2;
+  margin-bottom: 12px;
   text-transform: uppercase;
-  padding: 14px 18px;
-  display:flex;
-  align-items:center;
-  justify-content: space-between;
-  cursor: pointer;
 }
-.expand-btn .chev{
-  transition: transform .25s ease;
-  font-size: 0.9rem;
-}
-.card.open .expand-btn .chev{ transform: rotate(180deg); }
 
-.bio{
-  max-height: 0;
+.header p {
+  color: #888;
+  font-size: 0.85rem;
+  max-width: 420px;
+  margin: 0 auto;
+  line-height: 1.5;
+}
+
+/* Grid Layout */
+.artist-grid {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+/* Artist Card */
+.card {
+  background: #141318;
+  border: 1px solid #22202a;
+  border-radius: 12px;
   overflow: hidden;
-  transition: max-height .35s ease, padding .35s ease;
-  padding: 0 18px;
-  color: var(--muted);
-  font-size: 0.88rem;
-  line-height: 1.55;
+  transition: transform 0.3s ease, border-color 0.3s ease;
+  display: flex;
+  flex-direction: column;
 }
-.card.open .bio{
-  max-height: 260px;
-  padding: 0 18px 20px;
-}
-.bio strong{ color: var(--paper); }
 
-@media (prefers-reduced-motion: reduce){
-  .card, .bio, .expand-btn .chev { transition: none; }
+.card:hover {
+  transform: translateY(-4px);
+  border-color: #3d3949;
+}
+
+/* Image styling */
+.card-img-container {
+  width: 100%;
+  height: 210px;
+  overflow: hidden;
+  background-color: #1a1921;
+}
+
+.card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures image fills container neatly without stretching */
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.card:hover .card-img {
+  transform: scale(1.05); /* Subtle zoom effect on hover */
+}
+
+/* Card Content Details */
+.card-content {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.card-content h3 {
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+  color: #fff;
+  margin-bottom: 6px;
+}
+
+.card-content .meta {
+  font-size: 0.65rem;
+  color: #777;
+  line-height: 1.4;
+  letter-spacing: 0.5px;
+  margin-bottom: 15px;
+}
+
+.expand-btn {
+  margin-top: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #d4af37;
+  text-decoration: none;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  border-top: 1px solid #1f1d26;
+  padding-top: 10px;
+}
+
+.expand-btn:hover {
+  color: #fff;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .artist-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .artist-grid {
+    grid-template-columns: 1fr;
+  }
 }
