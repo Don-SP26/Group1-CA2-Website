@@ -125,9 +125,10 @@
     margin-bottom:45px;
 }
 
-.album-modal-cover-wrapper{
-    flex:0 0 320px;
+.album-modal-cover-wrapper{ 
+    flex:0 0 320px; 
 }
+
 
 .album-modal-cover{
     width:100%;
@@ -353,4 +354,70 @@
 
 .album-modal-description p:last-child{
     margin-bottom:0;
+}
+
+.copy-link-btn{
+    margin-top:15px;
+
+    padding:10px 20px;
+    border:none;
+    border-radius:50px;
+
+    background:rgba(255,255,255,.1);
+    color:white;
+
+    font-size:.9rem;
+    font-weight:600;
+    cursor:pointer;
+
+    transition:background .2s ease;
+}
+
+.copy-link-btn:hover{
+    background:rgba(255,255,255,.2);
+}
+
+@media (max-width:768px){
+    .album-modal-content{
+        padding:60px 25px;
+    }
+
+    .album-modal-top{
+        flex-wrap:wrap;
+    }
+
+    .album-modal-cover-wrapper{
+        flex:0 0 100%;
+    }
+
+    .album-modal-cover{
+        height:220px;
+    }
+
+    .album-modal-title{
+        font-size:2.2rem;
+    }
+}
+
+@media (max-width:480px){
+    .album-modal-content{
+        padding:50px 18px;
+    }
+
+    .album-modal-title{
+        font-size:1.8rem;
+    }
+
+    .album-modal-artist{
+        font-size:1.1rem;
+    }
+
+    .album-modal-close{
+        top:16px;
+        right:16px;
+
+        width:40px;
+        height:40px;
+        font-size:1.5rem;
+    }
 }

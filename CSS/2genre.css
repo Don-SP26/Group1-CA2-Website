@@ -185,8 +185,8 @@
     margin-bottom:35px;
 }
 
-.artist-modal-image-wrapper{
-    flex:0 0 280px;
+.artist-modal-image-wrapper{ 
+    flex:0 0 280px; 
 }
 
 .artist-modal-image{
@@ -220,6 +220,14 @@
     overflow-y:auto;
     padding-right:10px; /* keeps text from touching the scrollbar */
 
+}
+
+.artist-modal-description p{
+    margin-bottom:15px;
+}
+
+.artist-modal-description p:last-child{
+    margin-bottom:0;
 }
 
 .artist-modal-songs h5{
@@ -275,4 +283,49 @@
 /* Make artist cards feel clickable now that they're not links */
 .genre-artist-card{
     cursor:pointer;
+}
+
+@media (max-width:768px){
+    .genre-banner{
+        height:200px;
+    }
+
+    .genre-banner-content h1{
+        font-size:2.2rem;
+    }
+
+    .artist-modal{
+        padding:30px;
+    }
+
+    .artist-modal-top{
+        flex-wrap:wrap;
+    }
+
+    .artist-modal-image-wrapper{
+        flex:0 0 100%;
+    }
+
+    .artist-modal-image{
+        height:200px;
+    }
+}
+
+@media (max-width:480px){
+    .genre-banner-content{
+        padding-left:25px;
+    }
+
+    .genre-banner-content h1{
+        font-size:1.8rem;
+    }
+
+    .artist-modal{
+        padding:20px;
+        border-radius:16px;
+    }
+
+    .artist-modal-name{
+        font-size:1.5rem;
+    }
 }
