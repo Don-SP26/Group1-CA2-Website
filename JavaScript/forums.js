@@ -1,4 +1,9 @@
-
+// --- Small helpers ---
+function escapeHtml(str) {
+  const div = document.createElement("div");
+  div.textContent = str;
+  return div.innerHTML;
+}
 
 // Deterministic hash so the same text always produces the same colour
 function hashString(str) {
