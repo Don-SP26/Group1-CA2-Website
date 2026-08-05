@@ -40,10 +40,6 @@ body.page-ai-future h2 {
     -webkit-text-fill-color: transparent;
 }
 
-body.page-ai-future p {
-    color: #04ef00; /* custom green paragraph text */
-}
-
 body.page-ai-future ul li {
     color: #a9a3ab; /* custom grey list item text */
 }
