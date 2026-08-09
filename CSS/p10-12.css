@@ -1,100 +1,299 @@
-/* PAGE 10 CSS STYLING */
-/* Remove box background and border but keep spacing */
-body.page-ai-future .box {
-    background: #1c1c1c;
-    border: none !important; /* removes Bootstrap's white border */
+/* SHARED UTILITY CLASSES for p10-12 */
+.text-relaxed        { line-height: 1.7; }   /* page 10 body copy, page 12 Our Story */
+.hero-sub-width       { max-width: 480px; }   /* page 11 hero subtitle */
+.posts-max-height     { max-height: 80vh; }   /* page 11 posts scroll container */
+.forum-max-width      { max-width: 1200px; }  /* page 11 forum layout wrapper */
+.share-section-offset { top: 20px; }          /* page 11 sticky share form */
+
+
+/* Page 10 CSS */
+
+/* Page-level accent color override for Bootstrap's --bs-info,
+   used by border-info / text-info utility classes on this page */
+body.page-ai-future {
+    --bs-info: #72949b;
+    --bs-info-rgb: 114, 148, 155;
 }
 
-body.page-ai-future .pros {
-    background: #95c192;
-    border: 2px dashed #777777; /* Bootstrap has no dashed-border utility */
+/* Hero banner */
+.ai-banner {
+    position: relative;
+    height: 280px;
+    overflow: hidden;
+
+    background-size: cover;
+    background-position: center;
+    background-image: url('../Images/10_background1.jpg');
 }
 
-body.page-ai-future .cons {
-    background: #ca9c9c;
-    border: 2px dashed #777; /* Bootstrap has no dashed-border utility */
+.ai-banner-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, .5);
 }
 
-body.page-ai-future .pros ul li,
-body.page-ai-future .cons ul li {
-    color: #242020;
+.fs-page-heading {
+    font-size: 1.5rem;
+}
+.ai-body-text {
+    font-size: 1rem; /* matches genre-info-block p */
 }
 
-body.page-ai-future .ai-list strong {
-    color: #788d80; /* muted highlight, custom color */
+/* Row 1: Explanation of AI in Music + Row 3: Future of Music */
+body.page-ai-future p.text-secondary,
+body.page-ai-future .ai-list li.text-secondary {
+    color: #9a9a9a !important; /* noticeably dimmer than white headings */
 }
 
-body.page-ai-future .future-list strong {
-    color: #788d80; /* muted highlight, custom color */
+/* Callout boxes used at the end of Row 1, Row 2, and Row 3 */
+.callout {
+    background: rgba(114, 148, 155, 0.10);
+    border-color: #72949b !important;
+    border-width: 4px !important;
+    line-height: 1.6;
+    color: #c4c4c4;
+    font-size: 1.0rem;
+    box-shadow: 0 4px 20px rgba(114, 148, 155, 0.12);
 }
 
-body.page-ai-future .callout {
-    background: #bbe1df;
-    --bs-border-color: #00d9ff; /* border utility uses !important, so override the variable */
-    line-height: 1.4; /* not on Bootstrap's lh-* scale (1, 1.25, 1.5, 2) */
+/* Row 2: Pros & Cons uses the same callout + text rules above, 
+   hence no row-specific CSS needed  */
+
+/* Lightbox (triggered by Row 1-3 images) */
+body.page-ai-future .lightbox-trigger {
+    cursor: pointer;
+    transition: transform .2s ease, box-shadow .2s ease;
+}
+body.page-ai-future .lightbox-trigger:hover,
+body.page-ai-future .lightbox-trigger:focus-visible {
+    transform: scale(1.02);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, .35);
+}
+body.page-ai-future .lightbox-trigger:focus-visible {
+    outline: 3px solid #72949b;
+    outline-offset: 3px;
 }
 
-body.page-ai-future h2 {
-    background: linear-gradient(to right, #ff99cc, #66ccff);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+.lightbox-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, .85);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .25s ease;
+    z-index: 1050;
+}
+.lightbox-overlay.active {
+    opacity: 1;
+    visibility: visible;
 }
 
-body.page-ai-future ul li {
-    color: #a9a3ab; /* custom grey list item text */
+.lightbox-figure {
+    max-width: 90vw;
+    max-height: 85vh;
+    margin: 0;
+    text-align: center;
+}
+.lightbox-figure img {
+    max-width: 100%;
+    max-height: 75vh;
+    border-radius: 12px;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, .5);
+}
+.lightbox-figure figcaption {
+    color: #e8e8e8;
+    margin-top: 1rem;
+    font-size: 1rem;
 }
 
+.lightbox-close {
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    background: transparent;
+    border: none;
+    color: #fff;
+    font-size: 2.5rem;
+    line-height: 1;
+    cursor: pointer;
+}
+.lightbox-close:hover,
+.lightbox-close:focus-visible {
+    color: #72949b;
+}
 
-/* PAGE 11 CSS STYLING */
+/* Locks background scroll while the lightbox overlay is open */
+body.lightbox-open {
+    overflow: hidden;
+}
+
+/* Page 10 responsive: mobile portrait (below 768px) */
+@media (max-width: 767.98px) {
+    /* Force Bootstrap columns to stack on mobile for this page,
+       overriding any global row/column rules in mainstyle.css */
+    body.page-ai-future .row {
+        flex-direction: column !important;
+    }
+    body.page-ai-future .row > [class*="col-"] {
+        width: 100% !important;
+        max-width: 100% !important;
+        flex: 0 0 100% !important;
+    }
+
+    .ai-banner {
+        height: auto;
+        min-height: 220px;
+        padding: 2rem 0;
+    }
+    .ai-banner .position-relative {
+        padding-left: 1.5rem; /* ps-5's 3rem is too much on a narrow phone */
+    }
+    .fs-page-heading {
+        font-size: 1.65rem;
+    }
+
+    /* Lightbox: tighter padding so close button doesn't crowd the image */
+    .lightbox-overlay { padding: 1rem; }
+    .lightbox-close { top: .75rem; right: .75rem; font-size: 2rem; }
+}
+
+/* Page 10 responsive: tablet (768px – 991.98px) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .ai-banner {
+        height: 240px;
+    }
+}
+
+/* Desktop&laptop landscape (992px+) uses the base rules above, hence no overrides needed */
+
+
+/* Page 11 CSS */
+
 body.page-forums {
     background: #0c0c0e;
     color: #f3f2ee;
-    font-family: 'Inter', sans-serif;
 }
 
-/* Headings */
-body.page-forums h1,
-body.page-forums h2,
-body.page-forums h3,
-body.page-forums .post-track,
-body.page-forums .hero-title {
-    font-family: 'Bebas Neue', sans-serif;
-    letter-spacing: .03em;
-}
-
-/* Hero */
+/* Hero section (top banner with stats) */
 body.page-forums .forum-hero {
-    background: #17171b;
-    border: 1px solid #1a1a1d; /* subtle dark border */
-}
-body.page-forums .hero-eyebrow { color: #34e0c9; }
-body.page-forums .hero-title { font-size: 2.6rem; color: #ffcc00; }
-body.page-forums .hero-sub { color: #93939c; }
-body.page-forums .hero-stats strong { font-size: 2rem; color: #f3f2ee; }
-body.page-forums .hero-stats span { color: #93939c; }
+    position: relative;
+    height: 400px;
+    overflow: hidden;
+    border-radius: 30px;
 
-/* Tabs */
+    background-image: url("../Images/11_background2.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    border: 1px solid #1a1a1d !important;
+    color: #f3f2ee;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Dark overlay so hero text stays legible over the background image */
+body.page-forums .forum-hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, .45);
+    border-radius: 30px;
+    z-index: 0;
+}
+
+/* Keeps hero text/stats above the overlay */
+body.page-forums .eq-bars,
+body.page-forums .hero-copy,
+body.page-forums .hero-stats {
+    position: relative;
+    z-index: 1;
+}
+
+body.page-forums .hero-eyebrow {
+    color: #e0ca72;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+}
+body.page-forums .hero-title {
+    font-size: 2.6rem;
+    font-weight: bold;
+    letter-spacing: .03em;
+    color: #ffffff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+body.page-forums .hero-sub {
+    font-size: 1.3rem;
+    color: #d0d0d0;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
+}
+
+/* Hero stat counters (tracks shared / likes given) */
+body.page-forums .hero-stats strong {
+    font-size: 2rem;
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+    color: #ffffff;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+}
+body.page-forums .hero-stats span {
+    font-size: 0.9em;
+    color: #d0d0d0;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
+}
+
+/* Tick animation — plays whenever a stat number updates (JS toggles .tick) */
+@keyframes statTick {
+    0%   { transform: translateY(0);      opacity: 1; }
+    40%  { transform: translateY(-100%);  opacity: 0; }
+    41%  { transform: translateY(100%);   opacity: 0; }
+    100% { transform: translateY(0);      opacity: 1; }
+}
+body.page-forums .hero-stats strong.tick {
+    animation: statTick .35s ease;
+}
+
+/* Forum tabs (Latest / Top Rated / Most Commented / Shuffle) */
 body.page-forums .forum-tabs {
     background: #17171b;
-    border: 1px solid #1a1a1d; /* subtle dark border */
+    border: 1px solid #1a1a1d;
 }
-body.page-forums .forum-tab { background: transparent; color: #f3f2ee; }
+body.page-forums .forum-tab {
+    background: transparent;
+    color: #f3f2ee;
+    transition: background .2s ease, color .2s ease;
+}
 body.page-forums .forum-tab .tab-icon { color: #e5a9d6; }
-body.page-forums .forum-tab.active { background: #ffcc00; color: #000; }
+body.page-forums .forum-tab.active { background: #e0ca72; color: #000; }
 body.page-forums .forum-tab.active .tab-icon { color: #000; }
 
-/* Posts */
+body.page-forums .forum-tab:not(.active):hover {
+    background: rgba(224, 202, 114, 0.15);
+    color: #e0ca72;
+}
+body.page-forums .forum-tab:not(.active):hover .tab-icon {
+    color: #e0ca72;
+}
+
+/* Posts list (left column) */
 body.page-forums .post {
     background: #17171b;
-    border: 1px solid #1a1a1d; /* blends with background */
+    border: 1px solid #1a1a1d;
     transition: transform .2s ease, box-shadow .2s ease;
 }
 body.page-forums .post:hover {
     transform: translateY(-2px);
-    box-shadow: 0 6px 16px rgba(0,0,0,.4);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, .4);
 }
 
-/* Spinning album cover with vinyl design */
+/* Spinning "vinyl" album art swatch, painted per-post by JS (artGradientFor) */
 body.page-forums .post-art {
     width: 56px;
     height: 56px;
@@ -112,9 +311,8 @@ body.page-forums .post-art::before {
     width: 14px;
     height: 14px;
     background: #0c0c0e;
-    box-shadow: 0 0 0 2px rgba(255,255,255,.1); /* subtle inner ring */
+    box-shadow: 0 0 0 2px rgba(255, 255, 255, .1);
 }
-/* vinyl grooves */
 body.page-forums .post-art::after {
     content: "";
     position: absolute;
@@ -123,8 +321,8 @@ body.page-forums .post-art::after {
     background: repeating-radial-gradient(circle,
         transparent 0px,
         transparent 2px,
-        rgba(255,255,255,.05) 2px,
-        rgba(255,255,255,.05) 3px
+        rgba(255, 255, 255, .05) 2px,
+        rgba(255, 255, 255, .05) 3px
     );
 }
 body.page-forums .post:hover .post-art {
@@ -132,35 +330,28 @@ body.page-forums .post:hover .post-art {
 }
 @keyframes artSpin {
     from { transform: rotate(0deg); }
-    to { transform: rotate(360deg); }
+    to   { transform: rotate(360deg); }
 }
 
-/* Post metadata */
-body.page-forums .post-user { color: #ffcc00; }
+/* Post metadata (username, time, song title/artist, comment text) */
+body.page-forums .post-user { color: #e0ca72; }
 body.page-forums .post-time { color: #93939c; }
-body.page-forums .post-track { font-size: 1.1rem; color: #f3f2ee; }
+body.page-forums .post-track { font-size: 1.1rem; font-weight: bold; color: #f3f2ee; letter-spacing: .03em; }
 body.page-forums .post-artist { color: #34e0c9; font-size: .9rem; }
 body.page-forums .post-comment {
-    color: #e0e0e0; /* brighter */
+    color: #e0e0e0;
     font-size: .95rem;
     line-height: 1.4;
 }
 
-/* Buttons */
+/* Like / comment buttons under each post */
 body.page-forums .post-actions button {
     background: #1e1f24;
     color: #f3f2ee;
-    border: 1px solid #1a1a1d; /* subtle border */
-}
-body.page-forums .form-actions button {
-    background: #ffcc00;
-    color: #000;
-}
-body.page-forums .form-actions button:hover {
-    background: #e6b800;
+    border: 1px solid #1a1a1d;
 }
 
-/* Heart burst animation */
+/* Heart burst animation on like click */
 body.page-forums .icon-heart {
     fill: #93939c;
     transition: fill .2s ease, transform .2s ease;
@@ -170,42 +361,55 @@ body.page-forums .like-btn.liked .icon-heart {
     animation: heartBurst .4s ease;
 }
 @keyframes heartBurst {
-    0% { transform: scale(1); }
-    40% { transform: scale(1.35); }
+    0%   { transform: scale(1); }
+    40%  { transform: scale(1.35); }
     100% { transform: scale(1); }
 }
 
-/* Comment icon */
+/* Comment icon hover */
 body.page-forums .icon-comment {
     stroke: #e5a9d6;
     stroke-width: 1.8;
     transition: stroke .2s ease;
 }
 body.page-forums .comment-btn:hover .icon-comment {
-    stroke: #ffcc00;
+    stroke: #e0ca72;
 }
 
-/* Share section */
+/* Posts list inner scroll — max-height comes from the .posts-max-height
+   utility class applied in the HTML; scrollbar itself is hidden below */
+body.page-forums .posts-section::-webkit-scrollbar {
+    display: none;
+}
+
+/* Share form (right column, "Share YOUR Favourite!")  */
 body.page-forums .share-section {
     background: #17171b;
-    border: 1px solid #1a1a1d; /* subtle border */
+    border: 1px solid #1a1a1d;
 }
-body.page-forums .slip-header h3 { color: #ffcc00; }
+body.page-forums .slip-header h3 { color: #e0ca72; }
 body.page-forums .slip-sub { color: #93939c; }
-body.page-forums .share-section .form-label { color: #ffcc00; }
+body.page-forums .share-section .form-label { color: #e0ca72; }
 body.page-forums .share-section .form-control {
     background: #1e1f24;
     color: #f3f2ee;
-    border: 1px solid #1a1a1d; /* subtle border */
+    border: 1px solid #1a1a1d;
 }
 body.page-forums .share-section .form-control::placeholder { color: #afa4af; }
+body.page-forums .form-actions button {
+    background: #e0ca72;
+    color: #000;
+}
+body.page-forums .form-actions button:hover {
+    background: #5f583d;
+}
 
-/* Modal */
+/* Verification modal (opens on form submit) */
 body.page-forums .modal-content { border: 1px solid #1a1a1d; }
-body.page-forums .modal-title { color: #ffcc00; }
+body.page-forums .modal-title { color: #e0ca72; }
 body.page-forums .captcha-question { color: #34e0c9; }
 
-
+/* Force consistent dark subtle borders across all page-11 components */
 body.page-forums .forum-hero,
 body.page-forums .forum-tabs,
 body.page-forums .post,
@@ -213,125 +417,180 @@ body.page-forums .share-section,
 body.page-forums .modal-content,
 body.page-forums .post-actions button,
 body.page-forums .share-section .form-control {
-    border-color: #1a1a1d !important; /* force dark subtle border */
+    border-color: #1a1a1d !important;
 }
 
-body.page-forums .forum-hero {
-    background-image: url("../Images/11_background2.jpg"); /* replace with your image path */
-    background-size: cover;       /* fills the whole hero area */
-    background-position: center;  /* centers the image */
-    background-repeat: no-repeat; /* no tiling */
-    border: 1px solid #1a1a1d !important; /* subtle dark border */
-    color: #f3f2ee;               /* default text color */
+/* Page 11 responsive: mobile portrait (below 768px)  */
+@media (max-width: 767.98px) {
+    body.page-forums .forum-hero {
+        height: auto;
+        min-height: 300px;
+        padding: 2rem 1rem;
+        border-radius: 20px;
+    }
+    body.page-forums .hero-title  { font-size: 1.8rem; }
+    body.page-forums .hero-sub    { font-size: 1rem; }
+    body.page-forums .hero-stats  { gap: 2rem !important; }
+    body.page-forums .hero-stats strong { font-size: 1.4rem; }
+
+    /* Posts list: no inner scroll on mobile — the share form is moved
+       above the posts list on mobile (order-1/order-md-2 in the HTML),
+       so full-page scroll is fine and avoids a scroll-within-scroll */
+    body.page-forums .posts-section {
+        max-height: none;
+        overflow: visible;
+    }
+
+    /* Sticky only makes sense in a side-by-side layout;
+       on mobile it can overlap content below it */
+    body.page-forums .share-section {
+        position: static;
+    }
 }
 
-/* Hero text colors */
-body.page-forums .hero-eyebrow {
-    color: #ffcc00; /* gold accent */
-    text-shadow: 1px 1px 3px rgba(0,0,0,0.7);
-}
-body.page-forums .hero-title {
-    color: #ffffff; /* pure white for clarity */
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
-}
-body.page-forums .hero-sub {
-    color: #d0d0d0; /* light grey for softer contrast */
-    text-shadow: 1px 1px 3px rgba(0,0,0,0.6);
-}
-
-/* Stats section */
-body.page-forums .hero-stats strong {
-    color: #415153; /* bright cyan for numbers */
-    text-shadow: 1px 1px 3px rgba(0,0,0,0.7);
-}
-body.page-forums .hero-stats span {
-    color: #ffffff; /* white labels */
-    text-shadow: 1px 1px 3px rgba(0,0,0,0.6);
+/* Page 11 responsive: tablet (768px – 991.98px) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+    body.page-forums .forum-hero {
+        height: 340px;
+    }
+    body.page-forums .hero-title {
+        font-size: 2.2rem;
+    }
+    body.page-forums .share-section {
+        top: 12px; /* less offset since viewport is shorter */
+    }
 }
 
+/* Desktop&laptop landscape (992px+) uses the base rules above, hence no overrides needed */
 
-/* PAGE 12 CSS STYLING */
-/* Custom-only styles: colors, hover effects, and values not on Bootstrap's scale */
-body.page-about .about-section {
-    max-width: 1200px; /* keep for overall width control */
+
+/* Page 12 CSS */
+
+/* Page accent color for Bootstrap's border-info on team cards */
+body.page-about {
+    --bs-info: #8aa8ae;
+    --bs-info-rgb: 138, 168, 174;
 }
 
+/* Page intro header ("Who We Are") */
+body.page-about .gradient-heading {
+    color: #72949b;
+}
+body.page-about .intro-eyebrow {
+    letter-spacing: 2px;
+    color: #72949b;
+}
+body.page-about .intro-divider {
+    width: 60px;
+    height: 3px;
+    background: #72949b;
+}
+body.page-about .text-center.py-5 p.text-secondary {
+    color: #c4c4c4 !important;
+}
+body.page-about .fs-page-title {
+    font-size: 2.75rem;
+}
+
+/* Team card grid (4 members' favourite tracks) */
 body.page-about .team-card {
     background: #1c1c1c;
-    --bs-border-color: #555; /* border utility uses !important, so override the variable */
-    color: #f5f5f5;
+    --bs-border-color: #8aa8ae;
     transition: transform .3s ease, box-shadow .3s ease;
     display: flex;
-    flex-direction: column; /* stack image row + reason vertically */
-    height: 100%; /* equal-height cards */
+    flex-direction: column;
+    height: 100%;
 }
-
 body.page-about .team-card:hover {
     transform: scale(1.05);
-    box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+    box-shadow: 0 0 15px rgba(138, 168, 174, 0.3);
 }
-
-body.page-about .team-card-top img {
-    width: 120px;
-    height: 120px; /* square crop */
-    flex-shrink: 0;
-    object-position: center;
-}
-
-body.page-about .song-info {
-    min-width: 0; /* prevent text overflow */
-}
-
-body.page-about .song-info em {
-    color: #ffcc00;
-}
-
-body.page-about .song-reason {
-    --bs-border-color: #444;
-    margin-top: auto; /* pins reason section to the bottom */
-}
-
-body.page-about .team-card h3 {
-    font-size: 1.2rem; /* custom size */
-}
-
 body.page-about .team-card p {
-    font-size: .9rem; /* not on Bootstrap's fs-* scale */
-    color: #ccc;
+    font-size: 1.0rem;
+}
+body.page-about .team-card p.text-secondary.mb-1,
+body.page-about .team-card p.small,
+body.page-about .team-card p.fst-italic,
+body.page-about .our-story p {
+    color: #c4c4c4 !important;
+}
+body.page-about header p,
+body.page-about .team-card p strong {
+    color: #e8dfc4 !important;
+}
+body.page-about .team-card em {
+    color: #e0ca72;
+}
+body.page-about .team-thumb {
+    width: 90px;
+    height: 90px;
+    object-fit: cover;
+    flex-shrink: 0;
 }
 
-body.page-about .our-story h2 {
-    font-size: 1.8rem; /* custom heading size */
+/* "Our Story" section */
+body.page-about .fs-section-heading {
+    font-size: 2.25rem;
+}
+/* .our-story p color is covered by the shared team-card text rule above */
+
+/* Playlist / shuffle section */
+body.page-about .shuffle-btn {
+    background: transparent;
+    border: 1px solid #e0ca72;
+    color: #e0ca72;
+    border-radius: 999px;
+    padding: .35rem 1rem;
+    font-size: .9rem;
+    transition: background .2s ease, transform .2s ease;
+}
+body.page-about .shuffle-btn:hover {
+    background: rgba(224, 202, 114, 0.15);
+}
+body.page-about .shuffle-btn:active {
+    transform: scale(0.95);
 }
 
-body.page-about .our-story {
-    background: linear-gradient(to right, #ff99cc, #66ccff);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+/* Subtle pulse when JS reorders the playlist row via appendChild */
+@keyframes shufflePulse {
+    0%   { opacity: .4; }
+    100% { opacity: 1; }
+}
+body.page-about #playlistRow.shuffle-pulse .playlist-item {
+    animation: shufflePulse .3s ease;
+}
+body.page-about .playlist-item iframe {
+    border-radius: 12px;
 }
 
-body.page-about .music-player {
-    background: #222;
-    border-radius: 12px; /* not on Bootstrap's rounded-* scale */
+/* Page 12 responsive: mobile portrait (below 768px) */
+@media (max-width: 767.98px) {
+    body.page-about .fs-page-title {
+        font-size: 2rem;
+    }
+    body.page-about .fs-section-heading {
+        font-size: 1.65rem;
+    }
 }
 
-body.page-about .progress-bar {
-    width: 80%; /* custom width */
-    height: 8px; /* custom thickness */
-    background: #444;
+/* Extra-narrow phones: stack team card thumbnail above the text
+   instead of squeezing them side by side */
+@media (max-width: 400px) {
+    body.page-about .team-card-header {
+        flex-direction: column;
+        align-items: flex-start !important;
+    }
+    body.page-about .team-thumb {
+        width: 100%;
+        height: 160px;
+    }
 }
 
-body.page-about .progress {
-    background: #f5f5f5;
+/* --- Page 12 responsive: tablet (768px – 991.98px) --- */
+@media (min-width: 768px) and (max-width: 991.98px) {
+    body.page-about .fs-page-title {
+        font-size: 2.4rem;
+    }
 }
 
-body.page-about .buttons button {
-    background: #1c1c1c;
-    color: #f5f5f5;
-    font-size: 1.2rem; /* custom size */
-    transition: background .3s ease; /* custom transition */
-}
-
-body.page-about .buttons button:hover {
-    background: #333;
-}
+/* Desktop&laptop landscape (992px+) uses the base rules above, hence no overrides needed */
