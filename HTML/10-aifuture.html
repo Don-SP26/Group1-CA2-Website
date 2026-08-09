@@ -3,29 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Record Room — Forum</title>
+    <title>AI and the Future of Music</title>
 
     <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
 
-    <!-- Fonts: Bebas Neue for the concert-poster display type, Inter for body copy -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
 
     <!-- CSS -->
     <link rel="stylesheet" href="../CSS/p10-12.css">
     <link rel="stylesheet" href="../CSS/mainstyle.css">
 
-    <!-- Bootstrap JS Bundle (needed for modal) -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
-
-    <!-- Custom JS -->
+    <!-- JavaScript -->
     <script src="../JavaScript/dropdown.js" defer></script>
-    <script src="../JavaScript/forums.js" defer></script>
+    <script src="../JavaScript/10aifuture.js" defer></script>
+
 </head>
 
-<body class="page-forums">
+<body class="page-ai-future">
     <!-- Navigation -->
     <nav class="main-nav">
         <div class="logo">
@@ -71,189 +68,115 @@
         </div>
     </nav>
 
-    <!-- Hero -->
-    <header class="forum-hero position-relative overflow-hidden text-center border-bottom py-5 px-3">
-        <div class="eq-bars d-flex justify-content-center align-items-end gap-2 mb-4" aria-hidden="true">
-            <span></span><span></span><span></span><span></span>
-            <span></span><span></span><span></span><span></span>
+    <!-- Hero banner (custom bg-image needed — Bootstrap has no built-in for this) -->
+    <section class="ai-banner rounded-5 d-flex align-items-center">        
+        <div class="ai-banner-overlay rounded-5"></div>
+        <div class="position-relative ps-5 text-white">
+            <h1 class="display-4 fw-bold mb-0">AI & The Future of Music</h1>
         </div>
-        <div class="hero-copy">
-            <p class="hero-eyebrow text-uppercase fw-semibold small mb-2">
-                Welcome to the Music Forum!
-            </p>
-            <h1 class="hero-title mb-2">
-                Join the discussion
-            </h1>
-            <p class="hero-sub mx-auto mb-4 small">
-                Share your favourite music discoveries.
-            </p>
-        </div>
+    </section>
 
-        <div class="hero-stats d-flex justify-content-center gap-5" aria-label="Forum activity">
-            <div class="stat d-flex flex-column">
-                <strong id="statPosts">0</strong>
-                <span class="text-uppercase small">tracks shared</span>
-            </div>
-            <div class="stat d-flex flex-column">
-                <strong id="statLikes">0</strong>
-                <span class="text-uppercase small">likes given</span>
-            </div>
-        </div>
-    </header>
+   <main class="container-fluid px-2 px-md-4">
 
-    <!-- Forum Section -->
-    <main class="forum-layout mx-auto my-5 p-4">
-        <div class="row g-4">
-            <!-- Left: Posts -->
-            <div class="col-md-8 order-2 order-md-1">
-                <section class="posts-section overflow-auto pe-2 posts-max-height">
-
-                    <!-- Forum Tabs -->
-                    <div class="forum-tabs sticky-top d-flex flex-wrap justify-content-center gap-2 mb-4 p-2 rounded-pill border" role="tablist" aria-label="Sort posts">
-                        <button class="forum-tab active btn rounded-pill fw-semibold small d-inline-flex align-items-center gap-2 px-3 py-2 border-0" data-tab="latest" role="tab" aria-selected="true">
-                            <span class="tab-icon">▸</span>Latest
-                        </button>
-                        <button class="forum-tab btn rounded-pill fw-semibold small d-inline-flex align-items-center gap-2 px-3 py-2 border-0" data-tab="top" role="tab" aria-selected="false">
-                            <span class="tab-icon">♥</span>Top Rated
-                        </button>
-                        <button class="forum-tab btn rounded-pill fw-semibold small d-inline-flex align-items-center gap-2 px-3 py-2 border-0" data-tab="commented" role="tab" aria-selected="false">
-                            <span class="tab-icon">✎</span>Most Commented
-                        </button>
-                        <button class="forum-tab btn rounded-pill fw-semibold small d-inline-flex align-items-center gap-2 px-3 py-2 border-0" data-tab="random" role="tab" aria-selected="false">
-                            <span class="tab-icon">⟲</span>Shuffle
-                        </button>
-                    </div>
-
-                    <!-- Posts container -->
-                    <div id="posts">
-                        <article class="post rounded-3 p-3 mb-3 d-flex gap-3" data-timestamp="1788512400000">
-                            <div class="post-art rounded-3 flex-shrink-0" data-art-seed="user123" aria-hidden="true"></div>
-                            <div class="post-body flex-grow-1 min-w-0">
-                                <div class="post-top d-flex align-items-baseline justify-content-between gap-2">
-                                    <h4 class="post-user mb-0 small">user123</h4>
-                                    <time class="post-time small text-nowrap" data-timestamp="1788512400000">—</time>
-                                </div>
-                                <p class="post-comment small mb-0">🎵 Shake It Off — Taylor Swift</p>
-                                <p>It reminds me to stay positive and ignore negativity.</p>
-                                <div class="post-actions d-flex gap-2 mt-2">
-                                    <button class="like-btn btn rounded-pill d-inline-flex align-items-center gap-2 small px-3 py-1 border" type="button" aria-label="Like this post">
-                                        <svg class="icon-heart" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M12 21s-6.7-4.35-9.3-8.1C.8 10.1 1.4 6.6 4.4 5.1c2.4-1.2 5 .1 6.6 2.4 1.6-2.3 4.2-3.6 6.6-2.4 3 1.5 3.6 5 1.7 7.8C18.7 16.65 12 21 12 21z"/></svg>
-                                        <span class="like-count">0</span>
-                                    </button>
-                                    <button class="comment-btn btn rounded-pill d-inline-flex align-items-center gap-2 small px-3 py-1 border" type="button" aria-label="Comment on this post">
-                                        <svg class="icon-comment" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M4 4h16v12H8l-4 4V4z"/></svg>
-                                        <span class="comment-count">0</span>
-                                    </button>
-                                </div>
-                                <div class="comments mt-2 ps-3 border-start border-2"></div>
-                            </div>
-                        </article>
-
-                        <article class="post rounded-3 p-3 mb-3 d-flex gap-3" data-timestamp="1788426000000">
-                            <div class="post-art rounded-3 flex-shrink-0" data-art-seed="user456" aria-hidden="true"></div>
-                            <div class="post-body flex-grow-1 min-w-0">
-                                <div class="post-top d-flex align-items-baseline justify-content-between gap-2">
-                                    <h4 class="post-user mb-0 small">user456</h4>
-                                    <time class="post-time small text-nowrap" data-timestamp="1788426000000">—</time>
-                                </div>
-                                <p class="post-comment small mb-0">🎵 Beauty and A Beat — Justin Bieber</p>
-                                <p>This song ateee 🔥🔥🔥🔥🔥</p>
-                                <div class="post-actions d-flex gap-2 mt-2">
-                                    <button class="like-btn btn rounded-pill d-inline-flex align-items-center gap-2 small px-3 py-1 border" type="button" aria-label="Like this post">
-                                        <svg class="icon-heart" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M12 21s-6.7-4.35-9.3-8.1C.8 10.1 1.4 6.6 4.4 5.1c2.4-1.2 5 .1 6.6 2.4 1.6-2.3 4.2-3.6 6.6-2.4 3 1.5 3.6 5 1.7 7.8C18.7 16.65 12 21 12 21z"/></svg>
-                                        <span class="like-count">0</span>
-                                    </button>
-                                    <button class="comment-btn btn rounded-pill d-inline-flex align-items-center gap-2 small px-3 py-1 border" type="button" aria-label="Comment on this post">
-                                        <svg class="icon-comment" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M4 4h16v12H8l-4 4V4z"/></svg>
-                                        <span class="comment-count">0</span>
-                                    </button>
-                                </div>
-                                <div class="comments mt-2 ps-3 border-start border-2"></div>
-                            </div>
-                        </article>
-
-                        <article class="post rounded-3 p-3 mb-3 d-flex gap-3" data-timestamp="1788339600000">
-                            <div class="post-art rounded-3 flex-shrink-0" data-art-seed="user789" aria-hidden="true"></div>
-                            <div class="post-body flex-grow-1 min-w-0">
-                                <div class="post-top d-flex align-items-baseline justify-content-between gap-2">
-                                    <h4 class="post-user mb-0 small">user789</h4>
-                                    <time class="post-time small text-nowrap" data-timestamp="1788339600000">—</time>
-                                </div>
-                                <p class="post-comment small mb-0">🎵 The One That Got Away — Kate Perry</p>
-                                <p>I'm posting this because I want others to share their own 'songs that got away' stories.</p>
-                                <div class="post-actions d-flex gap-2 mt-2">
-                                    <button class="like-btn btn rounded-pill d-inline-flex align-items-center gap-2 small px-3 py-1 border" type="button" aria-label="Like this post">
-                                        <svg class="icon-heart" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M12 21s-6.7-4.35-9.3-8.1C.8 10.1 1.4 6.6 4.4 5.1c2.4-1.2 5 .1 6.6 2.4 1.6-2.3 4.2-3.6 6.6-2.4 3 1.5 3.6 5 1.7 7.8C18.7 16.65 12 21 12 21z"/></svg>
-                                        <span class="like-count">0</span>
-                                    </button>
-                                    <button class="comment-btn btn rounded-pill d-inline-flex align-items-center gap-2 small px-3 py-1 border" type="button" aria-label="Comment on this post">
-                                        <svg class="icon-comment" viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path d="M4 4h16v12H8l-4 4V4z"/></svg>
-                                        <span class="comment-count">0</span>
-                                    </button>
-                                </div>
-                                <div class="comments mt-2 ps-3 border-start border-2"></div>
-                            </div>
-                        </article>
-                    </div>
-                </section>
+        <!-- Row 1 -->
+        <section class="row gy-4 align-items-center py-5">
+            <div class="col-md-8">
+                <h2 class="text-white fw-bold mb-3 fs-page-heading">Explanation of AI in Music</h2>                
+                <p class="text-secondary ai-body-text text-relaxed">
+                    AI is becoming a useful tool in music. It can help artists come up with melodies, 
+                    suggest lyrics, create background music, and fix mistakes in recordings. It can 
+                    also match samples to the right key and tempo, making the music production process 
+                    faster and easier. However, human creativity is still important because artists 
+                    decide how the final song should sound.
+                </p>
+                <div class="callout border-start border-4 rounded p-3 mt-3 fst-italic">
+                    AI saves time and blends everything smoothly into the project.
+                </div>
             </div>
 
-            <!-- Right: Share Form -->
-            <div class="col-md-4 order-1 order-md-2">
-                <aside class="share-section p-4 rounded-3 border position-sticky">
-                    <div class="slip-header d-flex align-items-center gap-2 mb-1">
-                        <span class="slip-vinyl" aria-hidden="true"></span>
-                        <h3 class="mb-0">Share YOUR Favourite!</h3>
-                    </div>
-                    <p class="slip-sub small mb-4">Join the Playlist – Share Yours!</p>
-                    <form id="postForm">
-                        <label for="song" class="form-label text-uppercase small fw-semibold">Song title</label>
-                        <input type="text" id="song" name="song" class="form-control mb-3" placeholder="e.g. The First Snow" required>
+            <div class="col-md-4">
+                <img src="../Images/10_useOfAI.jpg" alt="AI in music production" 
+                    class="img-fluid rounded-4 w-100 ai-img lightbox-trigger" tabindex="0" role="button">
+            </div>
+        </section>
 
-                        <label for="artist" class="form-label text-uppercase small fw-semibold">Artist</label>
-                        <input type="text" id="artist" name="artist" class="form-control mb-3" placeholder="e.g. EXO" required>
+        <hr class="border-secondary-subtle opacity-25">
 
-                        <label for="comments" class="form-label text-uppercase small fw-semibold">Why it's worth a spin</label>
-                        <textarea id="comments" name="comments" maxlength="300" class="form-control" placeholder="Spill the tea..." required></textarea>
-                        <small id="charCount" class="d-block mb-3 small">0 / 300</small>
+        <!-- Row 2 -->
+        <section class="row gy-4 align-items-center py-5">
+            <div class="col-md-4 order-2 order-md-1">
+                <img src="../Images/10_prosAndCons.jpg" alt="Pros and cons of AI in music" 
+                    class="img-fluid rounded-4 w-100 ai-img lightbox-trigger" tabindex="0" role="button">
+            </div>
 
-                        <div class="form-actions">
-                            <button type="submit" class="btn rounded-pill fw-bold w-100 px-4 py-2 border-0">Post to the room</button>
+            <div class="col-md-8 order-1 order-md-2">
+                <h2 class="text-white fw-bold mb-3 fs-page-heading">Pros & Cons of Using AI in Music</h2>
+
+                <div class="row gy-4">
+                    <div class="col-12 col-sm-6">
+                        <div class="ps-3 border-start border-4 border-info">
+                            <h3 class="text-white fs-6 text-uppercase mb-3">Pros</h3>
+                            <ul class="ai-list list-unstyled text-secondary ai-body-text text-relaxed">
+                                <li class="text-secondary mb-2"><i class="bi bi-check-lg text-info me-2"></i>Provides creative inspiration</li>
+                                <li class="text-secondary mb-2"><i class="bi bi-check-lg text-info me-2"></i>Improves production efficiency</li>
+                                <li class="text-secondary mb-0"><i class="bi bi-check-lg text-info me-2"></i>Makes music creation more accessible</li>
+                            </ul>
                         </div>
-                    </form>
-                    <p id="formMessage" class="mt-2 small" role="status"></p>
-                </aside>
+                    </div>
+
+                    <div class="col-12 col-sm-6">
+                        <div class="ps-3 border-start border-4 border-secondary">
+                            <h3 class="text-white fs-6 text-uppercase mb-3">Cons</h3>
+                            <ul class="ai-list list-unstyled text-secondary ai-body-text text-relaxed">
+                                <li class="text-secondary mb-2"><i class="bi bi-exclamation-lg text-secondary me-2"></i>May reduce originality</li>
+                                <li class="text-secondary mb-2"><i class="bi bi-exclamation-lg text-secondary me-2"></i>Could affect musicians' careers</li>
+                                <li class="text-secondary mb-0"><i class="bi bi-exclamation-lg text-secondary me-2"></i>Raises ethical and copyright issues</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="callout border-start border-4 rounded p-3 mt-3 fst-italic">
+                    AI offers exciting opportunities, but balancing innovation with human artistry is essential.
+                </div>
             </div>
-        </div>
+        </section>
+
+        <hr class="border-secondary-subtle opacity-25">
+
+        <!-- Row 3 -->
+        <section class="row gy-4 align-items-center py-5">
+            <div class="col-md-8">
+                <h2 class="text-white fw-bold mb-3 fs-page-heading">Future of Music</h2>
+                <p class="text-secondary ai-body-text text-relaxed">
+                    In the future, AI could change the way music is created and enjoyed. We may see 
+                    virtual artists who are fully generated by AI, as well as smarter tools that help 
+                    with mixing, mastering, and adding instruments to songs. AI may also create new 
+                    forms of music, such as interactive compositions that change based on the 
+                    listener’s choices.
+                </p>
+                <div class="callout border-start border-4 rounded p-3 mt-3 fst-italic">
+                    AI may shape the future of music through new ideas and tools. However, 
+                    <strong>human</strong> creativity will always matter because music comes from deep 
+                    emotions, life experiences, and unique personal expression. 
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <img src="../Images/10_futureOfMusic.png" alt="Future of music" 
+                    class="img-fluid rounded-4 w-100 ai-img lightbox-trigger" tabindex="0" role="button">            
+            </div>
+        </section>
+
     </main>
 
-    <!-- Verification Modal -->
-    <div class="modal fade" id="verifyModal" tabindex="-1" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content bg-dark text-light rounded-4 border">
-                <div class="modal-header">
-                    <h5 class="modal-title">One quick check</h5>
-                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
-                </div>
-                <div class="modal-body">
-                    <label for="popupUsername" class="form-label">Username</label>
-                    <input type="text" id="popupUsername" class="form-control mb-3" placeholder="What should we call you?">
-
-                    <div class="form-check mb-3">
-                        <input class="form-check-input" type="checkbox" id="stayAnonymous">
-                        <label class="form-check-label" for="stayAnonymous">
-                            Post anonymously
-                        </label>
-                    </div>
-
-                    <br><p class="mb-2">Prove you're human, not a bot with good taste:</p>
-                    <p id="captchaQuestion" class="captcha-question"></p>
-                    <input type="text" id="captchaAnswer" class="form-control" placeholder="Enter answer">
-                    <div id="captchaMessage" class="mt-2 small"></div>
-                    <button id="verifyBtn" class="btn btn-warning w-100 mt-3">Confirm &amp; post</button>
-                </div>
-            </div>
-        </div>
+    <!-- Lightbox -->
+    <div id="lightboxOverlay" class="lightbox-overlay" aria-hidden="true">
+        <button id="lightboxClose" class="lightbox-close" aria-label="Close image preview">&times;</button>
+        <figure class="lightbox-figure">
+            <img id="lightboxImage" src="" alt="">
+            <figcaption id="lightboxCaption"></figcaption>
+        </figure>
     </div>
 
     <!-- Footer -->
