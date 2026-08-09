@@ -57,218 +57,260 @@
 </nav>
 
 <main>
+ 
+ <!-- HERO SECTION -->
+    <section class="singles-hero">
 
-    <!-- Header Section -->
-    <section class="header">
-        <h1>Renowned Singles</h1>
-        <p>Iconic singles that topped charts and made music history.</p>
+        <p class="hero-label">CHART TOPPERS</p>
+
+        <h1>
+            RENOWNED SINGLES
+        </h1>
+
+        <p class="hero-description">
+            Iconic singles that topped charts and made music history.
+        </p>
+
     </section>
 
-    <!-- Singles Gallery -->
-<section class="singles-gallery py-5">
-    <!-- 1. ADD THIS CONTAINER WRAPPER -->
-    <div class="container"> 
-        
-        <!-- 2. SINGLE ROW FOR ALL CARDS -->
-        <div class="row g-4 justify-content-center">
+    <!--SINGLES GALLERY -->
+    <section class="singles-gallery">
 
-            <!-- Card 1 -->
-            <div class="col-12 col-md-6 col-lg-4">
-                <div class="card h-100 shadow rounded-3 overflow-hidden">
-                    <img src="../Images/4BillieJean.jpg" class="card-img-top" alt="Billie Jean">
-                    <div class="card-body d-flex flex-column">
-                        <h5 class="card-title fw-bold">Billie Jean</h5>
-                        <p class="card-text mb-1"><strong>Artist:</strong> Michael Jackson</p>
-                        <p class="card-text mb-3"><strong>Released:</strong> 1983</p>
-                        
-                        <div class="mt-auto">
-                            <span class="badge bg-warning text-dark mb-3">Billboard #1</span>
-                            <button 
-                            class="btn btn-dark btn-read w-100"
-                            data-title="Billie Jean"
-                            data-artist="Michael Jackson"
-                            data-year="1983"
-                            data-badge="Billboard Hot 100 #1"
-                            data-behind="Billie Jean was inspired by letters Michael Jackson received from a woman claiming he was the father of her child."
-                            data-achievements="Billboard Hot 100 #1|Won 2 Grammy Awards|Multi-Platinum"
-                            data-impact="One of Michael Jackson's signature songs and famous for introducing the Moonwalk."
-                            >
-                            Read More
-                        </button>
-                        </div>
-                    </div>
+        <div class="singles-container">
+
+
+            <!-- Billie Jean -->
+            <article class="single-card"
+                data-title="Billie Jean"
+                data-artist="Michael Jackson"
+                data-year="1983"
+                data-image="../Images/4BillieJean.jpg"
+                data-description="Billie Jean became one of Michael Jackson's most iconic singles and helped establish his influence on pop music."
+                data-behind="Billie Jean was inspired by letters Michael Jackson received from a woman claiming he was the father of her child."
+                data-achievements="Billboard Hot 100 #1|Won 2 Grammy Awards|Multi-Platinum"
+                data-spotify= "https://open.spotify.com/embed/track/0Pta7osIb37yGqah9k3zOp?utm_source=generator&theme=0&si=70475206d2624e85">
+                
+
+                <img 
+                    src="../Images/4BillieJean.jpg"
+                    alt="Billie Jean">
+
+                <div class="single-card-title">
+                    Billie Jean
                 </div>
+
+            </article>
+
+
+            <!-- Rolling In The Deep -->
+            <article class="single-card"
+                data-title="Rolling In The Deep"
+                data-artist="Adele"
+                data-year="2010"
+                data-image="../Images/4RollingintheDeep.png"
+                data-description="Rolling In The Deep is one of Adele's most successful singles and became a worldwide hit."
+                data-behind="The song was written following the end of Adele's relationship and combines soul influences with powerful vocals."
+                data-achievements="Billboard Hot 100 #1|Won 3 Grammy Awards|Multi-Platinum"
+                data-spotify="https://open.spotify.com/embed/track/4OSBTYWVwsQhGLF9NHvIbR?utm_source=generator&si=16d099a12dd8459d">
+
+                <img 
+                    src="../Images/4RollingintheDeep.png"
+                    alt="Rolling In The Deep">
+
+                <div class="single-card-title">
+                    Rolling In The Deep
+                </div>
+
+            </article>
+
+
+            <!-- Gangnam Style -->
+            <article class="single-card"
+                data-title="Gangnam Style"
+                data-artist="PSY"
+                data-year="2012"
+                data-image="../Images/4Gangnam Style.jpg"
+                data-description="Gangnam Style became a global phenomenon and introduced Korean pop music to an even wider international audience."
+                data-behind="The song's humorous concept and distinctive horse-riding dance helped it become a worldwide viral sensation."
+                data-achievements="YouTube Milestone|Global Hit|Billboard Top 2"
+                data-spotify= "https://open.spotify.com/embed/track/03UrZgTINDqvnUMbbIMhql?utm_source=generator&si=76a71616534f4d9a" >
+
+                <img 
+                    src="../Images/4Gangnam Style.jpg"
+                    alt="Gangnam Style">
+
+                <div class="single-card-title">
+                    Gangnam Style
+                </div>
+
+            </article>
+
+
+            <!-- 晴天 -->
+            <article class="single-card"
+                data-title="晴天 (Qing Tian / Sunny Day)"
+                data-artist="Jay Chou"
+                data-year="2003"
+                data-image="../Images/Qing Tian .jpg"
+                data-description="晴天 is one of Jay Chou's most recognised songs and remains a memorable Chinese pop classic."
+                data-behind="The song is known for its nostalgic lyrics and distinctive musical style."
+                data-achievements="Classic Mandopop Hit|Popular Across Asia"
+                data-spotify="https://open.spotify.com/embed/track/7lvduqXuA2GmJQAh2wZhCP?utm_source=generator&si=f9d06d976d184517">
+
+                <img 
+                    src="../Images/Qing Tian .jpg"
+                    alt="晴天 (Qing Tian / Sunny Day)">
+
+                <div class="single-card-title">
+                    晴天 (Qing Tian / Sunny Day)
+                </div>
+
+            </article>
+
+
+            <!-- 修炼爱情 -->
+            <article class="single-card"
+                data-title="修炼爱情 (Xiu Lian Ai Qing / Practice Love)"
+                data-artist="JJ Lin"
+                data-year="2013"
+                data-image="../Images/修炼爱情 (Practice Love).jpg"
+                data-description="Practice Love is an emotional Mandopop song known for its heartfelt lyrics and powerful vocals."
+                data-behind="The song explores themes of love, loss and learning from emotional experiences."
+                data-achievements="Popular Mandopop Single|Multiple Music Awards"
+                data-spotify="https://open.spotify.com/embed/track/101iWa6yaODTI0RWewMK1B?utm_source=generator&si=d890c071c49b4bed">
+
+                <img 
+                    src="../Images/修炼爱情 (Practice Love).jpg"
+                    alt="修炼爱情 (Xiu Lian Ai Qing / Practice Love)">
+
+                <div class="single-card-title">
+                    修炼爱情 (Xiu Lian Ai Qing / Practice Love)
+                </div>
+
+            </article>
+
+
+            <!-- Despacito -->
+            <article class="single-card"
+                data-title="Despacito"
+                data-artist="Luis Fonsi ft. Daddy Yankee"
+                data-year="2017"
+                data-image="../Images/4-Despacito.png"
+                data-description="Despacito became one of the biggest global Latin music hits and broke multiple international records."
+                data-behind="The song's success helped bring Latin pop and Spanish-language music to an even larger worldwide audience."
+                data-achievements="Billboard Hot 100 #1|Global Hit|Multiple Streaming Records"
+                data-spotify="https://open.spotify.com/embed/track/6habFhsOp2NvshLv26DqMb?utm_source=generator&si=c1192fc64e744300">
+
+                <img 
+                    src="../Images/4-Despacito.png"
+                    alt="Despacito">
+
+                <div class="single-card-title">
+                    Despacito
+                </div>
+
+            </article>
+
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         SONG DETAILS POPUP
+    ========================== -->
+    <div id="singleModal" class="single-modal">
+
+        <div class="single-modal-content">
+
+            <!-- Close button -->
+            <button 
+                type="button"
+                class="modal-close"
+                id="modalClose"
+                aria-label="Close">
+                &times;
+            </button>
+
+
+            <!-- LEFT: IMAGE -->
+            <div class="modal-left">
+
+                <img 
+                    id="modalImage"
+                    src=""
+                    alt="">
+
             </div>
 
-            <!-- Card 2 -->
-              <div class="col-12 col-md-6 col-lg-4">
-                <div class="card h-100 shadow rounded-3 overflow-hidden">
-                    <img src="../Images/4RollingintheDeep.png" class="card-img-top" alt="Rolling in the Deep">
-                    <div class="card-body d-flex flex-column">
-                        <h5 class="card-title fw-bold">Rolling In The Deep</h5>
-                        <p class="card-text mb-1"><strong>Artist:</strong> Adele</p>
-                        <p class="card-text mb-3"><strong>Released:</strong> 2010</p>
-                        
-                        <div class="mt-auto">
-                            <span class="badge bg-warning text-dark mb-3">Billboard #1</span>
-                            <button class="btn btn-dark btn-read w-100"
-                            class="btn btn-dark btn-read w-100"
-                            data-title="Rolling In The deep"
-                            data-artist="Adele"
-                            data-year="2010"
-                            data-badge="Billboard Hot 100 #1"
-                            data-behind="Adele wrote 'Rolling in the Deep' after a difficult breakup. She wanted the song to express strength, 
-                            determination and moving on rather than sadness."
-                            data-achievements="Billboard Hot 100 #1|Won Grammy Award for Record of the Year|Won Grammy Award for Song of the Year|Over 20 million copies sold"
-                            data-impact="The song became Adele's breakthrough global hit and inspired many modern soul-pop artists with its powerful vocals and emotional storytelling.">Read More</button>
-                        </div>
-                    </div>
+
+            <!-- RIGHT: INFORMATION -->
+            <div class="modal-right">
+
+                <p id="modalYear" class="modal-year"></p>
+
+                <h2 id="modalTitle"></h2>
+
+                <h4 id="modalArtist"></h4>
+
+
+                <!-- Description -->
+                <div class="modal-section">
+
+                    <h3>About the Song</h3>
+
+                    <p id="modalDescription"></p>
+
                 </div>
-            </div>
 
-            <!--Card 3-->
-            <div class="col-12 col-md-6 col-lg-4">
-                <div class="card h-100 shadow rounded-3 overflow-hidden">
-                    <img src="../Images/4Gangnam Style.jpg" class="card-img-top" alt="Gangnam Style">
-                    <div class="card-body d-flex flex-column">
-                        <h5 class="card-title fw-bold">Gangnam Style</h5>
-                        <p class="card-text mb-1"><strong>Artist:</strong> PSY </p>
-                        <p class="card-text mb-3"><strong>Released:</strong> 2010</p>
-                        
-                        <div class="mt-auto">
-                            <span class="badge bg-warning text-dark mb-3">MAMA Award </span>
-                            <button class="btn btn-dark btn-read w-100"
-                            data-title="Gangnam Style"
-                            data-artist="PSY"
-                            data-year="2012"
-                            data-badge="MAMA Song of the Year"
-                            data-behind="PSY created 'Gangnam Style' as a humorous satire of the luxurious lifestyle associated with Seoul's Gangnam district. 
-                            The catchy horse-riding dance helped the song become a worldwide phenomenon."
-                            data-achievements="MAMA Song of the Year|First YouTube video to reach 1 billion views|Billboard Hot 100 #2|Global viral sensation"
-                            data-impact="Gangnam Style changed how viral music spread worldwide and showed that non-English songs could become international hits."
-                            >
-                            Read More</button>
-                        </div>
-                    </div>
+
+                <!-- Achievements -->
+                <div class="modal-section">
+
+                    <h3>Achievements</h3>
+
+                    <ul id="modalAchievements"></ul>
+
                 </div>
-            </div>
 
-            <!--Card 4-->
-            <div class="col-12 col-md-6 col-lg-4">
-                <div class="card h-100 shadow rounded-3 overflow-hidden">
-                    <img src="../Images/Qing Tian .jpg" class="card-img-top" alt="(Qing Tian / Sunny Day)">
-                    <div class="card-body d-flex flex-column">
-                        <h5 class="card-title fw-bold">晴天 (Qing Tian / Sunny Day)</h5>
-                        <p class="card-text mb-1"><strong>Artist:</strong> Jay chou</p>
-                        <p class="card-text mb-3"><strong>Released:</strong> 2003</p>
-                        
-                        <div class="mt-auto">
-                            <span class="badge bg-warning text-dark mb-3">Golden Melody Winner</span>
-                            <button class="btn btn-dark btn-read w-100"
-                            data-title="晴天 (Qing Tian / Sunny Day)"
-                            data-artist="Jay Chou"
-                            data-year="2003"
-                            data-badge="Golden Melody Award Winner"
-                            data-behind="Jay Chou composed the song himself, while Vincent Fang wrote the lyrics. The song tells a nostalgic story about first love and growing apart, 
-                            making it one of Jay Chou's most emotional works."
-                            data-achievements="Golden Melody Award Winner|One of Jay Chou's signature songs|Millions of streams across Asia|Popular karaoke classic"
-                            data-impact="The song remains one of the most iconic Mandopop songs and continues to influence younger Chinese artists and audiences."
-                            >Read More</button>
-                        </div>
-                    </div>
+
+                <!-- Behind the scenes -->
+                <div class="modal-section">
+
+                    <h3>Behind the Scenes</h3>
+
+                    <p id="modalBehind"></p>
+
                 </div>
-            </div>
 
-            <!--Card 5-->
-            <div class="col-12 col-md-6 col-lg-4">
-                <div class="card h-100 shadow rounded-3 overflow-hidden">
-                    <img src="../Images/修炼爱情 (Practice Love).jpg" class="card-img-top" alt="(Xiu Lian Ai Qin / Practice Love)">
-                    <div class="card-body d-flex flex-column">
-                        <h5 class="card-title fw-bold">修炼爱情 (Xiu Lian Ai Qin / Practice Love)</h5>
-                        <p class="card-text mb-1"><strong>Artist:</strong> JJ Lin</p>
-                        <p class="card-text mb-3"><strong>Released:</strong> 2013</p>
-                        
-                        <div class="mt-auto">
-                            <span class="badge bg-warning text-dark mb-3">Hit FM #1</span>
-                            <button class="btn btn-dark btn-read w-100"
-                            data-title="修炼爱情 (Practice Love)"
-                            data-artist="JJ Lin"
-                            data-year="2013"
-                            data-badge="Hit FM Top 100 #1"
-                            data-behind="JJ Lin revealed that the song was inspired by the passing of a close childhood friend. 
-                            The emotional lyrics describe learning to love again after experiencing loss."
-                            data-achievements="Hit FM Top 100 Songs of the Year #1|One of JJ Lin's signature songs|Millions of digital streams|Popular concert performance"
-                            data-impact="The heartfelt lyrics and emotional melody have made the song one of the most beloved Mandopop ballads of the past decade."
-                            >Read More</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
 
-            <!--Card -->
-            <div class="col-12 col-md-6 col-lg-4">
-                <div class="card h-100 shadow rounded-3 overflow-hidden">
-                    <img src="../Images/4-Despacito.png" class="card-img-top" alt="Despacito">
-                    <div class="card-body d-flex flex-column">
-                        <h5 class="card-title fw-bold">Despacito </h5>
-                        <p class="card-text mb-1"><strong>Artist:</strong>Luis Fonsi ft.Daddy Yankee (Spanish)</p>
-                        <p class="card-text mb-3"><strong>Released:</strong> 2017</p>
-                        
-                        <div class="mt-auto">
-                            <span class="badge bg-warning text-dark mb-3">Billboard Music Awards</span>
-                            <button class="btn btn-dark btn-read w-100"
-                            data-title="Despacito"
-                            data-artist="Luis Fonsi ft. Daddy Yankee"
-                            data-year="2017"
-                            data-badge="Billboard Music Awards"
-                            data-behind="Luis Fonsi wanted to create a modern Latin pop song with a catchy rhythm. 
-                            Daddy Yankee later added his rap verse, helping the song become a worldwide success."
-                            data-achievements="Billboard Hot 100 #1 for 16 weeks|Billboard Music Awards Winner|Most-viewed YouTube video for several years|Global Latin music breakthrough"
-                            data-impact="Despacito helped bring Latin pop into the global mainstream and proved that Spanish-language songs could dominate international music charts."
-                            >
-                            Read More</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
+               <!-- SPOTIFY - FULL WIDTH AT BOTTOM -->
+    <div class="modal-section">
 
-        </div><!-- /.row -->
-
-    </div><!-- /.container -->
-</section>
-</main>
-
- <div id="songPopup" class="popup">
-
-    <div class="popup-content">
-
-        <span class="close-btn">&times;</span>
-
-        <h2 id="popupTitle"></h2>
-
-        <p id="popupInfo"></p>
-
-        <span id="popupBadge" class="badge bg-warning text-dark"></span>
-
-        <hr>
-
-        <h4>🎬 Behind the Song</h4>
-
-        <p id="popupBehind"></p>
-
-        <h4>🏆 Achievements</h4>
-
-        <ul id="popupAchievements"></ul>
-
-        <h4>🌍 Cultural Impact</h4>
-
-        <p id="popupImpact"></p>
-
-    </div>
+    <iframe
+        id="modalSpotify"
+        title="Spotify Player"
+        width="100%"
+        height="152"
+        frameborder="0"
+        allowfullscreen=""
+        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture">
+    </iframe>
 
 </div>
 
-<!-- Footer -->
+</div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+ 
+</main>
+ 
 <footer class="site-footer">
     <div class="footer-top">
         <div class="footer-brand">
@@ -285,29 +327,29 @@
                 <a href="11-forums.html">Forums</a>
             </div>
 
-            <div class="footer-links">
-                <div class="footer-col">
-                    <h5>Renowned</h5>
-                    <a href="3-renoAlbums.html">Renowned Albums</a>
-                    <a href="4-renoSingles.html">Renowned Singles</a>
-                    <a href="5-renoArtists.html">Renowned Artists</a>
-                    <a href="6-renoMV.html">Renowned Music Videos</a>
-                </div>
+        <div class="footer-links">
+            <div class="footer-col">
+                <h5>Renowned</h5>
+                <a href="3-renoAlbums.html">Renowned Albums</a>
+                <a href="4-renoSingles.html">Renowned Singles</a>
+                <a href="5-renoArtists.html">Renowned Artists</a>
+                <a href="6-renoMV.html">Renowned Music Videos</a>
+            </div>
 
-                <div class="footer-col">
-                    <h5>History</h5>
-                    <a href="8-history.html">History of Music</a>
-                    <a href="9-musicProd.html">Mordern Music Production</a>
-                    <a href="10-aifuture.html">AI and the Future of Music</a>
-                </div>
+            <div class="footer-col">
+                <h5>History</h5>
+                <a href="8-history.html">History of Music</a>
+                <a href="9-musicProd.html">Mordern Music Production</a>
+                <a href="10-aifuture.html">AI and the Future of Music</a>
+            </div>
 
-                <div class="footer-col">
-                    <h5>About Us</h5>
-                    <a href="12-about.html">Who We Are</a>
-                </div>
+            <div class="footer-col">
+                <h5>About Us</h5>
+                <a href="12-about.html">Who We Are</a>
             </div>
         </div>
     </div>
+
     <div class="footer-bottom">
         <p>&copy; Discovery. All rights reserved.</p>
     </div>
