@@ -551,6 +551,11 @@ body.page-about .shuffle-btn:active {
     transform: scale(0.95);
 }
 
+.playlist-item iframe {
+    width: 100%;
+    border: 0;
+}
+
 /* Subtle pulse when JS reorders the playlist row via appendChild */
 @keyframes shufflePulse {
     0%   { opacity: .4; }
