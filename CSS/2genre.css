@@ -329,3 +329,52 @@
         font-size:1.5rem;
     }
 }
+
+.back-to-top{
+    position:fixed;
+    bottom:30px;
+    right:30px;
+
+    width:52px;
+    height:52px;
+
+    border:none;
+    border-radius:50%;
+
+    background:rgba(255,255,255,.1);
+    backdrop-filter:blur(4px);
+    color:white;
+
+    font-size:1.5rem;
+    line-height:1;
+    cursor:pointer;
+
+    opacity:0;
+    visibility:hidden;
+    transform:translateY(10px);
+
+    transition:opacity .25s ease, transform .25s ease, visibility .25s ease, background .2s ease;
+
+    z-index:50;
+}
+
+.back-to-top.visible{
+    opacity:1;
+    visibility:visible;
+    transform:translateY(0);
+}
+
+.back-to-top:hover{
+    background:rgba(255,255,255,.2);
+}
+
+@media (max-width:480px){
+    .back-to-top{
+        bottom:20px;
+        right:20px;
+
+        width:44px;
+        height:44px;
+        font-size:1.3rem;
+    }
+}

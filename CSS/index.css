@@ -4,6 +4,29 @@
     border-radius:30px;
     overflow:hidden;
     background:#000; /* fallback while slides load */
+    box-shadow: 5px 5px 10px black;
+
+}
+
+.body-content{
+    background:#1a1a1a;
+    border-radius:30px;
+
+    padding:50px;
+
+    box-shadow: 5px 5px 10px black;
+}
+
+.body-content h1{
+    margin-bottom:20px;
+}
+
+.body-content p{
+    color:#bbb;
+    font-size:1.1rem;
+    line-height:1.7;
+
+    max-width:900px;
 }
 
 /* Slides */
@@ -90,6 +113,8 @@
 }
 
 .cta{
+    display:inline-block; 
+
     padding:18px 45px;
     border:none;
     border-radius:50px;
@@ -97,6 +122,14 @@
     font-weight:bold;
     cursor:pointer;
     background:white;
+
+    text-decoration:none; 
+    color:black;    
+}
+
+.cta:hover {
+    background: #eee;
+    transform:scale(1.03);
 }
 
 /* Artist (per slide) */
@@ -280,3 +313,4 @@
         font-size:.95rem;
     }
 }
+

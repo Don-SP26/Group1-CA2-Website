@@ -69,16 +69,16 @@ section{
     top:calc(100% + 10px);
     right:0;
 
-    min-width:220px;
+    display:flex;
+    flex-direction:row;
+    gap:36px;
+
+    min-width:640px;
 
     background:#1a1a1a;
     border-radius:16px;
 
-    padding:10px;
-
-    display:flex;
-    flex-direction:column;
-    gap:2px;
+    padding:24px 28px;
 
     opacity:0;
     visibility:hidden;
@@ -95,12 +95,46 @@ section{
     transform:translateY(0);
 }
 
+.explore-col{
+    display:flex;
+    flex-direction:column;
+    gap:4px;
+
+    min-width:130px;
+}
+
+.explore-col h6{
+    position:relative;
+
+    color:#666;
+    font-size:.75rem;
+    text-transform:uppercase;
+    letter-spacing:.05em;
+
+    text-decoration:none; /* removes the full-width underline */
+
+    padding-bottom:12px;  /* pushes the new line further from the text */
+    margin-bottom:14px;
+}
+
+.explore-col h6::after{
+    content:'';
+    position:absolute;
+    left:0;
+    bottom:0;
+
+    width:30%;   /* half-width line */
+    height:1px;
+
+    background:#ffffff;
+}
+
 .explore-menu a{
     color:white;
     text-decoration:none;
     font-size:.95rem;
 
-    padding:10px 14px;
+    padding:8px 10px;
     border-radius:10px;
 
     transition:background .15s ease;
@@ -205,6 +239,16 @@ section{
 .footer-bottom p{
     color:#666;
     font-size:.85rem;
+}
+
+@media (max-width:600px){
+    .explore-menu{
+        flex-direction:column;
+        min-width:220px;
+        gap:20px;
+
+        right:-10px; /* keeps it from running off the edge of narrow screens */
+    }
 }
 
 @media (max-width:480px){
