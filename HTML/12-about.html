@@ -16,6 +16,7 @@
 
 <!-- JavaScript -->
 <script src="../JavaScript/dropdown.js" defer></script>
+<script src="../JavaScript/12about.js" defer></script>
 
 </head>
     
@@ -23,171 +24,207 @@
     <!-- Navigation -->
     <nav class="main-nav">
         <div class="logo">
-            <a href="index.html">
-                <img src="../Images/LogoDark-removebg.png" alt="Logo">
-            </a>
-        </div>
+        <a href="index.html">
+            <img src="../Images/LogoDark-removebg.png" alt="Logo">
+        </a>
+    </div>
 
-        <div class="nav-explore">
-            <button class="explore-btn">
-                Explore
-                <span class="chevron">▾</span>
-            </button>
-
+    <div class="nav-explore">
+        <button class="explore-btn">
+            Explore
+            <span class="chevron">▾</span>
+        </button>
             <div class="explore-menu">
-                <a href="index.html">Home</a>
-                <a href="2-genre.html">Genres</a>
-                <a href="3-renoAlbums.html">Renowned Albums</a>
-                <a href="4-renoSingles.html">Renowned Singles</a>
-                <a href="5-renoArtists.html">Renowned Artists</a>
-                <a href="6-renoMV.html">Renowned Music Videos</a>
-                <a href="7-vocaloids.html">Vocaloids</a>
-                <a href="8-history.html">History of Music</a>
-                <a href="9-musicProd.html">Mordern Music Production</a>
-                <a href="10-aifuture.html">AI and the Future of Music</a>
-                <a href="11-forums.html">Forums</a>
-                <a href="12-about.html">Who We Are</a>
+                <div class="explore-col">
+                    <h6>Discover</h6>
+                    <a href="index.html">Home</a>
+                    <a href="2-genre.html">Genres</a>
+                    <a href="7-vocaloids.html">Vocaloids</a>
+                    <a href="11-forums.html">Forums</a>
+                </div>
+
+                <div class="explore-col">
+                    <h6>Renowned</h6>
+                    <a href="3-renoAlbums.html">Albums</a>
+                    <a href="4-renoSingles.html">Singles</a>
+                    <a href="5-renoArtists.html">Artists</a>
+                    <a href="6-renoMV.html">Music Videos</a>
+                </div>
+
+                <div class="explore-col">
+                    <h6>History</h6>
+                    <a href="8-history.html">History of Music</a>
+                    <a href="9-musicProd.html">Modern Music Production</a>
+                    <a href="10-aifuture.html">AI and the Future of Music</a>
+                </div>
+
+                <div class="explore-col">
+                    <h6>About Us</h6>
+                    <a href="12-about.html">Who We Are</a>
+                </div>
             </div>
         </div>
     </nav>
 
-    <!-- Team Section -->
-    <main class="about-section mx-auto my-5 p-4">
-        <h2 class="section-title text-center fs-2 mb-4">Meet the Team</h2>
+    <main class="container-fluid px-2 px-md-4">
+        <!-- Page intro (replaces hero for this shorter page) -->
+        <header class="text-center py-5">
+            <p class="text-uppercase small mb-2 intro-eyebrow">The Team Behind Discovery</p>
+            <h1 class="gradient-heading fw-bold mb-2 fs-page-title">Who We Are</h1>
+            <p class="text-secondary fs-5 mb-4">Four songs, four reasons — a small preview of the music that inspired us to build this site.</p>
 
-        <div class="row mb-4">
-            <!-- Person 1 -->
-            <div class="col-md-6">
-                <div class="team-card border border-2 rounded-3 p-4 mb-4">
-                    <div class="team-card-top d-flex align-items-center mb-3">
-                        <img src="../Images/12_killingInTheName.webp" alt="Rage Against The Machine - Killing In The Name" class="rounded-3 object-fit-cover h-auto me-3">
-                        <div class="song-info">
-                        <p class="my-1"><strong>Track:</strong> <em class="fw-bold">Killing In The Name</em></p>
-                        <p class="my-1"><strong>Artist:</strong> Rage Against The Machine</p>
-                        <p class="my-1"><strong>Published:</strong> November 2, 1992</p>
+        </header>
+
+        <!-- Track Section -->
+        <section class="pb-5">
+            <div class="row gy-4 mb-4">
+                <!-- Person 1 -->
+                <div class="col-md-6">
+                    <article class="team-card rounded-4 p-4 h-100 border-start border-4 border-info">
+                        <div class="d-flex align-items-center mb-3 gap-3">
+                            <img src="../Images/12_killingInTheName.webp" alt="Rage Against The Machine - Killing In The Name" class="rounded-3 team-thumb">
+                            <div>
+                                <p class="text-white mb-1"><strong>Track:</strong> <em>Killing In The Name</em></p>
+                                <p class="text-secondary mb-1">Rage Against The Machine</p>
+                                <p class="text-secondary small mb-0">November 2, 1992</p>
+                            </div>
                         </div>
-                    </div>
-                    <div class="song-reason border-top pt-2 fst-italic">
-                        <p>It was my first exposure to rock/metal as a genre. The song itself is a protest to police 
-                            brutality, institutional racism, and the abuse of state power in the US. I listen to the 
-                            song whenever I need to remind myself of my morals, what I have to fight for, and simply 
+                        <p class="text-secondary fst-italic mb-0 pt-3 border-top border-secondary-subtle">
+                            It was my first exposure to rock/metal as a genre. The song itself is a protest to police
+                            brutality, institutional racism, and the abuse of state power in the US. I listen to the
+                            song whenever I need to remind myself of my morals, what I have to fight for, and simply
                             because I enjoy the lyrics. Especially the last verse.
                         </p>
-                    </div>
+                    </article>
                 </div>
-            </div>
 
-            <!-- Person 2 -->
-            <div class="col-md-6">
-                <div class="team-card border border-2 rounded-3 p-4 mb-4">
-                    <div class="team-card-top d-flex align-items-center mb-3">
-                        <img src="../Images/12_YouTianHuiZaiXiangJian.jpg" alt="有天會再相見 - Dior 大颖" class="rounded-3 object-fit-cover h-auto me-3">
-                        <div class="song-info">
-                        <p class="my-1"><strong>Track:</strong> <em class="fw-bold">See You // 有天會再相見 （yǒu tiān huì zài xiāng jiàn）</em></p>
-                        <p class="my-1"><strong>Artist:</strong> DIOR 大颖</p>
-                        <p class="my-1"><strong>Published:</strong> September 2, 2024</p>
+                <!-- Person 2 -->
+                <div class="col-md-6">
+                    <article class="team-card rounded-4 p-4 h-100 border-start border-4 border-info">
+                        <div class="d-flex align-items-center mb-3 gap-3">
+                            <img src="../Images/12_YouTianHuiZaiXiangJian.jpg" alt="有天會再相見 - Dior 大颖" class="rounded-3 team-thumb">
+                            <div>
+                                <p class="text-white mb-1"><strong>Track:</strong> <em>See You // 有天會再相見</em></p>
+                                <p class="text-secondary mb-1">DIOR 大颖</p>
+                                <p class="text-secondary small mb-0">September 2, 2024</p>
+                            </div>
                         </div>
-                    </div>
-                    <div class="song-reason border-top pt-2 fst-italic">
-                        <p>I like "See You" because it is emotional while also giving hope that people will meet 
-                            again someday. The lyrics are meaningful, and I like its calm, gentle rhythm. It's not 
+                        <p class="text-secondary fst-italic mb-0 pt-3 border-top border-secondary-subtle">
+                            I like "See You" because it is emotional while also giving hope that people will meet
+                            again someday. The lyrics are meaningful, and I like its calm, gentle rhythm. It's not
                             rock or R&B, which suits my preference for soft Mandopop songs.
                         </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="row mb-4">
-            <!-- Person 3 -->
-            <div class="col-md-6">
-                <div class="team-card border border-2 rounded-3 p-4 mb-4">
-                    <div class="team-card-top d-flex align-items-center mb-3">
-                        <img src="../Images/12_masshiroNaYuki.jpg" alt="Masshiro na Yuki" class="rounded-3 object-fit-cover h-auto me-3">
-                        <div class="song-info">
-                        <p class="my-1"><strong>Track:</strong> <em class="fw-bold">Masshiro na Yuki // まっしろな雪</em></p>
-                        <p class="my-1"><strong>Artist:</strong> Halozy</p>
-                        <p class="my-1"><strong>Published:</strong> December 30, 2015</p>
-                        </div>
-                    </div>
-                    <div class="song-reason border-top pt-2 fst-italic">
-                        <p> I like this song because of how the melody sounds throughout and it feels vibrant to listen 
-                            to, overall even tho the lyrics are in japanese it feels like taking a breather while 
-                            listening to the song.
-                            </p>
-                    </div>
+                    </article>
                 </div>
             </div>
 
-            <!-- Person 4 -->
-            <div class="col-md-6">
-                <div class="team-card border border-2 rounded-3 p-4 mb-4">
-                    <div class="team-card-top d-flex align-items-center mb-3">
-                        <img src="../Images/12_exoTheFirstSnow.jpg" alt="EXO - The First Snow" class="rounded-3 object-fit-cover h-auto me-3">
-                        <div class="song-info">
-                        <p class="my-1"><strong>Track:</strong> <em class="fw-bold">The First Snow</em></p>
-                        <p class="my-1"><strong>Artist:</strong> EXO</p>
-                        <p class="my-1"><strong>Published:</strong> December 9, 2013</p>
+            <div class="row gy-4">
+                <!-- Person 3 -->
+                <div class="col-md-6">
+                    <article class="team-card rounded-4 p-4 h-100 border-start border-4 border-info">
+                        <div class="d-flex align-items-center mb-3 gap-3">
+                            <img src="../Images/12_masshiroNaYuki.jpg" alt="Masshiro na Yuki" class="rounded-3 team-thumb">
+                            <div>
+                                <p class="text-white mb-1"><strong>Track:</strong> <em>Masshiro na Yuki // まっしろな雪</em></p>
+                                <p class="text-secondary mb-1">Halozy</p>
+                                <p class="text-secondary small mb-0">December 30, 2015</p>
+                            </div>
                         </div>
-                    </div>
-                    <div class="song-reason border-top pt-2 fst-italic">
-                        <p>❄️ I love this song because I love snow, and winter usually falls around December.  
-                            ✨ December is my favourite month too — it feels magical, peaceful, and full of memories. 
+                        <p class="text-secondary fst-italic mb-0 pt-3 border-top border-secondary-subtle">
+                            I like this song because of how the melody sounds throughout and it feels vibrant to
+                            listen to, overall even though the lyrics are in Japanese it feels like taking a
+                            breather while listening to the song.
                         </p>
-                    </div>
+                    </article>
+                </div>
+
+                <!-- Person 4 -->
+                <div class="col-md-6">
+                    <article class="team-card rounded-4 p-4 h-100 border-start border-4 border-info">
+                        <div class="d-flex align-items-center mb-3 gap-3">
+                            <img src="../Images/12_exoTheFirstSnow.jpg" alt="EXO - The First Snow" class="rounded-3 team-thumb">
+                            <div>
+                                <p class="text-white mb-1"><strong>Track:</strong> <em>The First Snow</em></p>
+                                <p class="text-secondary mb-1">EXO</p>
+                                <p class="text-secondary small mb-0">December 9, 2013</p>
+                            </div>
+                        </div>
+                        <p class="text-secondary fst-italic mb-0 pt-3 border-top border-secondary-subtle">
+                            I love this song because I love snow, and winter usually falls around December.
+                            December is my favourite month too — it feels magical, peaceful, and full of memories.
+                        </p>
+                    </article>
                 </div>
             </div>
-        </div>
+        </section>
 
+        <hr class="border-secondary-subtle opacity-25">
 
         <!-- Our Story -->
-        <section class="our-story text-left my-5">
-            <h2 class="mb-3">Our Story</h2>
-            <p>We chose this topic because we enjoy listening to different types of music and discovering new 
-                artists and albums. Music plays an important role in people’s life as it provides entertainment,
-                help people relieve stress, and helps to create meaningful experiences. Moreover, music is a 
-                universal form of expression that connects people from different backgrounds and brings together 
-                those who share a common interest in music.  
+        <section class="our-story py-5">
+            <h2 class="gradient-heading fw-bold mb-3 fs-section-heading">Our Story</h2>
+            <p class="text-secondary fs-5">
+                We chose this topic because we enjoy listening to different types of music and discovering new
+                artists and albums. Music plays an important role in people's life as it provides entertainment,
+                helps people relieve stress, and helps to create meaningful experiences. Moreover, music is a
+                universal form of expression that connects people from different backgrounds and brings together
+                those who share a common interest in music.
             </p>
         </section>
 
+        <hr class="border-secondary-subtle opacity-25">
+
         <!-- Music Player -->
-        <section class="music-player p-4 mt-5">
-            <h2>Your Playlist Picks</h2>
-            <div class="spotify-embeds d-flex flex-column align-items-center gap-3">
+        <section class="py-5">
+            <h2 class="gradient-heading fw-bold mb-4 fs-section-heading">Your Playlist Picks</h2>
 
-                <!-- Song 1: Killing In The Name — Rage Against The Machine -->
-                <iframe data-testid="embed-iframe" style="border-radius:12px" 
-                src="https://open.spotify.com/embed/track/3FUS56gKr9mVBmzvlnodlh?utm_source=generator&si=e509109faaff431e" 
-                width="100%" height="80" frameBorder="0" allowfullscreen="" 
-                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy">
-                </iframe>
+            <div class="d-flex justify-content-end mb-3">
+                <button class="btn shuffle-btn" id="shuffleBtn" type="button">
+                    🔀 Shuffle
+                </button>
+            </div>
 
-                <!-- Song 2: See You — DIOR 大颖 -->
-                <iframe data-testid="embed-iframe" style="border-radius:12px" 
-                src="https://open.spotify.com/embed/track/4BZlQdwkgUuaj5xbUHwUl8?utm_source=generator&si=5ca3b8a4177a4b71" 
-                width="100%" height="80" frameBorder="0" allowfullscreen="" 
-                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy">
-                </iframe>
+            <div class="row gy-3" id="playlistRow">
+                <div class="col-md-6 playlist-item">
+                    <iframe data-testid="embed-iframe"
+                    title="Killing In The Name — Rage Against The Machine"
+                    src="https://open.spotify.com/embed/track/3FUS56gKr9mVBmzvlnodlh?utm_source=generator&si=e509109faaff431e"
+                    width="100%" height="80" frameBorder="0" allowfullscreen=""
+                    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy">
+                    </iframe>
+                </div>
 
-                <!-- Song 3: Masshiro na Yuki — Halozy -->
-                <iframe data-testid="embed-iframe" style="border-radius:12px" 
-                src="https://open.spotify.com/embed/track/5d34Abn9Cvu9jOKLvU8kXg?utm_source=generator&si=ba27dcb27b0e4378" 
-                width="100%" height="80" frameBorder="0" allowfullscreen="" 
-                allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
-                loading="lazy">
-                </iframe>
-                
-                <!-- Song 4: The First Snow — EXO -->
-                <iframe data-testid="embed-iframe" style="border-radius:12px" 
-                    src="https://open.spotify.com/embed/track/2VNpT9fRk1kyksT0S4coZR?utm_source=generator" 
-                    width="100%" height="80" frameBorder="0" allowfullscreen="" 
-                    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+                <div class="col-md-6 playlist-item">
+                    <iframe data-testid="embed-iframe" 
+                    title="See You — DIOR 大颖"
+                    src="https://open.spotify.com/embed/track/4BZlQdwkgUuaj5xbUHwUl8?utm_source=generator&si=5ca3b8a4177a4b71"
+                    width="100%" height="80" frameBorder="0" allowfullscreen=""
+                    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy">
+                    </iframe>
+                </div>
+
+                <div class="col-md-6 playlist-item">
+                    <iframe data-testid="embed-iframe" 
+                    title="Masshiro na Yuki — Halozy"
+                    src="https://open.spotify.com/embed/track/5d34Abn9Cvu9jOKLvU8kXg?utm_source=generator&si=ba27dcb27b0e4378"
+                    width="100%" height="80" frameBorder="0" allowfullscreen=""
+                    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
                     loading="lazy">
-                </iframe>
+                    </iframe>
+                </div>
 
+                <div class="col-md-6 playlist-item">
+                    <iframe data-testid="embed-iframe"
+                        title="The First Snow — EXO"
+                        src="https://open.spotify.com/embed/track/2VNpT9fRk1kyksT0S4coZR?utm_source=generator"
+                        width="100%" height="80" frameBorder="0" allowfullscreen=""
+                        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                        loading="lazy">
+                    </iframe>
+                </div>
             </div>
         </section>
+
     </main>
 
     <!-- Footer -->
@@ -219,7 +256,7 @@
                     <div class="footer-col">
                         <h5>History</h5>
                         <a href="8-history.html">History of Music</a>
-                        <a href="9-musicProd.html">Mordern Music Production</a>
+                        <a href="9-musicProd.html">Modern Music Production</a>
                         <a href="10-aifuture.html">AI and the Future of Music</a>
                     </div>
 
