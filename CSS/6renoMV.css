@@ -1,15 +1,42 @@
-.thumbnail{
-    width: 100%;
-    height: 300px;
-    object-fit: cover;
-    cursor: pointer;
-    transition: transform 0.3s ease;
+.video-thumbnail {
+    position: relative;
 }
 
-.thumbnail:hover{
-    transform: scale(1.03);
-    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+.video-thumbnail a {
+    display: block;
+    position: relative;
 }
+
+.thumbnail-arrow {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+
+    width: 55px;
+    height: 55px;
+
+    background: rgba(0, 0, 0, 0.75);
+    color: white;
+
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 24px;
+
+    transition: all 0.3s ease;
+}
+
+.video-thumbnail a:hover .thumbnail-arrow {
+    background: black;
+    transform: translate(-50%, -50%) scale(1.1);
+}
+
+
 
 .page-title{
     color: #ffffff;   
@@ -22,14 +49,12 @@
 .card{
     border-radius:20px;
     margin-bottom: 40px;
+    background-color: #fafafac4;
 }
 
 .card img{
-
     height:320px;
-
     object-fit:cover;
-
 }
 
 h1,h2{
@@ -43,20 +68,19 @@ h5{
 
 h3{
     margin-bottom:15px;
-    color: rgb(164, 135, 168);
+    color: rgb(23, 23, 23);
+}
+
+p{
+    color: #0d0d0d;
 }
 
 .badge{
-
     font-size:15px;
-
     margin-right:8px;
-
 }
 
 #bts{
-
     margin-top:20px;
-
 }
 

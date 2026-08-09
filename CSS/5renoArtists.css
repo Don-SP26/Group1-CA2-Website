@@ -136,7 +136,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  color: #d4af37;
+  color: #e7e6e0;
   text-decoration: none;
   font-size: 0.7rem;
   font-weight: 600;
@@ -148,6 +148,7 @@ body {
 .expand-btn:hover {
   color: #fff;
 }
+
 
 /* Mobile Responsive */
 @media (max-width: 768px) {
