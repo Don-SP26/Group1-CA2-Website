@@ -7,6 +7,8 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
 
@@ -16,138 +18,163 @@
 
     <!-- JavaScript -->
     <script src="../JavaScript/dropdown.js" defer></script>
-
+    <script src="../JavaScript/10-aifuture.js" defer></script>
 </head>
 
 <body class="page-ai-future">
     <!-- Navigation -->
     <nav class="main-nav">
         <div class="logo">
-            <a href="index.html">
-                <img src="../Images/LogoDark-removebg.png" alt="Logo">
-            </a>
-        </div>
+        <a href="index.html">
+            <img src="../Images/LogoDark-removebg.png" alt="Logo">
+        </a>
+    </div>
 
-        <div class="nav-explore">
-            <button class="explore-btn">
-                Explore
-                <span class="chevron">▾</span>
-            </button>
-
+    <div class="nav-explore">
+        <button class="explore-btn">
+            Explore
+            <span class="chevron">▾</span>
+        </button>
             <div class="explore-menu">
-                <a href="index.html">Home</a>
-                <a href="2-genre.html">Genres</a>
-                <a href="3-renoAlbums.html">Renowned Albums</a>
-                <a href="4-renoSingles.html">Renowned Singles</a>
-                <a href="5-renoArtists.html">Renowned Artists</a>
-                <a href="6-renoMV.html">Renowned Music Videos</a>
-                <a href="7-vocaloids.html">Vocaloids</a>
-                <a href="8-history.html">History of Music</a>
-                <a href="9-musicProd.html">Mordern Music Production</a>
-                <a href="10-aifuture.html">AI and the Future of Music</a>
-                <a href="11-forums.html">Forums</a>
-                <a href="12-about.html">Who We Are</a>
+                <div class="explore-col">
+                    <h6>Discover</h6>
+                    <a href="index.html">Home</a>
+                    <a href="2-genre.html">Genres</a>
+                    <a href="7-vocaloids.html">Vocaloids</a>
+                    <a href="11-forums.html">Forums</a>
+                </div>
+
+                <div class="explore-col">
+                    <h6>Renowned</h6>
+                    <a href="3-renoAlbums.html">Albums</a>
+                    <a href="4-renoSingles.html">Singles</a>
+                    <a href="5-renoArtists.html">Artists</a>
+                    <a href="6-renoMV.html">Music Videos</a>
+                </div>
+
+                <div class="explore-col">
+                    <h6>History</h6>
+                    <a href="8-history.html">History of Music</a>
+                    <a href="9-musicProd.html">Modern Music Production</a>
+                    <a href="10-aifuture.html">AI and the Future of Music</a>
+                </div>
+
+                <div class="explore-col">
+                    <h6>About Us</h6>
+                    <a href="12-about.html">Who We Are</a>
+                </div>
             </div>
         </div>
     </nav>
 
-
-    <main class="container">
-        <!-- Row 1: wide left, narrow right -->
-        <div class="row g-3 my-3">
-            <!-- Wide left: Explanation -->
-            <section class="col-md-7" id="ai-explanation">
-                <div class="box border border-2 rounded-3 p-4 h-100 d-flex flex-column justify-content-between">
-                    <h2>Explanation of AI in Music</h2>
-                    <ul class="ai-list list-unstyled">
-                    <li class="my-2">🎶 <strong>Melody Generation</strong> – sparks inspiration for artists</li>
-                    <li class="my-2">📝 <strong>Lyric Suggestions</strong> – refined by human creativity</li>
-                    <li class="my-2">🎧 <strong>Background Tracks</strong> – speeds up production workflow</li>
-                    <li class="my-2">🔧 <strong>Studio Corrections</strong> – helps achieve professional sound</li>
-                    <li class="my-2">🔍 <strong>Smart Sample Matching</strong> – auto‑fits key & tempo seamlessly</li>
-                    </ul>
-
-                    <div class="callout border-start border-4 rounded p-3 mt-3 fst-italic">
-                    ✨ AI saves time and blends everything smoothly into the project.
-                    </div>
-                </div>
-            </section>
-
-            <!-- Narrow right: Image -->
-            <section class="col-md-5" id="ai-music-1">
-                <div class="box border border-2 rounded-3 p-4 h-100 d-flex flex-column justify-content-between">
-                <img src="../Images/10_useOfAI.jpg" alt="AI Music Example" class="w-100 h-100 object-fit-cover rounded">
-                </div>
-            </section>
+    <!-- Hero banner (custom bg-image needed — Bootstrap has no built-in for this) -->
+    <section class="ai-banner rounded-5 d-flex align-items-center">        
+        <div class="ai-banner-overlay rounded-5"></div>
+        <div class="position-relative ps-5 text-white">
+            <h1 class="display-4 fw-bold mb-0">AI & The Future of Music</h1>
         </div>
+    </section>
 
-        <!-- Row 2: narrow left, wide right -->
-        <div class="row g-3 my-4">
-            <!-- Narrow left: Image -->
-            <section class="col-md-5" id="ai-music-2">
-                <div class="box border border-2 rounded-3 p-4 h-100 d-flex flex-column justify-content-between">
-                <img src="../Images/10_pros&cons.png" alt="Pros and Cons" class="w-100 h-100 object-fit-cover rounded">
+   <main class="container-fluid px-2 px-md-4">
+        <!-- Row 1 -->
+        <section class="row gy-4 align-items-center py-5">
+            <div class="col-md-8">
+                <h2 class="text-white fw-bold mb-3 fs-page-heading">Explanation of AI in Music</h2>                
+                <p class="text-secondary ai-body-text text-relaxed">
+                    AI is becoming a useful tool in music. It can help artists come up with melodies, 
+                    suggest lyrics, create background music, and fix mistakes in recordings. It can 
+                    also match samples to the right key and tempo, making the music production process 
+                    faster and easier. However, human creativity is still important because artists 
+                    decide how the final song should sound.
+                </p>
+                <div class="callout border-start border-4 rounded p-3 mt-3 fst-italic">
+                    AI saves time and blends everything smoothly into the project.
                 </div>
-            </section>
+            </div>
 
-            <!-- Wide right: Pros & Cons -->
-            <section class="col-md-7" id="pros-cons">
-                <div class="box border border-2 rounded-3 p-4 h-100 d-flex flex-column justify-content-between">
-                    <h2>Pros & Cons of Using AI in Music</h2>
-                    <div class="row g-3 mt-1">
-                        <div class="col-6">
-                            <div class="pros rounded-2 p-2 h-100">
-                                <h3>✅ Pros</h3>
-                                <ul class="pros-cons list-unstyled">
-                                <li>🎶 Provides creative inspiration</li>
-                                <li>⚡ Improves production efficiency</li>
-                                <li>🌍 Music creation more accessible</li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="col-6">
-                            <div class="cons rounded-2 p-2 h-100">
-                                <h3>⚠️ Cons</h3>
-                                <ul class="pros-cons list-unstyled">
-                                <li>🌀 May reduce originality</li>
-                                <li>💼 Could affect musicians’ careers</li>
-                                <li>📜 Raises ethical/copyright issues</li>
-                                </ul>
-                            </div>
+            <div class="col-md-4">
+                <img src="../Images/10_useOfAI.jpg" alt="AI in music production" 
+                    class="img-fluid rounded-4 w-100 ai-img lightbox-trigger" tabindex="0" role="button">
+            </div>
+        </section>
+
+        <hr class="border-secondary-subtle opacity-25">
+
+        <!-- Row 2 -->
+        <section class="row gy-4 align-items-center py-5">
+            <div class="col-md-4 order-2 order-md-1">
+                <img src="../Images/10_prosAndCons.jpg" alt="Pros and cons of AI in music" 
+                    class="img-fluid rounded-4 w-100 ai-img lightbox-trigger" tabindex="0" role="button">
+            </div>
+
+            <div class="col-md-8 order-1 order-md-2">
+                <h2 class="text-white fw-bold mb-3 fs-page-heading">Pros & Cons of Using AI in Music</h2>
+
+                <div class="row gy-4">
+                    <div class="col-12 col-sm-6">
+                        <div class="ps-3 border-start border-4 border-info">
+                            <h3 class="text-white fs-6 text-uppercase mb-3">Pros</h3>
+                            <ul class="ai-list list-unstyled text-secondary ai-body-text text-relaxed">
+                                <li class="text-secondary mb-2"><i class="bi bi-check-lg text-info me-2"></i>Provides creative inspiration</li>
+                                <li class="text-secondary mb-2"><i class="bi bi-check-lg text-info me-2"></i>Improves production efficiency</li>
+                                <li class="text-secondary mb-0"><i class="bi bi-check-lg text-info me-2"></i>Makes music creation more accessible</li>
+                            </ul>
                         </div>
                     </div>
 
-                    <div class="callout border-start border-4 rounded p-3 mt-3 fst-italic">
-                    🎵 AI offers exciting opportunities, but balancing innovation with human artistry is essential.
+                    <div class="col-12 col-sm-6">
+                        <div class="ps-3 border-start border-4 border-secondary">
+                            <h3 class="text-white fs-6 text-uppercase mb-3">Cons</h3>
+                            <ul class="ai-list list-unstyled text-secondary ai-body-text text-relaxed">
+                                <li class="text-secondary mb-2"><i class="bi bi-exclamation-lg text-secondary me-2"></i>May reduce originality</li>
+                                <li class="text-secondary mb-2"><i class="bi bi-exclamation-lg text-secondary me-2"></i>Could affect musicians' careers</li>
+                                <li class="text-secondary mb-0"><i class="bi bi-exclamation-lg text-secondary me-2"></i>Raises ethical and copyright issues</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
-            </section>
-        </div>
 
-        <!-- Row 3: wide left, narrow right -->
-        <div class="row g-3 my-4">
-            <section class="col-md-7" id="future">
-                <div class="box border border-2 rounded-3 p-4 h-100 d-flex flex-column justify-content-between">
-                    <h2>Future of Music</h2>
-                    <ul class="future-list list-unstyled">
-                    <li class="my-2">🎤 <strong>Virtual Artists</strong> – AI‑generated performers</li>
-                    <li class="my-2">💡 <strong>Smarter Production Tools</strong> – mastering, mixing, accompaniment</li>
-                    <li class="my-2">✨ <strong>New Creative Possibilities</strong> – interactive compositions</li>
-                    </ul>
+                <div class="callout border-start border-4 rounded p-3 mt-3 fst-italic">
+                    AI offers exciting opportunities, but balancing innovation with human artistry is essential.
+                </div>
+            </div>
+        </section>
 
-                    <div class="callout border-start border-4 rounded p-3 mt-3 fst-italic">
-                    🌟 AI may shape the future of music through these innovations.  
-                    <br>But <strong>human creativity</strong> will always remain vital — music depends on emotion, experience, and personal expression.
-                    </div>
+        <hr class="border-secondary-subtle opacity-25">
+
+        <!-- Row 3 -->
+        <section class="row gy-4 align-items-center py-5">
+            <div class="col-md-8">
+                <h2 class="text-white fw-bold mb-3 fs-page-heading">Future of Music</h2>
+                <p class="text-secondary ai-body-text text-relaxed">
+                    In the future, AI could change the way music is created and enjoyed. We may see 
+                    virtual artists who are fully generated by AI, as well as smarter tools that help 
+                    with mixing, mastering, and adding instruments to songs. AI may also create new 
+                    forms of music, such as interactive compositions that change based on the 
+                    listener's choices.
+                </p>
+                <div class="callout border-start border-4 rounded p-3 mt-3 fst-italic">
+                    AI may shape the future of music through new ideas and tools. However, 
+                    <strong>human</strong> creativity will always matter because music comes from deep 
+                    emotions, life experiences, and unique personal expression. 
                 </div>
-            </section>
-            <section class="col-md-5" id="ai-music-3">
-                <div class="box border border-2 rounded-3 p-4 h-100 d-flex flex-column justify-content-between">
-                <img src="../Images/10_futureOfMusic.png" alt="pros and cons" class="w-100 h-100 object-fit-cover rounded">
-                </div>
-            </section>
-        </div>
+            </div>
+
+            <div class="col-md-4">
+                <img src="../Images/10_futureOfMusic.png" alt="Future of music" 
+                    class="img-fluid rounded-4 w-100 ai-img lightbox-trigger" tabindex="0" role="button">            
+            </div>
+        </section>
     </main>
+
+    <!-- Lightbox -->
+    <div id="lightboxOverlay" class="lightbox-overlay" aria-hidden="true">
+        <button id="lightboxClose" class="lightbox-close" aria-label="Close image preview">&times;</button>
+        <figure class="lightbox-figure">
+            <img id="lightboxImage" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBTAA7" alt="">
+            <figcaption id="lightboxCaption"></figcaption>
+        </figure>
+    </div>
 
     <!-- Footer -->
     <footer class="site-footer">
@@ -159,7 +186,7 @@
 
             <div class="footer-links">
                 <div class="footer-col">
-                    <h5>Discover</h5>
+                    <h3 class="h5">Discover</h3>
                     <a href="index.html">Home</a>
                     <a href="2-genre.html">Genres</a>
                     <a href="7-vocaloids.html">Vocaloids</a>
@@ -168,7 +195,7 @@
 
                 <div class="footer-links">
                     <div class="footer-col">
-                        <h5>Renowned</h5>
+                        <h3 class="h5">Renowned</h3>
                         <a href="3-renoAlbums.html">Renowned Albums</a>
                         <a href="4-renoSingles.html">Renowned Singles</a>
                         <a href="5-renoArtists.html">Renowned Artists</a>
@@ -176,14 +203,14 @@
                     </div>
 
                     <div class="footer-col">
-                        <h5>History</h5>
+                        <h3 class="h5">History</h3>
                         <a href="8-history.html">History of Music</a>
-                        <a href="9-musicProd.html">Mordern Music Production</a>
+                        <a href="9-musicProd.html">Modern Music Production</a>
                         <a href="10-aifuture.html">AI and the Future of Music</a>
                     </div>
 
                     <div class="footer-col">
-                        <h5>About Us</h5>
+                        <h3 class="h5">About Us</h3>
                         <a href="12-about.html">Who We Are</a>
                     </div>
                 </div>

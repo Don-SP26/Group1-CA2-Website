@@ -1,70 +1,123 @@
-// Get HTML elements
-console.log("JavaScript is working!");
+// RENOWNED SINGLES - POPUP
 
-const popup = document.getElementById("songPopup");
-const readMoreBtns = document.querySelectorAll(".btn-read");
-const closeBtn = document.querySelector(".close-btn");
-
-const popupTitle = document.getElementById("popupTitle");
-const popupInfo = document.getElementById("popupInfo");
-const popupBadge = document.getElementById("popupBadge");
-const popupBehind = document.getElementById("popupBehind");
-const popupAchievements = document.getElementById("popupAchievements");
-const popupImpact = document.getElementById("popupImpact");
-
-// Open popup when Read More is clicked
-readMoreBtns.forEach(function(button){
-
-    button.addEventListener("click", function(){
-
-        // Get information from the button's data attributes
-        popupTitle.textContent = this.dataset.title;
-
-        popupInfo.textContent =
-            this.dataset.artist + " • Released: " + this.dataset.year;
-
-        popupBadge.textContent = this.dataset.badge;
-
-        popupBehind.textContent = this.dataset.behind;
-
-        popupImpact.textContent = this.dataset.impact;
+// Get all the song cards
+const cards = document.querySelectorAll(".single-card");
 
 
-        // Clear previous achievements
-        popupAchievements.innerHTML = "";
+// Get the popup
+const modal = document.getElementById("singleModal");
 
-        // Convert achievements into bullet points
-        const achievements = this.dataset.achievements.split("|");
 
-        achievements.forEach(function(item){
+// Get the close button
+const closeButton = document.getElementById("modalClose");
 
-            popupAchievements.innerHTML += `<li>${item}</li>`;
+
+// Get the elements inside the popup
+const modalImage = document.getElementById("modalImage");
+const modalTitle = document.getElementById("modalTitle");
+const modalArtist = document.getElementById("modalArtist");
+const modalYear = document.getElementById("modalYear");
+const modalDescription = document.getElementById("modalDescription");
+const modalBehind = document.getElementById("modalBehind");
+const modalAchievements = document.getElementById("modalAchievements");
+const modalSpotify = document.getElementById("modalSpotify");
+
+// CLICK ON A CARD
+cards.forEach(function(card) {
+
+    card.addEventListener("click", function() {
+
+        // Get information from the card
+        const title = card.dataset.title;
+        const artist = card.dataset.artist;
+        const year = card.dataset.year;
+        const image = card.dataset.image;
+        const description = card.dataset.description;
+        const behind = card.dataset.behind;
+        const achievements = card.dataset.achievements;
+        const spotify = card.dataset.spotify;
+
+
+        // Put information into popup
+        modalTitle.textContent = title;
+
+        modalArtist.textContent = artist;
+
+        modalYear.textContent = year;
+
+        modalImage.src = image;
+
+        modalImage.alt = title;
+
+        modalDescription.textContent = description;
+
+        modalBehind.textContent = behind;
+
+        // ACHIEVEMENTS
+        modalAchievements.innerHTML = "";
+
+
+        const achievementList = achievements.split("|");
+
+
+        achievementList.forEach(function(achievement) {
+
+            const li = document.createElement("li");
+
+            li.textContent = achievement;
+
+            modalAchievements.appendChild(li);
 
         });
 
 
-        // Show popup
-        popup.classList.add("show");
+        // =================================================
+        // SPOTIFY
+        // =================================================
+
+        modalSpotify.src = spotify;
+
+
+        // SHOW POPUP
+        modal.classList.add("show");
 
     });
 
 });
 
-// Close popup
+// CLOSE BUTTON
 
-closeBtn.addEventListener("click", function(){
+closeButton.addEventListener("click", function() {
 
-    popup.classList.remove("show");
+    modal.classList.remove("show");
+
+    // Stop Spotify when closing
+    modalSpotify.src = "";
 
 });
 
+// CLICK OUTSIDE POPUP TO CLOSE
+modal.addEventListener("click", function(event) {
 
-// Close popup when clicking outside it
-popup.addEventListener("click", function(event){
+    if (event.target === modal) {
 
-    if(event.target === popup){
+        modal.classList.remove("show");
 
-        popup.classList.remove("show");
+        // Stop Spotify
+        modalSpotify.src = "";
+
+    }
+
+});
+
+// ESC KEY TO CLOSE
+document.addEventListener("keydown", function(event) {
+
+    if (event.key === "Escape") {
+
+        modal.classList.remove("show");
+
+        modalSpotify.src = "";
 
     }
 

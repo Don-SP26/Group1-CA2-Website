@@ -4,7 +4,35 @@ const artistData = {
     name: "REGINA SONG",
     meta: "POP / INDIE POP · SINGAPORE",
     description: "Singaporean singer-songwriter known for her intimate, viral melodies capturing modern girlhood and relationship experiences.",
-    songs: ["the cutest pair", "fangirl", "Before i leave", "everland"]
+    songs:[
+    {
+        title: "the cutest pair",
+        background: "This is where the background of the song will go.",
+        trivia: "This is where an interesting trivia fact will go.",
+        spotify: "https://open.spotify.com/embed/track/0VVD95cRAppHSOGPYrfIG2?utm_source=generator&si=8cbcc59309fd4ddb"
+    },
+
+    {
+        title: "fangirl",
+        background: "This is where the background of the song will go.",
+        trivia: "This is where an interesting trivia fact will go.",
+        spotify: "YOUR-SPOTIFY-LINK-HERE"
+    },
+
+    {
+        title: "Before i leave",
+        background: "This is where the background of the song will go.",
+        trivia: "This is where an interesting trivia fact will go.",
+        spotify: "YOUR-SPOTIFY-LINK-HERE"
+    },
+
+    {
+        title: "everland",
+        background: "This is where the background of the song will go.",
+        trivia: "This is where an interesting trivia fact will go.",
+        spotify: "YOUR-SPOTIFY-LINK-HERE"
+    }
+]
   },
   iu: {
     name: "IU",
@@ -131,7 +159,15 @@ function openModal(artistKey) {
   descEl.textContent = data.description;
 
   songListEl.innerHTML = data.songs
-    .map(song => `<li>${song}</li>`)
+    .map(song => {
+
+        if (typeof song === "string") {
+            return `<li>${song}</li>`;
+        }
+
+        return `<li>${song.title}</li>`;
+
+    })
     .join("");
 
   modalOverlay.classList.add("active");
