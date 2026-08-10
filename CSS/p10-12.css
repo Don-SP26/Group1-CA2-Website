@@ -171,7 +171,6 @@ body.lightbox-open {
 
 
 /* Page 11 CSS */
-
 body.page-forums {
     background: #0c0c0e;
     color: #f3f2ee;
@@ -466,7 +465,6 @@ body.page-forums .share-section .form-control {
 
 
 /* Page 12 CSS */
-
 /* Page accent color for Bootstrap's border-info on team cards */
 body.page-about {
     --bs-info: #8aa8ae;
