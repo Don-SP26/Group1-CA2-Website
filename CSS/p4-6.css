@@ -318,6 +318,7 @@
 
 .header h1 {
   font-size: 2.2rem;
+  font-weight: bold;
   letter-spacing: 3px;
   color: #ffff;
   line-height: 1.2;
@@ -385,7 +386,7 @@
   flex-grow: 1;
 }
 
-.card-content h3 {
+.card-content h2 {
   font-size: 0.9rem;
   letter-spacing: 1px;
   color: #fff;
@@ -419,6 +420,8 @@
 }
 
 <!--RenoMv-->
+/* RenoMV */
+
 .video-thumbnail {
     position: relative;
 }
@@ -432,7 +435,6 @@
     position: absolute;
     top: 50%;
     left: 50%;
-
     transform: translate(-50%, -50%);
 
     width: 55px;
@@ -457,54 +459,83 @@
     transform: translate(-50%, -50%) scale(1.1);
 }
 
-.page-title{
-     margin: 0;
-    font-size: 50px;
+.page-title {
+    margin: 0;
+    font-size: 2.2rem;
     font-weight: bold;
     line-height: 1.1;
     letter-spacing: 1px;
     color: #ffffff;
 }
 
-.page-subtitle{
+.page-subtitle {
     font-size: 16px;
     color: #ffffff;
 }
 
-.card{
-    border-radius:20px;
+/* MV CARD */
+.card {
+    border-radius: 20px;
     margin-bottom: 40px;
-    background-color: #fafafac4;
+    background-color: #18151b;
+    color: #ffffff;
 }
 
-.card img{
-    height:320px;
-    object-fit:cover;
+/* MV IMAGE */
+.card img {
+    height: 320px;
+    object-fit: cover;
 }
 
-.row h1,h2{
-    font-weight:bold;
-    color: #000;
+/* MV HEADINGS */
+.row h1,
+.row h2 {
+    font-weight: bold;
+    color: #ffffff;
 }
 
-.row h5{
-  font-weight:bold;
+.row h5 {
+    font-weight: bold;
+    color: #a79faa;
 }
 
-.row h3{
-    margin-bottom:15px;
-    color: rgb(23, 23, 23);
+.row h3 {
+    margin-bottom: 15px;
+    color: #e5c987;
 }
 
-.row p{
-    color: #0d0d0d;
+/* MV DESCRIPTION */
+.row p {
+    color: #ffffff;
 }
 
-.badge{
-    font-size:15px;
-    margin-right:8px;
+/* MV LISTS (Awards & Cultural Impact) */
+.row ul {
+    padding-left: 20px;
+    margin: 0;
 }
 
-#bts{
-    margin-top:20px;
+.row ul li {
+    color: #d0cbd2;      /* same soft grey-white as your .row p text — change this to whatever you want */
+    font-size: 14px;
+    line-height: 1.8;
+    margin-bottom: 6px;
+}
+
+.row ul li::marker {
+    color: #e5c987;      /* gold bullet points to match your headings */
+}
+
+.badge {
+    font-size: 15px;
+    margin-right: 8px;
+}
+
+/* BEHIND THE SCENES */
+[id^="bts"] {
+    margin-top: 20px;
+}
+
+[id^="bts"] hr {
+    border-color: #342e37;
 }
