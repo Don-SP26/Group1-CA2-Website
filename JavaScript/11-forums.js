@@ -70,16 +70,6 @@ function refreshTimeLabels() {
 
 
 /* 2. STATS COUNTER (hero "tracks shared" / "likes given") */
-// Updates a stat's number with a quick slide/fade tick, so even +1 changes feel visible
-function tickStat(el, to) {
-  const from = parseInt(el.textContent, 10) || 0;
-  if (from === to) return;
-
-  el.textContent = to;
-  el.classList.remove("tick");
-  void el.offsetWidth; // force reflow so the animation can re-trigger even on rapid clicks
-  el.classList.add("tick");
-}
 
 // Recalculates total posts + total likes and updates the hero stat counters
 function updateStats() {
@@ -96,6 +86,22 @@ function updateStats() {
 
   tickStat(statPosts, posts.length);
   tickStat(statLikes, totalLikes);
+}
+
+// Updates a stat's number with a smooth slide/fade roll — the old
+// number visibly slides up and out, then the new one rolls in from below
+function tickStat(el, to) {
+  const from = parseInt(el.textContent, 10) || 0;
+  if (from === to) return;
+
+  el.classList.remove("tick");
+  void el.offsetWidth; // force reflow so the animation can re-trigger even on rapid clicks
+  el.classList.add("tick");
+
+  clearTimeout(el._tickSwap);
+  el._tickSwap = setTimeout(() => {
+    el.textContent = to;
+  }, 225);
 }
 
 
