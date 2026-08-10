@@ -18,11 +18,23 @@ img {
 /* =========================================
    Vocaloids Layout
 ========================================= */
+.vocaloid-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 60px 20px;
+}
+
+/* Hero Section */
 .vocaloid-hero {
     display: flex;
     justify-content: space-between;
     align-items: center;
     gap: 40px;
+    padding: 40px;
+    border-radius: 12px;
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('../Images/image_5e8220.jpg');
+    background-size: cover;
+    background-position: center;
 }
 
 .vocaloid-text {
@@ -30,16 +42,30 @@ img {
 }
 
 .vocaloid-text h1 {
-    font-size: 3rem;
-    margin-bottom: 20px;
+    color: #39C5BB;
 }
 
 .vocaloid-text p {
-    color: #ccc;
+    color: #ddd;
     line-height: 1.6;
     margin-bottom: 15px;
 }
 
+/* Gray Blocky Buttons from Reference Image */
+
+.btn-gray {
+    border: 1px solid #222;
+    color: #fff;
+    padding: 15px 25px;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: bold;
+    text-align: left;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+/* Image Stack (Kept from your original CSS) */
 .vocaloid-image-stack {
     flex: 1;
     position: relative;
@@ -51,28 +77,64 @@ img {
     position: absolute;
     top: 0;
     right: 0;
+    opacity: 0.8;
 }
 
 .vocaloid-image-stack .img-front {
-    width: 60%;
+    width: 90%;
     position: absolute;
-    bottom: -30px;
-    left: 20px;
-    box-shadow: -10px 10px 30px rgba(0,0,0,0.8);
+    bottom: -40px;
+    left: 50px;
+    z-index: 1;
 }
 
+/* Bottom Gallery Cards */
 .vocaloid-gallery {
     display: flex;
     gap: 20px;
     justify-content: space-between;
-    margin-top: 100px;
+    margin-top: 60px;
 }
 
 .gallery-card {
     flex: 1;
     background: #1a1a1a;
+    border: 1px solid #333;
     border-radius: 12px;
     overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.card-content {
+    padding: 25px;
+}
+
+.card-content h2 {
+    color: #39C5BB;
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+}
+
+.card-content p {
+    color: #bbb;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .vocaloid-hero, .vocaloid-gallery {
+        flex-direction: column;
+    }
+    
+    .piapro-buttons {
+        flex-direction: column;
+    }
+    
+    .vocaloid-image-stack {
+        width: 100%;
+        margin-top: 40px;
+    }
 }
 
 /* =========================================
@@ -133,38 +195,137 @@ img {
 /* =========================================
    Modern Music Prod (Zig-Zag) Layout
 ========================================= */
+.zigzag-container {
+    max-width: 1200px;
+    margin: 0 auto;       /* Centers the container on the page */
+    padding: 60px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 80px;            /* Vertical space between each row */
+}
+
+/* Flexbox to put text and image side-by-side */
 .zz-row {
     display: flex;
-    align-items: center;
-    gap: 60px;
-    margin-bottom: 80px;
+    align-items: center;  /* Centers items vertically */
+    justify-content: space-between;
+    gap: 40px;            /* Horizontal space between text and image */
 }
 
-.zz-row.reverse {
-    flex-direction: row-reverse;
-}
-
-.zz-text {
-    flex: 1;
-}
-
+/* Ensure text and image containers take up equal halves (50/50) */
+.zz-text, 
 .zz-image {
     flex: 1;
 }
 
-.zz-text h2 {
+/* Make sure the images are responsive and don't overflow */
+.zz-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;  /* Optional: gives the images nice rounded corners */
+    box-shadow: 0 8px 24px rgba(0,0,0,0.1); /* Optional: adds a modern drop shadow */
+    object-fit: cover;
+}
+
+/* =========================================
+   Mobile Responsive Adjustments
+========================================= */
+@media (max-width: 768px) {
+    /* Stack elements vertically on small screens */
+    .zz-row {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    /* 
+      Because your "reverse" rows have the image first in the HTML, 
+      a standard column stack would put the image on top. 
+      Using column-reverse ensures the Text is always on top on mobile!
+    */
+    .zz-row.reverse {
+        flex-direction: column-reverse;
+    }
+}
+
+/* =========================================
+   Interactivity (Scroll Reveal) Styles
+========================================= */
+.reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* =========================================
+   Table Styling (Modern Music Production)
+========================================= */
+
+.table-section {
+    margin-bottom: 80px;
+}
+
+.table-header {
+    margin-bottom: 25px;
+}
+
+.table-header h2 {
     font-size: 2.2rem;
     margin-bottom: 10px;
 }
 
-.accent-line {
-    width: 50px;
-    height: 3px;
-    background-color: #28a745; /* Green accent from wireframe */
-    margin-bottom: 20px;
+.table-header p {
+    color: #ccc;
+    font-size: 1rem;
 }
 
-.zz-text p {
-    color: #ccc;
-    line-height: 1.6;
+/* Wrapper ensures smooth horizontal scrolling on mobile/portrait devices */
+.table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+    border-radius: 12px;
+    background: #1a1a1a;
+    border: 1px solid #333;
+}
+
+.prod-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+    color: #fff;
+    font-size: 0.95rem;
+    min-width: 600px; /* Prevents text crushing on mobile */
+}
+
+.prod-table thead {
+    background-color: #252525;
+    border-bottom: 2px solid #333;
+}
+
+.prod-table th {
+    padding: 16px 20px;
+    font-weight: bold;
+    color: #28a745; /* Matches green accent theme */
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 0.05em;
+}
+
+.prod-table td {
+    padding: 16px 20px;
+    border-bottom: 1px solid #2a2a2a;
+    color: #ddd;
+}
+
+.prod-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.prod-table tbody tr:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+    transition: background-color 0.2s ease;
 }

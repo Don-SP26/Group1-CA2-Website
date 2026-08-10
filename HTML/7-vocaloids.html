@@ -7,6 +7,7 @@
 
     <!-- Bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- CSS -->
     <link rel="stylesheet" href="../CSS/mainstyle.css">
@@ -20,63 +21,104 @@
 <!-- Navigation -->
 <nav class="main-nav">
     <div class="logo">
-        <a href="index.html">
-            <img src="../Images/LogoDark-removebg.png" alt="Logo">
-        </a>
-    </div>
-    <div class="nav-explore">
-        <button class="explore-btn">
-            Explore
-            <span class="chevron">▾</span>
-        </button>
-        
+    <a href="index.html">
+        <img src="../Images/LogoDark-removebg.png" alt="Logo">
+    </a>
+</div>
+
+<div class="nav-explore">
+    <button class="explore-btn">
+        Explore
+        <span class="chevron">▾</span>
+    </button>
         <div class="explore-menu">
-            <a href="index.html">Home</a>
-            <a href="2-genre.html">Genres</a>
-            <a href="3-renoAlbums.html">Renowned Albums</a>
-            <a href="4-renoSingles.html">Renowned Singles</a>
-            <a href="5-renoArtists.html">Renowned Artists</a>
-            <a href="6-renoMV.html">Renowned Music Videos</a>
-            <a href="7-vocaloids.html">Vocaloids</a>
-            <a href="8-history.html">History of Music</a>
-            <a href="9-musicProd.html">Mordern Music Production</a>
-            <a href="10-aifuture.html">AI and the Future of Music</a>
-            <a href="11-forums.html">Forums</a>
-            <a href="12-about.html">Who We Are</a>
+            <div class="explore-col">
+                <h6>Discover</h6>
+                <a href="index.html">Home</a>
+                <a href="2-genre.html">Genres</a>
+                <a href="7-vocaloids.html">Vocaloids</a>
+                <a href="11-forums.html">Forums</a>
+            </div>
+
+            <div class="explore-col">
+                <h6>Renowned</h6>
+                <a href="3-renoAlbums.html">Albums</a>
+                <a href="4-renoSingles.html">Singles</a>
+                <a href="5-renoArtists.html">Artists</a>
+                <a href="6-renoMV.html">Music Videos</a>
+            </div>
+
+            <div class="explore-col">
+                <h6>History</h6>
+                <a href="8-history.html">History of Music</a>
+                <a href="9-musicProd.html">Modern Music Production</a>
+                <a href="10-aifuture.html">AI and the Future of Music</a>
+            </div>
+
+            <div class="explore-col">
+                <h6>About Us</h6>
+                <a href="12-about.html">Who We Are</a>
+            </div>
         </div>
     </div>
 </nav>
 
-<!-- Vocaloid Intro Section (Overlapping Images) -->
-<section class="vocaloid-hero">
-    <div class="vocaloid-text">
-        <h1>Introduction to Vocaloid</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-        <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.</p>
-    </div>
-    <div class="vocaloid-image-stack">
-        <div class="img-back">
-            <img src="../Images/SampleHorizontal_Image.jpg" alt="Sample">
+<main>
+    <!-- Hero Section -->
+    <section class="vocaloid-hero">
+        <div class="vocaloid-text">
+            <h1>Introduction to Vocaloid</h1>
+            <div class="accent-line"></div>
+            <p>It all started as a voice synthesizer software that was initially produced and developed through a collaborative project between Yamaha Corporation and Pompeu Fabra University.</p>
+            <p>It allows independent music producers to release fully produced vocal tracks without the need to have a human singing in front of a microphone.</p>
         </div>
-        <div class="img-front">
-            <img src="../Images/SampleVertical_Image.jpg" alt="Sample">
+        
+        <!-- Image Stack -->
+        <div class="vocaloid-image-stack">
+            <a href="https://en.wikipedia.org/wiki/Hatsune_Miku" target="_blank">
+                <img src="../Images/hatsuneAMAZING.png" class="img-front clickable-img" alt="Hatsune Miku">
+            </a>
         </div>
-    </div>
-</section>
+    </section>
 
-<!-- Vocaloid 3-Image Grid -->
-<section class="vocaloid-gallery">
-    <div class="gallery-card">
-        <img src="../Images/SampleVertical_Image.jpg" alt="Sample">
-    </div>
-    <div class="gallery-card">
-        <img src="../Images/SampleVertical_Image.jpg" alt="Sample">
-    </div>
-    <div class="gallery-card">
-        <img src="../Images/SampleVertical_Image.jpg" alt="Sample">
-    </div>
-</section>
+    <!-- Interactive Cards Section (Replacing KARENT with relevant content) -->
+    <section class="vocaloid-gallery">
+        
+        <!-- Card 1: The Interface / Piano Roll -->
+        <div class="gallery-card">
+            <a href="https://dreamtonics.com/synthesizer-v-studio-1-8-1b1-update/" target="_blank">
+                <img src="../Images/piano-roll-sample.png" alt="Synthesizer Software Interface" class="card-img clickable-img">
+            </a>
+            <div class="card-content">
+                <h2 class="h1">Synthesizer Software & Interface</h2>
+                <p>Music producers can synthesize the voicebanks of the software by typing out the lyrics and inputting a melody into a piano-roll type interface. The software engine selects appropriate vocal fragments (sampled from real voice actors or singers) from a "singer library" and concatenates them to fit the pitch and timing of the song.</p>
+            </div>
+        </div>
 
+        <!-- Card 2: A Singer in a Box (Avatars) -->
+        <div class="gallery-card">
+            <a href="https://www.vocaloid.com/en/" target="_blank">
+                <img src="../Images/vocaloid-avatars.jpg" alt="Vocaloid Avatars" class="card-img clickable-img">
+            </a>
+            <div class="card-content">
+                <h2 class="h1">A Singer in a Box</h2>
+                <p>These voicebanks are often sold as “a singer in a box” and marketed with unique character avatars (such as MEIKO, KAITO, and the globally recognized Hatsune Miku).</p>
+            </div>
+        </div>
+
+        <!-- Card 3: Live Concerts -->
+        <div class="gallery-card">
+            <a href="https://mikuexpo.com/" target="_blank">
+                <img src="../Images/live-concert.jpg" alt="Virtual Idol Live Concert" class="card-img clickable-img">
+            </a>
+            <div class="card-content">
+                <h2 class="h1">Live Concert Projections</h2>
+                <p>Some of these virtual idols have even transcended software, performing at sold-out live concerts as stunning on-stage holographic projections for global audiences.</p>
+            </div>
+        </div>
+
+    </section>
+</main>
 <!-- Footer -->
 <footer class="site-footer">
     <div class="footer-top">
@@ -87,7 +129,7 @@
 
         <div class="footer-links">
             <div class="footer-col">
-                <h5>Discover</h5>
+                <h3 class="h5">Discover</h3>
                 <a href="index.html">Home</a>
                 <a href="2-genre.html">Genres</a>
                 <a href="7-vocaloids.html">Vocaloids</a>
@@ -96,7 +138,7 @@
 
             <div class="footer-links">
                 <div class="footer-col">
-                    <h5>Renowned</h5>
+                    <h3 class="h5">Renowned</h3>
                     <a href="3-renoAlbums.html">Renowned Albums</a>
                     <a href="4-renoSingles.html">Renowned Singles</a>
                     <a href="5-renoArtists.html">Renowned Artists</a>
@@ -104,14 +146,14 @@
                 </div>
 
                 <div class="footer-col">
-                    <h5>History</h5>
+                    <h3 class="h5">History</h3>
                     <a href="8-history.html">History of Music</a>
-                    <a href="9-musicProd.html">Mordern Music Production</a>
+                    <a href="9-musicProd.html">Modern Music Production</a>
                     <a href="10-aifuture.html">AI and the Future of Music</a>
                 </div>
 
                 <div class="footer-col">
-                    <h5>About Us</h5>
+                    <h3 class="h5">About Us</h3>
                     <a href="12-about.html">Who We Are</a>
                 </div>
             </div>

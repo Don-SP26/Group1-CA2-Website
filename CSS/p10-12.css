@@ -171,7 +171,6 @@ body.lightbox-open {
 
 
 /* Page 11 CSS */
-
 body.page-forums {
     background: #0c0c0e;
     color: #f3f2ee;
@@ -251,12 +250,14 @@ body.page-forums .hero-stats span {
 /* Tick animation — plays whenever a stat number updates (JS toggles .tick) */
 @keyframes statTick {
     0%   { transform: translateY(0);      opacity: 1; }
-    40%  { transform: translateY(-100%);  opacity: 0; }
-    41%  { transform: translateY(100%);   opacity: 0; }
+    45%  { transform: translateY(-100%);  opacity: 0; }
+    55%  { transform: translateY(100%);   opacity: 0; }
     100% { transform: translateY(0);      opacity: 1; }
 }
+
 body.page-forums .hero-stats strong.tick {
-    animation: statTick .35s ease;
+    animation: statTick .5s cubic-bezier(.45, 0, .2, 1);
+    will-change: transform, opacity;
 }
 
 /* Forum tabs (Latest / Top Rated / Most Commented / Shuffle) */
@@ -464,7 +465,6 @@ body.page-forums .share-section .form-control {
 
 
 /* Page 12 CSS */
-
 /* Page accent color for Bootstrap's border-info on team cards */
 body.page-about {
     --bs-info: #8aa8ae;

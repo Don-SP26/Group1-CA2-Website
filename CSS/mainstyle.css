@@ -211,7 +211,7 @@ section{
     gap:12px;
 }
 
-.footer-col h5{
+.footer-col .footer-heading{
     color:#666;
     font-size:.8rem;
     text-transform:uppercase;
