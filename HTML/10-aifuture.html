@@ -3,22 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WHO ARE WE?</title>
+    <title>AI and the Future of Music</title>
 
     <!-- Bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
 
     <!-- CSS -->
-    <link rel="stylesheet" href="../CSS/mainstyle.css">
     <link rel="stylesheet" href="../CSS/p10-12.css">
+    <link rel="stylesheet" href="../CSS/mainstyle.css">
 
     <!-- JavaScript -->
     <script src="../JavaScript/dropdown.js" defer></script>
-    <script src="../JavaScript/12-about.js" defer></script>
+    <script src="../JavaScript/10-aifuture.js" defer></script>
 </head>
-    
-<body class="page-about">
+
+<body class="page-ai-future">
     <!-- Navigation -->
     <nav class="main-nav">
         <div class="logo">
@@ -64,165 +65,114 @@
         </div>
     </nav>
 
-    <main class="container-fluid px-2 px-md-4">
-        <!-- Page intro (replaces hero for this shorter page) -->
-        <header class="text-center py-5">
-            <p class="text-uppercase small mb-2 intro-eyebrow">The Team Behind Discovery</p>
-            <h1 class="gradient-heading fw-bold mb-2 fs-page-title">Who We Are</h1>
-            <p class="text-secondary fs-5 mb-4">Four songs, four reasons — a small preview of the music that inspired us to build this site.</p>
-        </header>
+    <!-- Hero banner (custom bg-image needed — Bootstrap has no built-in for this) -->
+    <section class="ai-banner rounded-5 d-flex align-items-center">        
+        <div class="ai-banner-overlay rounded-5"></div>
+        <div class="position-relative ps-5 text-white">
+            <h1 class="display-4 fw-bold mb-0">AI & The Future of Music</h1>
+        </div>
+    </section>
 
-        <!-- Track Section -->
-        <section class="pb-5">
-            <h2 class="visually-hidden">Team picks</h2>
-            <div class="row gy-4 mb-4">
-                <!-- Person 1 -->
-                <div class="col-md-6">
-                    <article class="team-card rounded-4 p-4 h-100 border-start border-4 border-info">
-                        <div class="d-flex align-items-center mb-3 gap-3">
-                            <img src="../Images/12_killingInTheName.webp" alt="Rage Against The Machine - Killing In The Name" class="rounded-3 team-thumb">
-                            <div>
-                                <h3 class="text-white mb-1 fs-6"><strong>Track:</strong> <em>Killing In The Name</em></h3>
-                                <p class="text-secondary mb-1">Rage Against The Machine</p>
-                                <p class="text-secondary small mb-0">November 2, 1992</p>
-                            </div>
-                        </div>
-                        <p class="text-secondary fst-italic mb-0 pt-3 border-top border-secondary-subtle">
-                            It was my first exposure to rock/metal as a genre. The song itself is a protest to police
-                            brutality, institutional racism, and the abuse of state power in the US. I listen to the
-                            song whenever I need to remind myself of my morals, what I have to fight for, and simply
-                            because I enjoy the lyrics. Especially the last verse.
-                        </p>
-                    </article>
-                </div>
-
-                <!-- Person 2 -->
-                <div class="col-md-6">
-                    <article class="team-card rounded-4 p-4 h-100 border-start border-4 border-info">
-                        <div class="d-flex align-items-center mb-3 gap-3">
-                            <img src="../Images/12_YouTianHuiZaiXiangJian.jpg" alt="有天會再相見 - Dior 大颖" class="rounded-3 team-thumb">
-                            <div>
-                                <h3 class="text-white mb-1 fs-6"><strong>Track:</strong> <em>See You // 有天會再相見</em></h3>
-                                <p class="text-secondary mb-1">DIOR 大颖</p>
-                                <p class="text-secondary small mb-0">September 2, 2024</p>
-                            </div>
-                        </div>
-                        <p class="text-secondary fst-italic mb-0 pt-3 border-top border-secondary-subtle">
-                            I like "See You" because it is emotional while also giving hope that people will meet
-                            again someday. The lyrics are meaningful, and I like its calm, gentle rhythm. It's not
-                            rock or R&B, which suits my preference for soft Mandopop songs.
-                        </p>
-                    </article>
+   <main class="container-fluid px-2 px-md-4">
+        <!-- Row 1 -->
+        <section class="row gy-4 align-items-center py-5">
+            <div class="col-md-8">
+                <h2 class="text-white fw-bold mb-3 fs-page-heading">Explanation of AI in Music</h2>                
+                <p class="text-secondary ai-body-text text-relaxed">
+                    AI is becoming a useful tool in music. It can help artists come up with melodies, 
+                    suggest lyrics, create background music, and fix mistakes in recordings. It can 
+                    also match samples to the right key and tempo, making the music production process 
+                    faster and easier. However, human creativity is still important because artists 
+                    decide how the final song should sound.
+                </p>
+                <div class="callout border-start border-4 rounded p-3 mt-3 fst-italic">
+                    AI saves time and blends everything smoothly into the project.
                 </div>
             </div>
 
-            <div class="row gy-4">
-                <!-- Person 3 -->
-                <div class="col-md-6">
-                    <article class="team-card rounded-4 p-4 h-100 border-start border-4 border-info">
-                        <div class="d-flex align-items-center mb-3 gap-3">
-                            <img src="../Images/12_masshiroNaYuki.jpg" alt="Masshiro na Yuki" class="rounded-3 team-thumb">
-                            <div>
-                                <h3 class="text-white mb-1 fs-6"><strong>Track:</strong> <em>Masshiro na Yuki // まっしろな雪</em></h3>
-                                <p class="text-secondary mb-1">Halozy</p>
-                                <p class="text-secondary small mb-0">December 30, 2015</p>
-                            </div>
+            <div class="col-md-4">
+                <img src="../Images/10_useOfAI.jpg" alt="AI in music production" 
+                    class="img-fluid rounded-4 w-100 ai-img lightbox-trigger" tabindex="0" role="button">
+            </div>
+        </section>
+
+        <hr class="border-secondary-subtle opacity-25">
+
+        <!-- Row 2 -->
+        <section class="row gy-4 align-items-center py-5">
+            <div class="col-md-4 order-2 order-md-1">
+                <img src="../Images/10_prosAndCons.jpg" alt="Pros and cons of AI in music" 
+                    class="img-fluid rounded-4 w-100 ai-img lightbox-trigger" tabindex="0" role="button">
+            </div>
+
+            <div class="col-md-8 order-1 order-md-2">
+                <h2 class="text-white fw-bold mb-3 fs-page-heading">Pros & Cons of Using AI in Music</h2>
+
+                <div class="row gy-4">
+                    <div class="col-12 col-sm-6">
+                        <div class="ps-3 border-start border-4 border-info">
+                            <h3 class="text-white fs-6 text-uppercase mb-3">Pros</h3>
+                            <ul class="ai-list list-unstyled text-secondary ai-body-text text-relaxed">
+                                <li class="text-secondary mb-2"><i class="bi bi-check-lg text-info me-2"></i>Provides creative inspiration</li>
+                                <li class="text-secondary mb-2"><i class="bi bi-check-lg text-info me-2"></i>Improves production efficiency</li>
+                                <li class="text-secondary mb-0"><i class="bi bi-check-lg text-info me-2"></i>Makes music creation more accessible</li>
+                            </ul>
                         </div>
-                        <p class="text-secondary fst-italic mb-0 pt-3 border-top border-secondary-subtle">
-                            I like this song because of how the melody sounds throughout and it feels vibrant to
-                            listen to, overall even though the lyrics are in Japanese it feels like taking a
-                            breather while listening to the song.
-                        </p>
-                    </article>
+                    </div>
+
+                    <div class="col-12 col-sm-6">
+                        <div class="ps-3 border-start border-4 border-secondary">
+                            <h3 class="text-white fs-6 text-uppercase mb-3">Cons</h3>
+                            <ul class="ai-list list-unstyled text-secondary ai-body-text text-relaxed">
+                                <li class="text-secondary mb-2"><i class="bi bi-exclamation-lg text-secondary me-2"></i>May reduce originality</li>
+                                <li class="text-secondary mb-2"><i class="bi bi-exclamation-lg text-secondary me-2"></i>Could affect musicians' careers</li>
+                                <li class="text-secondary mb-0"><i class="bi bi-exclamation-lg text-secondary me-2"></i>Raises ethical and copyright issues</li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
 
-                <!-- Person 4 -->
-                <div class="col-md-6">
-                    <article class="team-card rounded-4 p-4 h-100 border-start border-4 border-info">
-                        <div class="d-flex align-items-center mb-3 gap-3">
-                            <img src="../Images/12_exoTheFirstSnow.jpg" alt="EXO - The First Snow" class="rounded-3 team-thumb">
-                            <div>
-                                <h3 class="text-white mb-1 fs-6"><strong>Track:</strong> <em>The First Snow</em></h3>
-                                <p class="text-secondary mb-1">EXO</p>
-                                <p class="text-secondary small mb-0">December 9, 2013</p>
-                            </div>
-                        </div>
-                        <p class="text-secondary fst-italic mb-0 pt-3 border-top border-secondary-subtle">
-                            I love this song because I love snow, and winter usually falls around December.
-                            December is my favourite month too — it feels magical, peaceful, and full of memories.
-                        </p>
-                    </article>
+                <div class="callout border-start border-4 rounded p-3 mt-3 fst-italic">
+                    AI offers exciting opportunities, but balancing innovation with human artistry is essential.
                 </div>
             </div>
         </section>
 
         <hr class="border-secondary-subtle opacity-25">
 
-        <!-- Our Story -->
-        <section class="our-story py-5">
-            <h2 class="gradient-heading fw-bold mb-3 fs-section-heading">Our Story</h2>
-            <p class="text-secondary fs-5">
-                We chose this topic because we enjoy listening to different types of music and discovering new
-                artists and albums. Music plays an important role in people's life as it provides entertainment,
-                helps people relieve stress, and helps to create meaningful experiences. Moreover, music is a
-                universal form of expression that connects people from different backgrounds and brings together
-                those who share a common interest in music.
-            </p>
-        </section>
-
-        <hr class="border-secondary-subtle opacity-25">
-
-        <!-- Music Player -->
-        <section class="py-5">
-            <h2 class="gradient-heading fw-bold mb-4 fs-section-heading">Your Playlist Picks</h2>
-
-            <div class="d-flex justify-content-end mb-3">
-                <button class="btn shuffle-btn" id="shuffleBtn" type="button">
-                    🔀 Shuffle
-                </button>
+        <!-- Row 3 -->
+        <section class="row gy-4 align-items-center py-5">
+            <div class="col-md-8">
+                <h2 class="text-white fw-bold mb-3 fs-page-heading">Future of Music</h2>
+                <p class="text-secondary ai-body-text text-relaxed">
+                    In the future, AI could change the way music is created and enjoyed. We may see 
+                    virtual artists who are fully generated by AI, as well as smarter tools that help 
+                    with mixing, mastering, and adding instruments to songs. AI may also create new 
+                    forms of music, such as interactive compositions that change based on the 
+                    listener's choices.
+                </p>
+                <div class="callout border-start border-4 rounded p-3 mt-3 fst-italic">
+                    AI may shape the future of music through new ideas and tools. However, 
+                    <strong>human</strong> creativity will always matter because music comes from deep 
+                    emotions, life experiences, and unique personal expression. 
+                </div>
             </div>
 
-            <div class="row gy-3" id="playlistRow">
-                <div class="col-md-6 playlist-item">
-                    <iframe data-testid="embed-iframe"
-                    title="Killing In The Name — Rage Against The Machine"
-                    src="https://open.spotify.com/embed/track/3FUS56gKr9mVBmzvlnodlh?utm_source=generator&si=e509109faaff431e"
-                    height="80" allowfullscreen=""
-                    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy">
-                    </iframe>
-                </div>
-
-                <div class="col-md-6 playlist-item">
-                    <iframe data-testid="embed-iframe" 
-                    title="See You — DIOR 大颖"
-                    src="https://open.spotify.com/embed/track/4BZlQdwkgUuaj5xbUHwUl8?utm_source=generator&si=5ca3b8a4177a4b71"
-                    height="80" allowfullscreen=""
-                    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy">
-                    </iframe>
-                </div>
-
-                <div class="col-md-6 playlist-item">
-                    <iframe data-testid="embed-iframe" 
-                    title="Masshiro na Yuki — Halozy"
-                    src="https://open.spotify.com/embed/track/5d34Abn9Cvu9jOKLvU8kXg?utm_source=generator&si=ba27dcb27b0e4378"
-                    height="80" allowfullscreen=""
-                    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-                    loading="lazy">
-                    </iframe>
-                </div>
-
-                <div class="col-md-6 playlist-item">
-                    <iframe data-testid="embed-iframe"
-                        title="The First Snow — EXO"
-                        src="https://open.spotify.com/embed/track/2VNpT9fRk1kyksT0S4coZR?utm_source=generator"
-                        height="80" allowfullscreen=""
-                        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-                        loading="lazy">
-                    </iframe>
-                </div>
+            <div class="col-md-4">
+                <img src="../Images/10_futureOfMusic.png" alt="Future of music" 
+                    class="img-fluid rounded-4 w-100 ai-img lightbox-trigger" tabindex="0" role="button">            
             </div>
         </section>
     </main>
+
+    <!-- Lightbox -->
+    <div id="lightboxOverlay" class="lightbox-overlay" aria-hidden="true">
+        <button id="lightboxClose" class="lightbox-close" aria-label="Close image preview">&times;</button>
+        <figure class="lightbox-figure">
+            <img id="lightboxImage" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBTAA7" alt="">
+            <figcaption id="lightboxCaption"></figcaption>
+        </figure>
+    </div>
 
     <!-- Footer -->
     <footer class="site-footer">
