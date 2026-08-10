@@ -18,11 +18,23 @@ img {
 /* =========================================
    Vocaloids Layout
 ========================================= */
+.vocaloid-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 60px 20px;
+}
+
+/* Hero Section */
 .vocaloid-hero {
     display: flex;
     justify-content: space-between;
     align-items: center;
     gap: 40px;
+    padding: 40px;
+    border-radius: 12px;
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('../Images/image_5e8220.jpg');
+    background-size: cover;
+    background-position: center;
 }
 
 .vocaloid-text {
@@ -30,16 +42,30 @@ img {
 }
 
 .vocaloid-text h1 {
-    font-size: 3rem;
-    margin-bottom: 20px;
+    color: #39C5BB;
 }
 
 .vocaloid-text p {
-    color: #ccc;
+    color: #ddd;
     line-height: 1.6;
     margin-bottom: 15px;
 }
 
+/* Gray Blocky Buttons from Reference Image */
+
+.btn-gray {
+    border: 1px solid #222;
+    color: #fff;
+    padding: 15px 25px;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: bold;
+    text-align: left;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+/* Image Stack (Kept from your original CSS) */
 .vocaloid-image-stack {
     flex: 1;
     position: relative;
@@ -51,28 +77,64 @@ img {
     position: absolute;
     top: 0;
     right: 0;
+    opacity: 0.8;
 }
 
 .vocaloid-image-stack .img-front {
-    width: 60%;
+    width: 90%;
     position: absolute;
-    bottom: -30px;
-    left: 20px;
-    box-shadow: -10px 10px 30px rgba(0,0,0,0.8);
+    bottom: -40px;
+    left: 50px;
+    z-index: 1;
 }
 
+/* Bottom Gallery Cards */
 .vocaloid-gallery {
     display: flex;
     gap: 20px;
     justify-content: space-between;
-    margin-top: 100px;
+    margin-top: 60px;
 }
 
 .gallery-card {
     flex: 1;
     background: #1a1a1a;
+    border: 1px solid #333;
     border-radius: 12px;
     overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.card-content {
+    padding: 25px;
+}
+
+.card-content h4 {
+    color: #39C5BB;
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+}
+
+.card-content p {
+    color: #bbb;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .vocaloid-hero, .vocaloid-gallery {
+        flex-direction: column;
+    }
+    
+    .piapro-buttons {
+        flex-direction: column;
+    }
+    
+    .vocaloid-image-stack {
+        width: 100%;
+        margin-top: 40px;
+    }
 }
 
 /* =========================================
