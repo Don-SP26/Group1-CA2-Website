@@ -204,6 +204,30 @@ body {
 }
 
 /* =========================================
+   Mobile Responsiveness for History Layout
+========================================= */
+@media (max-width: 768px) {
+    /* Stack the main feature image and text */
+    .history-main-feature {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    /* Stack the two sub-cards on top of each other */
+    .history-sub-grid {
+        flex-direction: column;
+        gap: 50px;
+        margin-top: 40px;
+    }
+
+    /* Stack the image and text INSIDE each sub-card */
+    .sub-card {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+/* =========================================
    Modern Music Prod (Zig-Zag) Layout
 ========================================= */
 .zigzag-container {
