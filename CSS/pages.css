@@ -15,6 +15,10 @@ img {
     object-fit: cover;
 }
 
+body {
+    font-family: "Your Desired Font Name", sans-serif !important;
+}
+
 /* =========================================
    Vocaloids Layout
 ========================================= */
